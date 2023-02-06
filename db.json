@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "144",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    },{
+      "id": "143",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    },{
+      "id": "142",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    },{
+      "id": "141",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    },{
+      "id": "140",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    },{
+      "id": "139",
+      "name": "Cerveza Anonima",
+      "price": "600",
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true
+    }
+    
+  ]
+}

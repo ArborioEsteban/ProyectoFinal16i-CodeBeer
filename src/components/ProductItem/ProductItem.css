@@ -1,0 +1,45 @@
+.text-card{
+    
+    color: #ECB365;
+}
+
+.imgCardProductos{
+    max-width: 100%;
+    max-height: 10rem;
+    border-radius: 10px;
+    
+}
+.cardProductos{
+    background-color: #064663;
+    color: #ECB365;
+    border-radius: 10px;
+}
+
+#myButton {
+	box-shadow: 3px 4px 0px 0px #ecb465;
+	background-color:transparent;
+	border-radius:18px;
+	border:1px solid #ecb465;
+	display:inline-block;
+	cursor:pointer;
+	color:#ecb465;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 1px #ecb465;
+}
+#myButton:focus {
+	background-color:transparent;
+    box-shadow: 3px 4px 0px 0px #ecb465;
+    
+
+}
+#myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
