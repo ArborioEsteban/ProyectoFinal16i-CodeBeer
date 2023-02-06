@@ -1,9 +1,14 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductGrid from './components/ProductGrid/ProductGrid';
+
 
 function App() {
   return (
     <>
-      <h1>Beer & Code</h1>
+      <h1>Code & Beer</h1>
+      <ProductGrid/>
+      
       
     </>
   );
