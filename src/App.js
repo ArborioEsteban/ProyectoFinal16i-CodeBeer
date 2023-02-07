@@ -1,11 +1,15 @@
-import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import ProductGrid from './components/ProductGrid/ProductGrid';
+
 
 function App() {
   return (
-    <>
-      <h1>Beer & Code</h1>
-      
-    </>
+    <Container>
+      <h1>Code & Beer</h1>
+      <ProductGrid/>    
+    </Container>
   );
 }
 
