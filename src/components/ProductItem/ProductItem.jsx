@@ -21,6 +21,9 @@ const ProductItem = (props) => {
       </Card.Body>
     </Card>
   )
+
+
+  
 }
 
 export default ProductItem
