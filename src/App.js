@@ -1,13 +1,18 @@
-import LoginForm from '../components/Login/LoginForm';
-import './App.css';
+
+import FormLogin from './components/FormLogin/FormLogin';
 
 
-function App() {
+
+
+
+
+const App = () => {
   return (
-    <>
-      <h1>Beer & Code</h1>
-      <LoginForm/>
-    </>
+   <div className='d-flex justify-content-center align-items-center vh-100'>
+    <FormLogin/>
+    
+    </div>
+   
   );
 }
 
