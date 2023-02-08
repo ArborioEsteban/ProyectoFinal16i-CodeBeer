@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import axios from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 import './ProductGrid.css';
 
 
@@ -30,10 +29,8 @@ const ProductGrid = () => {
                 </Col>
                 );
             })}
+            
         </Row>
-            <Button className='my-2 fixed-bottom ' id='myCartBtn'>
-                <AiOutlineShoppingCart/>
-            </Button>   
     </>
   )
 }

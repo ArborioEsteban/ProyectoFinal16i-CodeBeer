@@ -1,24 +1,7 @@
-#myCartBtn{
-	background-color: #041C32;
-	border-radius: 20%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-	border:1px solid #ecb465;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	/* padding:7px 25px; */
-	text-decoration:none;
-	width: 15%;
-    position: absolute;
-    right: 100;
-    /* left: 100; */
-}
-
-#myCartBtn:focus:hover{
-    background-color: #ecb465;
-    box-shadow: 3px 4px 0px 0px #ecb465;
-    color: white;
-}
+body {
+	background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
+	  url("https://img.freepik.com/free-photo/glass-bottles-beer-with-glass-ice-dark-background_1150-8901.jpg?w=1380&t=st=1675872713~exp=1675873313~hmac=5b3610be203a4b1ea22f98b970aee3f1ffad09582008c34b4e369db93591b6f0");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+  }
