@@ -5,6 +5,7 @@ import { AiFillPlusCircle, AiOutlineShoppingCart } from "react-icons/ai";
 
 
 
+
 const ProductItem = (props) => {
     const {id,name,price,description,image,category,available} = props;
 
@@ -39,13 +40,17 @@ const ProductItem = (props) => {
         <div className='text-center my-2'>
           <h5>$ {price}</h5>
 
-          <Button id='myButton' className={`btnCardProductos mt-4 ${
+             
+          <Button 
+          id='myButton'
+           className={`
+           btnCardProductos mt-
+            ${
 						available ? '' : 'disabled'
 					}`}>
-            
-             
-            {`${available ? Button.innerHTML = '' :' No disponible'}`}          
-            <AiOutlineShoppingCart className=''/>
+          
+            {`${available ? Button.innerHTML = `Agregar`  : Button.innerHTML = ''}`}
+            <AiOutlineShoppingCart/>
           </Button>
         </div>
       </Card.Body>

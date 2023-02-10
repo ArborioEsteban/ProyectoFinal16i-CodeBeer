@@ -1,10 +1,9 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import Carrito from './components/Carrito/Carrito';
-
+import { Button, Container } from 'react-bootstrap';
 import ProductGrid from './components/ProductGrid/ProductGrid';
+import Table from './components/Table/Table';
 
 
 function App() {
@@ -12,11 +11,11 @@ function App() {
 
   return (
     <Container>
-      <div className='text-center'>
-        <h1>Code & Beer</h1>
-        <Carrito />    
+      <div className='text-center my-2'>
+        <h1>Code & Beer</h1>  
       </div>
       <ProductGrid />
+      {/* <Table/> */}
     </Container>
   );
 }

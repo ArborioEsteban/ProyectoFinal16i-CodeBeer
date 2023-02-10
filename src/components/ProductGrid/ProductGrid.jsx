@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import {  Button, Col,  Container,  Row } from 'react-bootstrap'
 import axios from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductGrid.css';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
@@ -21,6 +22,13 @@ const ProductGrid = () => {
 
   return (
     <>
+
+        
+      <div className='text-end fixed-bottom mt-3 mx-2 container'>
+        <Button className="w-25" id='myCartBtn'>
+          <AiOutlineShoppingCart/>
+        </Button>
+      </div>
       <Row>
             {products.map((elemento) => {
                 return (

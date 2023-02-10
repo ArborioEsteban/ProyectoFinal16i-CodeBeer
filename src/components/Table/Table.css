@@ -1,0 +1,68 @@
+body {
+	background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
+	  url("https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=1060&t=st=1675966033~exp=1675966633~hmac=a9fe388609c359815830a433980689a9d30ecccd8b710cd39ae71a13c1081e06");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+  }
+
+  .textBienvenidos{
+    
+    display: block;
+    filter: saturate(60%);
+    font-size: calc(1em + 3vmax);
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  #btnTable{
+    background-color: transparent;
+	border-radius: 20%;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+	border:1px solid #ecb465;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+  }
+
+  #btnTable:focus{
+    background-color: #ecb465;
+    box-shadow: 3px 4px 0px 0px #ecb465;
+    color: white;
+}
+
+.optionTable{
+    background-color: transparent !important;
+    color: #ecb465;
+    text-align: center !important;
+}
+
+.optionTable:focus:checked:hover{
+    background-color: transparent !important;
+}
+
+#optionForm{
+  background-color:black !important;
+}
+
+#optionForm:active:hover:focus{
+  background-color: black !important;
+
+}
+
+select{
+  background-color: black !important;
+
+}
+
+option{
+  background-color: black !important;
+}
+
+option:checked:hover:focus{
+  background-color: black !important;
+}

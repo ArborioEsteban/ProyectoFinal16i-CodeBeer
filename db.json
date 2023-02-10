@@ -4,7 +4,7 @@
       "id": "144",
       "name": "Cerveza Anonima",
       "price": "600",
-      "description": "() => {Una cerveza con un toque de citrus y 4.5% de alcohol}",
+      "description": "() => {Dorado/ anaranjado profundo, de espuma blanca persistente y opalescencia característica - 4.5% de alcohol if(pintasConsumidas >= 1){!manejar}}",
       "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
       "category" : "Cervezas",
       "available" : true

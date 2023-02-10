@@ -5,3 +5,23 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
   }
+
+  #myCartBtn{
+	background-color: #ecb46591;
+	border-radius: 20%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+	border:1px solid #ecb465;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#myCartBtn:focus:hover{
+    background-color: #ecb465;
+    box-shadow: 3px 4px 0px 0px #ecb465;
+    color: white;
+}
