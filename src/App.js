@@ -1,10 +1,12 @@
 import './App.css';
+import Router from './routing/Router';
 
-function App() {
+
+const App = () => {
   return (
     <>
-      <h1>Beer & Code</h1>
       
+      <Router />
     </>
   );
 }

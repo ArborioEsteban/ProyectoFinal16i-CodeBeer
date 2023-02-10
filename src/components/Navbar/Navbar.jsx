@@ -1,41 +1,37 @@
-import { Container, Navbar as NavbarBS, Nav, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import "../Navbar/Navbar1.css";
 
-const Navbar = () => {
-  const navigate = useNavigate();
+import { Navbar, Nav, Container } from "react-bootstrap"
+import { Outlet, Link } from "react-router-dom"
 
-  const handleClick = (route) => {
-    navigate(route);
-  };
 
-  return (
-    <NavbarBS bg='dark' variant='dark' expand='lg'>
+
+
+const NavBarCode = () => {
+
+
+  return(
+ 
+    <>
+  
+    <Navbar className="navBg"   variant="dark" expand="lg">
       <Container>
-        <NavbarBS.Brand
-          onClick={() => handleClick('/')}
-          style={{ cursor: 'pointer' }}
-        >
-          Rolling Market
-        </NavbarBS.Brand>
-        <NavbarBS.Toggle aria-controls='navbar-market' />
-        <NavbarBS.Collapse id='navbar-market'>
-          <Nav className='ms-auto'>
-            <Button variant='danger' onClick={() => handleClick('/admin')}>
-              Admin
-            </Button>
-            <Button
-              variant='primary'
-              className='ms-2'
-              onClick={() => handleClick('/login')}
-            >
-              Login
-            </Button>
-            {/* Link o NavLink  */}
+        <Navbar.Brand as={Link} to="/" >React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/" >Home</Nav.Link>
+            <Nav.Link as={Link} to="/AcercaDe" >Acerca De</Nav.Link>
           </Nav>
-        </NavbarBS.Collapse>
+        </Navbar.Collapse>
       </Container>
-    </NavbarBS>
-  );
-};
+    </Navbar>
+  <section>
+    <Outlet></Outlet>
+  </section>
 
-export default Navbar;
+    </>
+
+  )
+}
+
+export default NavBarCode
