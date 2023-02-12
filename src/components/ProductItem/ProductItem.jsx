@@ -7,7 +7,32 @@ import { AiFillPlusCircle, AiOutlineShoppingCart } from "react-icons/ai";
 
 
 const ProductItem = (props) => {
-    const {id,name,price,description,image,category,available} = props;
+    const {id,name,price,description,image,category,available,quantity} = props;
+    const {allProducts , setAllProducts , countProducts, setCountProducts ,total , setTotal} = props;
+    
+    const {...elemento} = props;
+    
+
+    const onAddProduct = elemento  => {
+
+      if(allProducts.find(item => item.id === elemento.id)){
+        const products = allProducts.map(item => 
+          item.id === elemento.id 
+              ? {...item, quantity: item.quantity+1}
+              : item);
+
+              setTotal(total + elemento.price * quantity);
+              setCountProducts(countProducts + elemento.quantity);
+              return setAllProducts([...products]);
+
+            };
+            
+            
+            setTotal(total + elemento.price * quantity);
+            setCountProducts(countProducts + elemento.quantity);
+            setAllProducts([...allProducts , elemento]);
+      };
+    
 
     const popover = (
         <Popover id="popover-basic" className='popOverInfo'>
@@ -42,12 +67,15 @@ const ProductItem = (props) => {
 
              
           <Button 
-          id='myButton'
-           className={`
+            onClick={() => onAddProduct(elemento)}
+            id='myButton'
+            className={`
            btnCardProductos mt-
             ${
 						available ? '' : 'disabled'
-					}`}>
+					}`}
+
+          >
           
             {`${available ? Button.innerHTML = `Agregar`  : Button.innerHTML = ''}`}
             <AiOutlineShoppingCart/>

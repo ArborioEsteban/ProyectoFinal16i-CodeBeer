@@ -1,13 +1,12 @@
-body {
+/* body {
 	background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
 	  url("https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=1060&t=st=1675966033~exp=1675966633~hmac=a9fe388609c359815830a433980689a9d30ecccd8b710cd39ae71a13c1081e06");
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-  }
+  } */
 
   .textBienvenidos{
-    
     display: block;
     filter: saturate(60%);
     font-size: calc(1em + 3vmax);
