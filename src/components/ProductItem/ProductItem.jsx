@@ -14,25 +14,24 @@ const ProductItem = (props) => {
     
 
     const onAddProduct = elemento  => {
-
       if(allProducts.find(item => item.id === elemento.id)){
         const products = allProducts.map(item => 
           item.id === elemento.id 
-              ? {...item, quantity: item.quantity+1}
-              : item);
-
-              setTotal(total + elemento.price * quantity);
-              setCountProducts(countProducts + elemento.quantity);
-              return setAllProducts([...products]);
-
-            };
+          ? {...item, quantity: item.quantity+1}
+          : item);
+          
+          setTotal(total + elemento.price * quantity);
+          setCountProducts(countProducts + elemento.quantity);
+          
+          return setAllProducts([...products]);
+          };
             
             
             setTotal(total + elemento.price * quantity);
             setCountProducts(countProducts + elemento.quantity);
             setAllProducts([...allProducts , elemento]);
-      };
-    
+            
+          };
 
     const popover = (
         <Popover id="popover-basic" className='popOverInfo'>

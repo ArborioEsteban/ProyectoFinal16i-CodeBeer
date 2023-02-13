@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {  Button, Col,  Container,  Offcanvas,  Row } from 'react-bootstrap'
-import axios, { all } from 'axios';
+import axios from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductGrid.css';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
@@ -11,24 +11,69 @@ import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
+
+// inicializar con valores del localStorage
+const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
+let totalLS=0; 
+let countLS=0;
+
+carritoLS.forEach(element => {
+  totalLS = totalLS + (element.price * element.quantity)
+});
+
+carritoLS.forEach(element => {
+   countLS = countLS + element.quantity; 
+});
+
+
+
 const ProductGrid = () => {
-    const [products,setItems] = useState([]);
+  const [products,setItems] = useState([]);
 
     // states para el carrito
+    const [allProducts, setAllProducts] = useState(carritoLS);
+    const [total, setTotal] = useState(totalLS);
+    const [countProducts, setCountProducts] = useState(countLS);
 
-    const [allProducts, setAllProducts] = useState([]);
-    const [total, setTotal] = useState(0);
-    const [countProducts, setCountProducts] = useState(0);
+    
+    
 
+
+    const saveLS = () =>{
+      localStorage.setItem("carrito", JSON.stringify(allProducts));
+
+    }
+
+    // actualizar localStorage por cada cambio en los productos del LocalStorage
+    useEffect(() => {
+      saveLS();
+    }, [allProducts])
+    
+    
 
     useEffect(() => {
         const itemsFetch = async () => {
           const data = await axios.get(`${baseUrl}/products`);
           setItems(data.data);
         };
-    
         itemsFetch();
+        
+        
       }, []);
+      
+      
+      
+      
+
+         
+          
+          
+
+      
+      
+      
+
+      
 
       const onRemoveProduct = products => {
         const results = allProducts.filter(
@@ -38,19 +83,24 @@ const ProductGrid = () => {
         setTotal(total - products.price * products.quantity);
         setCountProducts(countProducts - products.quantity);
         setAllProducts(results);
+
       };
+      
 
       const onCleanCart = () => {
-        setAllProducts([]);
         setTotal(0);
         setCountProducts(0);
+        setAllProducts([]);
+        // localStorage.setItem("carrito", JSON.stringify([])); 
       };
       
 
       const [show, setShow] = useState(false);
       const handleClose = () => setShow(false);
       const handleShow = () => setShow(true);
+      
 
+      
   return (
     <>
 
