@@ -2,10 +2,30 @@
     
     background-color: #041C32;
     color: #ECB365;
+    
+  
 }
 
 .colorBotones{
     background-color: #04293A;
    border: #041C32;
    color: #ECB365;
+}
+.form{
+    background-color: #04293A;
+    
+}
+
+.botonIngresar{
+    
+    width: 60%;
+    height: 20%;
+    border-radius: 5rem;
+    border: none; 
+    background-color: #064663;
+    color: #ECB365;
+}
+
+.enlaces{
+    color: #ECB365;
 }
