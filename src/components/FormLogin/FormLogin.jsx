@@ -1,31 +1,24 @@
 import React, { useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
+import SignInPage from "../../pages/SignInPage";
+
 
 import "./FormLogin.css";
 import swal from "sweetalert2";
 
 const FormLogin = () => {
   
-  const {register, handleSubmit} = useForm();
+  const {register, handleSubmit: handleLogin} = useForm();
 
 
-  const coustomHandleSubmit = (data) =>{
+  const handleSubmit = (data) =>{
+
+    console.log(data);
     
-   // const usuarioRegistrado = localStorage.getItem('email');
-    //const contraseñaRegistarda = localStorage.getItem('contraseña');
- 
-   // const [isError, setIsError] = useState(false);
+  
 
- //if (data.email === usuarioRegistrado && data.contraseña === contraseñaRegistarda) {
-  //   setIsError(false);
-  //  alert("entraste")
-   // } else {
-      //   Datos no validos
-   //   setIsError(true);
-  //  }
- //    }
-};
+  };
  
 
   return (
@@ -37,7 +30,7 @@ const FormLogin = () => {
         <h2 className="ms-2">Iniciar sesión</h2>
       </div>
       <div className="mx-2 mt-3 form">
-        <Form onSubmit={handleSubmit(coustomHandleSubmit)} className="p-4">
+        <Form onSubmit={handleLogin(handleSubmit)} className="p-4">
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Ingrese un Email</Form.Label>
             <Form.Control
@@ -70,9 +63,9 @@ const FormLogin = () => {
       <div className="container d-flex justify-content-center mt-4 mb-3">
         <div className="">
           <p>¿No tenes cuenta?</p>
-          <a href="#" className="ps-4 enlaces">
+          
             Registrate
-          </a>
+          
         </div>
       </div>
     </div>

@@ -1,7 +1,5 @@
 
-import FormLogin from './components/FormLogin/FormLogin';
-
-
+import Router from "./routing/Router";
 
 
 
@@ -9,8 +7,7 @@ import FormLogin from './components/FormLogin/FormLogin';
 const App = () => {
   return (
    <div className='d-flex justify-content-center align-items-center vh-100'>
-    <FormLogin/>
-    
+    <Router/>
     </div>
    
   );
