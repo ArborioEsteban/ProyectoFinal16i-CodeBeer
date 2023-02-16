@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from '../App';
-import Navbar from '../components/Navbar/Navbar';
+// import App from '../App';
+// import Navbar from '../components/Navbar/Navbar';
 import ProductGrid from '../components/ProductGrid/ProductGrid';
 import SelectTable from '../components/Table/SelectTable';
 import '../components/ProductGrid/ProductGrid.css';
