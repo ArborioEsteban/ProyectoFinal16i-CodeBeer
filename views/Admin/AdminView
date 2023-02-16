@@ -1,0 +1,13 @@
+import { Container } from "react-bootstrap"
+import ItemsForm from "../../src/components/Admin/Form/ItemsForm"
+
+const AdminView =() =>{
+    return (
+        <Container className='my-5'>
+          <h1 className="text-center">Panel de Adinistracion</h1>
+           <hr/>
+           <ItemsForm/>
+        </Container>
+    )
+}
+ export default AdminView

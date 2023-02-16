@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './App.css'
+
+import {ItemsForm} from './components/Admin/Form'
+
+import {ItemsTable} from './components/Admin/Table/ItemsTable'
+
+//import './index.css'
+
 
 
 
