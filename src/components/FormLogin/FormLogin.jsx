@@ -1,75 +1,85 @@
-import React, { useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import SignInPage from "../../pages/SignInPage";
 
+import { Button } from "react-bootstrap";
+import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
+import { HiEnvelope } from "react-icons/hi2";
 
 import "./FormLogin.css";
-import swal from "sweetalert2";
 
 const FormLogin = () => {
-  
-  const {register, handleSubmit: handleLogin} = useForm();
+  const { register, handleSubmit: handleLogin } = useForm();
 
-
-  const handleSubmit = (data) =>{
-
+  const handleSubmit = (data) => {
     console.log(data);
-    
-  
-
   };
- 
 
   return (
-    <div className="mx-3 login rounded p-3">
-      <div className="p-4 mt-3 text-center">
-        <h1>Te damos la bienvenida a Code & Beer </h1>
-      </div>
-      <div className="container mt-2">
-        <h2 className="ms-2">Iniciar sesión</h2>
-      </div>
-      <div className="mx-2 mt-3 form">
-        <Form onSubmit={handleLogin(handleSubmit)} className="p-4">
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label>Ingrese un Email</Form.Label>
-            <Form.Control
-            {... register('email', {required: true, maxLength: 20})}
-             type= "email"
-                                       
-              placeholder="Ingrese un Email"
-            />
-          </Form.Group>
+    <div className="pt-5">
+      <div className=" mx-5">
+        <div className="p-3 py-4 login rounded">
+          <div>
+            <h2 className="ms-2 my-2">Iniciar sesión</h2>
+            <hr className="mt-4" />
+          </div>
+          <div className="form">
+            <Form
+              onSubmit={handleLogin(handleSubmit)}
+              className="container px-4 pt-5"
+            >
+              <Form.Group className="container " controlId="email">
+                <Form.Label>
+                  <HiEnvelope className="me-2" />
+                  Ingrese su Email
+                </Form.Label>
+                <Form.Control
+                  {...register("email", { required: true, maxLength: 20 })}
+                  type="email"
+                  placeholder="Coloque un Email"
+                />
+              </Form.Group>
 
-          <Form.Group className="mb-3" controlId="Password">
-            <Form.Label>Ingrese su contraseña</Form.Label>
-            <Form.Control 
-             {...register('contraseña', { required: true, maxLength: 20 })}  
-             type="password" placeholder="Contraseña" />
-          </Form.Group>
-          <a href="" className="enlaces">
-            ¿Olvido su contraseña?
-          </a>
-          <button type="submit" className="botonIngresar ms-5 mt-4">
-            Ingresar
-          </button>
-        </Form>
-      </div>
-      <div className="container d-flex justify-content-center my-4 ">
-        <div></div>
-      </div>
-      <hr />
+              <Form.Group className="container my-5" controlId="Password">
+                <Form.Label>
+                  <HiLockClosed className="me-2" />
+                  Ingrese su contraseña
+                </Form.Label>
+                <Form.Control
+                  {...register("contraseña", { required: true, maxLength: 20 })}
+                  type="password"
+                  placeholder="****************"
+                />
+              </Form.Group>
+              <a href="" className="icons">
+                ¿Olvido su contraseña?
+              </a>
+              <div className="text-center">
+                <Button
+                  type="submit"
+                  className="bg-transparent mt-3"
+                  id="botonLogin"
+                >
+                  Ingresar
+                  <HiLogin className="icons ms-2" />
+                </Button>
+              </div>
+            </Form>
+          </div>
+          <div className="container">
+            <hr />
+          </div>
 
-      <div className="container d-flex justify-content-center mt-4 mb-3">
-        <div className="">
-          <p>¿No tenes cuenta?</p>
-          
-            Registrate
-          
+          <div className="text-center my-3">¿Aun no estas registrado?</div>
+          <div className="d-flex column align-items-center justify-content-center">
+            <Button className="bg-transparent my-3" id="botonLogin">
+              Registrate
+              <HiOutlineClipboardList className="ms-2 icons" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>
   );
-  }
+};
 
 export default FormLogin;

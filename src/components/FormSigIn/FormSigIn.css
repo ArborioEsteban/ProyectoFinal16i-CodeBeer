@@ -1,9 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .login{
     
     background-color: #041C32;
     color: #ECB365;
+      
+}
+
+.form{
+    background-color: #04293A;
     
-  
 }
 
 .colorBotones{
@@ -20,12 +30,12 @@
 
 .botonIngresar{
     
-    width: 20%;
-    height: 30%;
+   
     border-radius: 5rem;
     border: none; 
     background-color: #064663;
     color: #ECB365;
 }
+
 
 
