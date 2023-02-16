@@ -75,13 +75,13 @@ const ItemsTable = () => {
             <th>Precio</th>
             <th>Imagen</th>
             <th>Descripcion</th>
-            <th>Acciones</th>
+            <th>Acciones </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>Mark</td>
+            <td>#</td>
+            <td>Nombre</td>
             <td>Otto</td>
             <td>@mdo</td>
           </tr>
