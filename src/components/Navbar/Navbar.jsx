@@ -1,7 +1,10 @@
-import { Container, Navbar as NavbarBS, Nav, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+import "../Navbar/Navbar1.css";
+
+
+const NavBarCode = () => {
   const navigate = useNavigate();
 
   const handleClick = (route) => {
@@ -9,33 +12,43 @@ const Navbar = () => {
   };
 
   return (
-    <NavbarBS bg='dark' variant='dark' expand='lg'>
-      <Container>
-        <NavbarBS.Brand
-          onClick={() => handleClick('/')}
-          style={{ cursor: 'pointer' }}
-        >
-          Rolling Market
-        </NavbarBS.Brand>
-        <NavbarBS.Toggle aria-controls='navbar-market' />
-        <NavbarBS.Collapse id='navbar-market'>
-          <Nav className='ms-auto'>
-            <Button variant='danger' onClick={() => handleClick('/admin')}>
-              Admin
-            </Button>
-            <Button
-              variant='primary'
-              className='ms-2'
-              onClick={() => handleClick('/login')}
-            >
-              Login
-            </Button>
-            {/* Link o NavLink  */}
-          </Nav>
-        </NavbarBS.Collapse>
-      </Container>
-    </NavbarBS>
+    <>
+      <Navbar className="navBg"  variant="dark" expand="lg">
+        <Container>
+          <Navbar.Brand as={Link} to="/">
+           
+           <img src="https://live.staticflickr.com/65535/52671878919_2a831d2f56_b.jpg" alt="Code&Beer" className="CodeBeer" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="nav nav-tabs  me-auto mx-auto mb-lg-0 justify-content-end fs-5  ">
+              <Nav.Link as={Link} to="/">
+                Inicio
+              </Nav.Link>
+              <Nav.Link as={Link} to="/AcercaDe">
+                Acerca De Nosotros
+              </Nav.Link>
+            </Nav>
+
+            <Nav className="p-2  ">
+              <Button
+              
+                variant="dark "
+                className="ms-2   "
+                onClick={() => handleClick("/login")}
+              >
+                Login
+              </Button>
+              {/* Link o NavLink  */}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <section>
+        <Outlet></Outlet>
+      </section>
+    </>
   );
 };
 
-export default Navbar;
+export default NavBarCode;
