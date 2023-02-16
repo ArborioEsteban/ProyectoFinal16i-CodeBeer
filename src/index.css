@@ -5,7 +5,8 @@
     color:#ECB365;
 }
 .BotonGuardar{
-    color:#041C32
+    border-radius: 10px;
+    color: #041C32;
 }
 .formDescripcion{
     resize: none;
