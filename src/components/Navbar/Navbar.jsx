@@ -16,23 +16,25 @@ const NavBarCode = () => {
       <Navbar className="navBg"  variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
-           Code&Beer
+           
+           <img src="https://live.staticflickr.com/65535/52671878919_2a831d2f56_b.jpg" alt="Code&Beer" className="CodeBeer" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="nav nav-tabs me-auto mx-auto mb-lg-0 justify-content-end  ">
+            <Nav className="nav nav-tabs  me-auto mx-auto mb-lg-0 justify-content-end fs-5  ">
               <Nav.Link as={Link} to="/">
                 Inicio
               </Nav.Link>
               <Nav.Link as={Link} to="/AcercaDe">
-                Acerca De
+                Acerca De Nosotros
               </Nav.Link>
             </Nav>
 
-            <Nav className="ms-auto mt-3">
+            <Nav className="p-2  ">
               <Button
-                variant="danger"
-                className="ms-2"
+              
+                variant="dark "
+                className="ms-2   "
                 onClick={() => handleClick("/login")}
               >
                 Login
