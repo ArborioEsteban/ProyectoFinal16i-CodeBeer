@@ -1,4 +1,4 @@
-export const validateData = (name,price,description,image)=>{
+export const validateDate = (name,price,description,image)=>{
     if ( !name || !price || !description || !image){
          return false
     }

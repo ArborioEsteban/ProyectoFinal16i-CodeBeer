@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import './App.css'
 //import {ItemsForm} from './components/Admin/Form'
 //import {ItemsTable} from './components/Admin/Table/ItemsTable'
-//import './index.css'
+import './index.css'
 
 
 

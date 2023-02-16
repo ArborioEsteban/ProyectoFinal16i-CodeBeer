@@ -3,6 +3,7 @@ import { useState } from 'react'
 import {Button, Container,Form} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { getRandomId } from '../../../hellpers/getRandomId';
+import { validateDate } from '../../../hellpers/validateDate';
 const baseUrl = process.env.REACT_APP_BASE_URL
 
 
@@ -15,13 +16,23 @@ const ItemsForm = () => {
      
         const handleSubmit = async (e)=>{
             
-            e.preventDeFault();}
+            e.preventDeFault();
+        
+        if (validateDate(name, price, description, image)){
+            //guardo los datos
+        } else{
+            //muestro error
+        }
+        
+    }
 
 
      return (
-            <Form className='bg-dark text-light rounded w-100'>
+            <Form className='bg-dark text-light rounded w-100'
+            onSubmit={handleSubmit}>
+                
               <Container>
-                <h2>Lista de Productos</h2>
+                <h2>Formulario de Productos</h2>
                 <hr />
                 <Form.Group>
                     <Form.Label>Nombre</Form.Label>
@@ -51,10 +62,11 @@ const ItemsForm = () => {
                         rows='3'
                         type='text'
                         value={description}
-                        onChange={(e) => setDescription(e.target.value)} />
+                        onChange={(e) => setDescription(e.target.value)} 
+                        className='formDescripcion'/>
                 </Form.Group>
-                    <div className='text.end'>
-                        <Button type='submit'>Guardar</Button>
+                    <div className='text-end mt-3'>
+                        <Button type='submit' className='BotonGuardar'>Guardar</Button>
                     </div>
                  </Container>
             </Form>
