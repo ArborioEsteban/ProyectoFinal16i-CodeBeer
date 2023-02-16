@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {  Button, Col,  Container,  Offcanvas,  Row } from 'react-bootstrap'
-import axios from 'axios';
+import axios, { all } from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
 import './ProductGrid.css';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
@@ -12,8 +12,10 @@ import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
-// inicializar con valores del localStorage
+
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
+
+
 let totalLS=0; 
 let countLS=0;
 
@@ -23,6 +25,8 @@ carritoLS.forEach(element => {
 
 carritoLS.forEach(element => {
    countLS = countLS + element.quantity; 
+  
+  
 });
 
 
@@ -31,6 +35,7 @@ const ProductGrid = () => {
   const [products,setItems] = useState([]);
 
     // states para el carrito
+
     const [allProducts, setAllProducts] = useState(carritoLS);
     const [total, setTotal] = useState(totalLS);
     const [countProducts, setCountProducts] = useState(countLS);
@@ -38,13 +43,12 @@ const ProductGrid = () => {
     
     
 
-
     const saveLS = () =>{
       localStorage.setItem("carrito", JSON.stringify(allProducts));
+      
 
     }
 
-    // actualizar localStorage por cada cambio en los productos del LocalStorage
     useEffect(() => {
       saveLS();
     }, [allProducts])
@@ -60,20 +64,6 @@ const ProductGrid = () => {
         
         
       }, []);
-      
-      
-      
-      
-
-         
-          
-          
-
-      
-      
-      
-
-      
 
       const onRemoveProduct = products => {
         const results = allProducts.filter(
@@ -91,7 +81,7 @@ const ProductGrid = () => {
         setTotal(0);
         setCountProducts(0);
         setAllProducts([]);
-        // localStorage.setItem("carrito", JSON.stringify([])); 
+        
       };
       
 

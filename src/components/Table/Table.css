@@ -1,10 +1,10 @@
-/* body {
+body {
 	background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
-	  url("https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?w=1060&t=st=1675966033~exp=1675966633~hmac=a9fe388609c359815830a433980689a9d30ecccd8b710cd39ae71a13c1081e06");
+	  url("https://images.adsttc.com/media/images/5a32/4c74/b22e/385c/9e00/009f/large_jpg/250917__-__Antares_Guemes_ph_G_Viramonte-7896.jpg?1513245806");
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-  } */
+  }
 
   .textBienvenidos{
     display: block;
@@ -45,23 +45,28 @@
 }
 
 #optionForm{
-  background-color:black !important;
+  background-color:rgb(53, 51, 51) !important;
+  color: white;
 }
 
 #optionForm:active:hover:focus{
-  background-color: black !important;
+  background-color: rgba(28, 28, 28, 0.654) !important;
+  color: white;
 
 }
 
 select{
   background-color: black !important;
+  color: white;
 
 }
 
 option{
   background-color: black !important;
+  color: white;
 }
 
 option:checked:hover:focus{
   background-color: black !important;
+  color: white;
 }

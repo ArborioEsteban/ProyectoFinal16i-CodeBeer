@@ -9,9 +9,11 @@
     border-radius: 10px;
 }
 .cardProductos{
-    background-color: #0646635c;
+    background-color: #06466338 !important;
     color: #ECB365;
     border-radius: 10px;
+	border-color: #ECB365;
+	border: 2px solid #ECB365;
 	min-height: 18rem;
 	
 }
@@ -21,8 +23,8 @@
 }
 
 .popOverInfo{
-	background-color: #064663;
-    color: #ECB365;
+	background-color: #041C32 ;
+    color: #ecb365;
     border-radius: 10px;
 }
 

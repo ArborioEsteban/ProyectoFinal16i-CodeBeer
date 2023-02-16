@@ -6,8 +6,10 @@ body {
 	background-attachment: fixed;
   }
 
+ 
+
   #myCartBtn{
-	background-color: #ecb46591;
+	background-color: #ecb465df;
 	border-radius: 20%;
     margin-left: 1rem;
     margin-bottom: 1rem;
