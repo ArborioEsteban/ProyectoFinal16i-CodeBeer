@@ -20,8 +20,48 @@ const ItemsForm = () => {
         
         if (validateDate(name, price, description, image)){
             //guardo los datos
+           const res = await axios.post(`${baseUrl}/items`,{
+                id:getRandomId(),
+                name:name,
+                price:price,
+                description:description,
+                image:image,
+            })
+            
+            if(res.status === 201){
+                Swal.fire ({
+                title:'Operacion exitosa',
+                text:'Elemento agregado correctamente',
+                icon:'success',
+                timer:2000,
+                showCancelButton: false,
+                showConfirmButton: false,
+            }); 
+            SetName("");
+                setPrice("");
+                setDescription("");
+                setImage("")  
+ 
+
+        }   else{
+            Swal.fire ({
+                title:'Error',
+                text:'Ocurrio un error al guardar el elemento,que es: ${res.statusText} ',
+                icon:'success',
+                timer:2000,
+                showCancelButton: false,
+                showConfirmButton: false,
+            });  
+        }  
         } else{
-            //muestro error
+            Swal.fire ({
+                title:'Error',
+                text:'Revise los campos',
+                icon:'error',
+                timer:2000,
+                showCancelButton: false,
+                showConfirmButton: false,
+            });   
         }
         
     }
