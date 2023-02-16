@@ -1,53 +1,24 @@
+import {axios} from 'axios';
 import { useState } from 'react'
 import {Button, Container,Form} from 'react-bootstrap';
-import {validateData} from './hellpers/validateData';
-
+import Swal from 'sweetalert2';
+import { getRandomId } from '../../../hellpers/getRandomId';
 const baseUrl = process.env.REACT_APP_BASE_URL
 
+
+
 const ItemsForm = () => {
-        const[name,SetName]= useState();
+    const[name,SetName]= useState();
         const[price,setPrice]=useState();
         const[image,setImage]=useState();
         const[description,setDescription]=useState(); 
      
         const handleSubmit = async (e)=>{
             
-            e.preventDeFault();
-            
-            if (validateData(name,price,description,image)){
-                //si es correcto, guarda los datos  
-                const res = await axios.post('${baseUrl}/items',{
-                    id: getRandomId(),
-                    name:name,
-                    description:description,
-                    image:image
-                    });
-            } if (res.status === 201){
-            Swal.fire ({
-                title:'Operacion exitosas',
-                text:'Elemento agregado correctamente',
-                icon:'success',
-                timer:2000,
-                showCancelButton: false,
-                showConfirmButton: false,
-            });   
-                SetName("");
-                setPrice("");
-                setDescription("");
-                setImage("")  
-    }else{
-        Swal.fire ({
-            title:'Error',
-            text:'Ocurrio un error al guardar el elemento, que es : ${res.statusText}',
-            icon:'success',
-            timer:2000,
-            showCancelButton: false,
-            showConfirmButton: false,
-        });
-    } 
-}   
-  }
-    return (
+            e.preventDeFault();}
+
+
+     return (
             <Form className='bg-dark text-light rounded w-100'>
               <Container>
                 <h2>Lista de Productos</h2>
@@ -87,7 +58,7 @@ const ItemsForm = () => {
                     </div>
                  </Container>
             </Form>
-  )
-
+)
+}
 
 export default ItemsForm
