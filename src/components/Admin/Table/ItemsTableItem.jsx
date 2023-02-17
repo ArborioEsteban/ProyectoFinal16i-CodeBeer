@@ -6,9 +6,11 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 
 
 const ItemsTableItem = (props) => {
-    const {id,name,price,image,description}= props;
+    const {id,name,price,image,description, setModifyingItem}= props;
 
-   const handleEdit = ()=>{}
+   const handleEdit = ()=>{
+    setModifyingItem (id)
+   }
 
    const handleDelete = ()=>{
     Swal.fire({
@@ -29,6 +31,8 @@ const ItemsTableItem = (props) => {
                 timer:2000,
                 showCancelButton: false,
                 showConfirmButton: false,
+            }).then(()=>{
+                window.location.reload();
             });
         } else {
             Swal.fire({

@@ -6,7 +6,8 @@ import './table.css'
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-const ItemsTable = () => {
+const ItemsTable = (props) => {
+  const {setModifyingItem}= props;
 
     const[items , SetItems] = useState ([]);
       useEffect (() =>{
@@ -34,7 +35,10 @@ const ItemsTable = () => {
         </thead>
         <tbody>
           {items.map((elemento)=>{
-            return  <ItemsTableItem key = {elemento.id} {...elemento}/>
+            return  <ItemsTableItem
+             key = {elemento.id} 
+             {...elemento}
+            setModifyingItem={setModifyingItem}/>
               
           })}
           
