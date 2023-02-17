@@ -11,7 +11,7 @@ const ItemsTable = () => {
     const[items , SetItems] = useState ([]);
       useEffect (() =>{
         const itemsFetch = async (e) => {
-          const data = await axios.get ('${baseUrl}/items}');
+          const data = await axios.get (`${baseUrl}/items`);
           SetItems(data.data)
         };
         itemsFetch ();
@@ -21,7 +21,7 @@ const ItemsTable = () => {
     
     return (
 
-        <Table striped hover = 'mt-3 bg-light rounded'>
+        <Table responsive striped hover = 'mt-3 bg-light rounded'>
         <thead>
           <tr>
             <th>#</th>
