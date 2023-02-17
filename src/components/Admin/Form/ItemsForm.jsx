@@ -9,7 +9,7 @@ const baseUrl = process.env.REACT_APP_BASE_URL
 
 
 const ItemsForm = (props) => {
-        const {modifyingItem, setModifyingItem} = props;
+        const {modifyingItem} = props;
 
     const[name,SetName]= useState();
         const[price,setPrice]=useState();
@@ -53,13 +53,10 @@ const ItemsForm = (props) => {
                     timer:2000,
                     showCancelButton: false,
                     showConfirmButton: false,
+                }).then(()=>{
+                    window.location.reload();
                 }); 
-                SetName("");
-                    setPrice("");
-                    setDescription("");
-                    setImage("");
-                    setModifyingItem(null) ;
-     
+            
     
             }   else{
                 Swal.fire ({
@@ -71,9 +68,10 @@ const ItemsForm = (props) => {
                     showConfirmButton: false,
                 });  
             }  
-
+        
+            return;
             }
-        //guardo los datos
+        //caso crear
            const res = await axios.post(`${baseUrl}/items`,{
                 id:getRandomId(),
                 name:name,
@@ -90,12 +88,9 @@ const ItemsForm = (props) => {
                 timer:2000,
                 showCancelButton: false,
                 showConfirmButton: false,
-            }); 
-            SetName("");
-                setPrice("");
-                setDescription("");
-                setImage("")  
- 
+            }).then(()=>{
+                window.location.reload();
+            });
 
         }   else{
             Swal.fire ({
@@ -160,7 +155,7 @@ const ItemsForm = (props) => {
                         className='formDescripcion'/>
                 </Form.Group>
                     <div className='text-end mt-3'>
-                        <Button type='submit' className='BotonGuardar'>Guardar</Button>
+                        <Button type='submit' className='botonGeneral'>Guardar</Button>
                     </div>
                  </Container>
             </Form>

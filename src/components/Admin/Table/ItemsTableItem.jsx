@@ -57,8 +57,8 @@ const ItemsTableItem = (props) => {
     </td>
     <td>{description}</td>
     <td>
-        <Button variant='primary' className='me-1' onClick={handleEdit}>Editar</Button>
-        <Button variant='danger' onClick={handleDelete}>Borrar</Button>
+        <Button  className='me-1 botonGeneral' onClick={handleEdit}>Editar</Button>
+        <Button className='botonGeneral' variant='danger' onClick={handleDelete}>Borrar</Button>
     </td>
   </tr>
   )

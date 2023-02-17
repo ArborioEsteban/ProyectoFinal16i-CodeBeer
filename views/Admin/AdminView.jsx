@@ -8,7 +8,7 @@ const AdminView =() =>{
         <Container className='my-5'>
           <h1 className="text-center">Panel de Adinistracion</h1>
            <hr/>
-           <ItemsForm modifyingItem ={modifyingItem} setModifyingItem={setModifyingItem}/>
+           <ItemsForm modifyingItem ={modifyingItem} />
            <ItemsTable setModifyingItem={setModifyingItem}/>
         </Container>
     )
