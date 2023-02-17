@@ -50,9 +50,9 @@ const FormLogin = () => {
                   placeholder="****************"
                 />
               </Form.Group>
-              <a href="" className="icons">
+              <div>
                 ¿Olvido su contraseña?
-              </a>
+              </div>
               <div className="text-center">
                 <Button
                   type="submit"
