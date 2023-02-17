@@ -1,6 +1,8 @@
 import {axios} from 'axios'
 import { useEffect, useState } from "react"
 import { Table } from 'react-bootstrap';
+import ItemsTableItem from './ItemsTableItem';
+import './table.css'
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
@@ -32,14 +34,8 @@ const ItemsTable = () => {
         </thead>
         <tbody>
           {items.map((elemento)=>{
-            return <tr>
-              <td>{elemento.id}</td>
-              <td>{elemento.name}</td>
-              <td>{elemento.price}</td>
-              <td>{elemento.image}</td>
-              <td>{elemento.description}</td>
-             
-            </tr>
+            return  <ItemsTableItem key = {elemento.id} {...elemento}/>
+              
           })}
           
          </tbody>
