@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import { Button } from "react-bootstrap";
-import { useForm } from "react-hook-form";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { validateData } from "../../helpers/validateData";
+import { Button, Container, Row, Col } from "react-bootstrap";
+
+
+
+
+
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope, HiUser } from "react-icons/hi2";
 
 const FormSignIn = () => {
-  const { register, handleSubmit: handleSignIn } = useForm();
+  
+  
+  const [nombreRegistro, setNombreRegistro] = useState();
+  const [emailRegistro, setEmailRegistro] = useState();
+  const [contraseñaRegistro, setContraseñaRegistro] = useState();
 
-  const handleSubmit = (data) => {
-    console.log(data);
-  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    
+    if(validateData(nombreRegistro, emailRegistro, contraseñaRegistro)){
+      console.log("es valido");
+    }
+    else{
+      console.log("no valido");
+    }
+  }
+
+  
 
   return (
     <div className="container">
@@ -24,7 +40,7 @@ const FormSignIn = () => {
           <h2 className="my-3 ms-2 ">Registrate</h2>
         </div>
         <Form
-          onSubmit={handleSignIn(handleSubmit)}
+          onSubmit={handleSubmit}
           className="form container py-4 px-4"
         >
           <Form.Group className="mt-3" controlId="Nombre">
@@ -33,8 +49,9 @@ const FormSignIn = () => {
               Ingrese su nombre
             </Form.Label>
             <Form.Control
-              {...register("nombreRegistro", { required: true, maxLength: 20 })}
               type="text"
+              value={nombreRegistro}
+              onChange={(e) =>setNombreRegistro(e.target.value)}
               placeholder="Ingrese su nombre"
             />
           </Form.Group>
@@ -45,8 +62,9 @@ const FormSignIn = () => {
               Ingrese su Email
             </Form.Label>
             <Form.Control
-              {...register("correoRegistro", { required: true, maxLength: 20 })}
               type="Email"
+              value={emailRegistro}
+              onChange={(e)=>setEmailRegistro(e.target.value)}
               placeholder="Ingrese su email"
             />
           </Form.Group>
@@ -56,8 +74,9 @@ const FormSignIn = () => {
                   Ingrese su contraseña
                 </Form.Label>
                 <Form.Control
-                  {...register("contraseña", { required: true, maxLength: 20 })}
                   type="password"
+                  value={contraseñaRegistro}
+                  onChange={(e)=>setContraseñaRegistro(e.target.value)}
                   placeholder="****************"
                 />
               </Form.Group>
@@ -71,9 +90,11 @@ const FormSignIn = () => {
               label="Al hacer click aqui acepta nuestros terminos y condiciones"
             />
           </Form.Group>
+      
           <div className="container text-center">
+            
             <Button
-              type="submit"
+           type="submit"
               className="bg-transparent mt-3"
               id="botonLogin"
             >
@@ -81,6 +102,7 @@ const FormSignIn = () => {
               <HiOutlineClipboardList className="icons ms-2" />
             </Button>
           </div>
+          
         </Form>
 
         <div className="text-center">
@@ -130,6 +152,6 @@ const FormSignIn = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default FormSignIn;
