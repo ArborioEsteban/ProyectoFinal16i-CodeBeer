@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Button, FloatingLabel, Form } from "react-bootstrap";
+
+import { Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -10,46 +10,19 @@ import "./Table.css";
 const SelectTable = () => {
 
   const { register, handleSubmit: handleRHF } = useForm();
-  const [data, setData] = useState("");
-  const [mesa, setMesa] = useState();
-
-  // const handleSubmit = (data) => {
-
-  //   setData(JSON.stringify(data));
-  //   console.log(data);
-  //   sessionStorage.setItem('mesa', data);
-  //   sessionStorage.getItem('mesa');
-  //   console.log(mesa);
-  //   if(data){
-  //     Swal.fire({
-  //       title: 'Bienvenido a Code&Beer',
-  //       timer: 2000,
-  //       showCancelButton: false,
-  //       showConfirmButton: false,
-  //       background: '#ecb465',
-  //     }).then(() => {
-  //       navigate('/products');
-  //     });
-  //   } else {
-  //     Swal.fire({
-  //       title: 'Seleccione una Mesa',
-  //       timer: 2000,
-  //       showCancelButton: false,
-  //       showConfirmButton: false,
-  //     })
-  //   }
-      
-    
-  // };
-
-  const navigate = useNavigate();
+  // const [data, setData] = useState("");
+  // const [mesa, setMesa] = useState();
 
   
 
+  const navigate = useNavigate();
+
+  const userLS = localStorage.getItem("user");
+
   return (
     <div className="d-flex  justify-content-center flex-column text-center my-3 vh-100">
-      <h2 className="textBienvenidos my-5">
-        Bienvenido "USUARIO" a Code & Beer
+      <h2 className="textBienvenidos my-5 g-5">
+        Bienvenido {userLS}
       </h2>
       
 
@@ -71,9 +44,9 @@ const SelectTable = () => {
       className="bg-transparent fs-3 my-5 text-center align-content-center"
 
       >
-        <label>Seleccione su Mesa</label>
+        <label className='mt-5 bg-transparent align-content-center m-auto text-center w-100'>Seleccione su Mesa</label>
         <select {...register("numMesa", { required: true })}
-        className='mt-5 bg-transparent align-content-center m-auto text-center text-white w-50'>
+        className='mt-5 bg-transparent align-content-center m-auto text-center w-50'>
           <option value=""  className='bg-dark align-content-center text-center text-white'></option>
           <option value="1"  className='bg-dark align-content-center m-auto text-center text-white'>1</option>
           <option value="2" className='bg-dark align-content-center m-auto text-center text-white'>2</option>

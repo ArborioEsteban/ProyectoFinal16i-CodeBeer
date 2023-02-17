@@ -39,6 +39,7 @@ const ProductGrid = () => {
     const [allProducts, setAllProducts] = useState(carritoLS);
     const [total, setTotal] = useState(totalLS);
     const [countProducts, setCountProducts] = useState(countLS);
+
     // state para la orden, en espera y pedido realizado
     const [stateOrder, setstateOrder] = useState("en Espera");
 
@@ -98,7 +99,7 @@ const ProductGrid = () => {
           color: '#ecb465',
           allowOutsideClick:false,
           allowEscapeKey:false,
-          confirmButtonText:'Realizar nuevo pedido',
+          confirmButtonText:'Continuar',
           confirmButtonColor:'#ecb465',
           background: '#064663 url(https://i.pinimg.com/originals/33/7d/11/337d113e8745328fb8d68c951c49eec6.gif)',
           backdrop: `
@@ -109,7 +110,6 @@ const ProductGrid = () => {
           `
         }).then(() => {
           Swal.fire({
-
             title: 'Gracias por su compra!',
             timer: 3000,
             color: '#ecb465',
