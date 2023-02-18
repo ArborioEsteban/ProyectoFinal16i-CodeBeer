@@ -141,7 +141,7 @@ const ProductGrid = () => {
     <>
 
         
-      <div className='text-end fixed-top mt-3 mx-2 container'>
+      <div className='text-end fixed-bottom  mb-5 me-2 container'>
         <Button className="w-25" id='myCartBtn' onClick={handleShow}>
           {countProducts}<AiOutlineShoppingCart/>
         </Button>

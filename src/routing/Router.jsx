@@ -10,6 +10,7 @@ import Error404 from '../components/Error404';
 const Router = () => {
   return (
     <BrowserRouter>
+    <NavBarCode></NavBarCode>
       <Routes>
         {/* <Route path="/" element={ <App/> }/> */}
         <Route path="/products" element={ <ProductGrid /> }/>
