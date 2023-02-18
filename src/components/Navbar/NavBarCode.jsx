@@ -34,7 +34,8 @@ const NavBarCode = () => {
               <Button
               
                 variant="dark "
-                className="ms-2   "
+                className="ms-2"
+                id="myloginBtn"
                 onClick={() => handleClick("/login")}
               >
                 Login
