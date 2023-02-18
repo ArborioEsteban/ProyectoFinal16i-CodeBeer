@@ -3,6 +3,7 @@ import { Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import NavBarCode from "../Navbar/NavBarCode";
 
 import "./Table.css";
 
@@ -20,8 +21,10 @@ const SelectTable = () => {
   const userLS = localStorage.getItem("user");
 
   return (
-    <div className="d-flex  justify-content-center flex-column text-center my-3 vh-100">
-      <h2 className="textBienvenidos my-5 g-5">
+    <>
+      <NavBarCode></NavBarCode>
+    <div className="d-flex  justify-content-center flex-column text-center my-2 vh-100">
+      <h2 className="textBienvenidos my-2">
         Bienvenido {userLS}
       </h2>
       
@@ -30,6 +33,7 @@ const SelectTable = () => {
         let nmesa = data.numMesa;
         
         sessionStorage.setItem('mesa', nmesa);
+        
         Swal.fire({
                 title: 'Bienvenido a Code&Beer',
                 timer: 2000,
@@ -63,6 +67,7 @@ const SelectTable = () => {
         >Continuar</Button>
       </form>
     </div>
+    </>
   );
 };
 

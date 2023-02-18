@@ -6,6 +6,7 @@ import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 import Swal from 'sweetalert2';
 
 import './ProductGrid.css';
+import NavBarCode from '../Navbar/NavBarCode';
 
 
 
@@ -14,6 +15,7 @@ const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 const userLS = localStorage.getItem("user");
 const numMesaSStorage = sessionStorage.getItem('mesa');
+
 
 
 
@@ -139,6 +141,7 @@ const ProductGrid = () => {
 
   return (
     <>
+    <NavBarCode></NavBarCode>
 
         
       <div className='text-end fixed-bottom  mb-5 me-2 container'>
