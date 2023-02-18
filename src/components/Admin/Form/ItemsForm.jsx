@@ -23,13 +23,13 @@ const ItemsForm = (props) => {
         const[available,setAvailable]=useState(); 
         
         useEffect(()=>{
-             const fetchItems = async () =>{
+                    const fetchItems = async () =>{
                     const res = await axios.get(`${baseUrl}/products`);
                     const items = res.data;
                     
                     const itemToModify = items.find (
-                        element => element.id === modifyingItem);
-
+                        (element) => element.id === modifyingItem);
+                        
                     SetName (itemToModify.name);
                     setPrice (itemToModify.price);
                     setDescription (itemToModify.description);
@@ -39,12 +39,11 @@ const ItemsForm = (props) => {
                     setQuantity (itemToModify.quantity);
                 };
                 if(modifyingItem){
-                    fetchItems()
+                    fetchItems();
                 } 
-        }, [modifyingItem])
+        }, [modifyingItem]);
      
         const handleSubmit = async (e)=>{
-            
             e.preventDeFault();
         
         if (validateDate(name, price, description, image)){
@@ -52,7 +51,7 @@ const ItemsForm = (props) => {
 
             //Caso Editar
             if (modifyingItem){
-                const res =await axios.put (`${baseUrl}/products/${modifyingItem}`, { 
+                const res = await axios.put (`${baseUrl}/products/${modifyingItem}`, { 
                     id:getRandomId(),
                     name:name,
                     price:price,
@@ -60,10 +59,10 @@ const ItemsForm = (props) => {
                     image:image,
                     category:category,
                     available:available, 
-                    quantity:1,
+                    quantity:quantity,
 
                 });
-                if(res.status === 201){
+                if(res.status === 200){
                     Swal.fire ({
                     title:'Operacion exitosa',
                     text:'Elemento modificado correctamente',
@@ -80,7 +79,7 @@ const ItemsForm = (props) => {
                 Swal.fire ({
                     title:'Error',
                     text:`Ocurrio un error al editar el elemento,que es: ${res.statusText} `,
-                    icon:'success',
+                    icon:'error',
                     timer:2000,
                     showCancelButton: false,
                     showConfirmButton: false,
@@ -89,6 +88,7 @@ const ItemsForm = (props) => {
         
             return;
             }
+
         //caso crear
            const res = await axios.post(`${baseUrl}/products`,{
                 id:getRandomId(),
@@ -98,7 +98,8 @@ const ItemsForm = (props) => {
                 image:image,
                 category:category,
                 available:available,
-            })
+                quantity:quantity,
+            });
             
             if(res.status === 201){
                 Swal.fire ({
@@ -115,8 +116,8 @@ const ItemsForm = (props) => {
         }   else{
             Swal.fire ({
                 title:'Error',
-                text:`Ocurrio algun error ,Revise los campos. ${res.statusText} `,
-                icon:'success',
+                text:`Ocurrio algun error ,que es: ${res.statusText} `,
+                icon:'error',
                 timer:2000,
                 showCancelButton: false,
                 showConfirmButton: false,

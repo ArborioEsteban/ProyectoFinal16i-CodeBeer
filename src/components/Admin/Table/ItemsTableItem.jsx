@@ -10,7 +10,7 @@ const ItemsTableItem = (props) => {
     const {id,name,price,image, category,description, available,quantity, setModifyingItem}= props;
 
    const handleEdit = ()=>{
-    console.log('editar', id);
+    
     setModifyingItem(id);
    }
 

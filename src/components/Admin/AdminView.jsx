@@ -13,7 +13,7 @@ const AdminView = () => {
       <ItemsForm modifyingItem={modifyingItem} />
       <ItemsTable setModifyingItem={setModifyingItem}/>
     </Container>
-  )
-}
+  );
+};
 
 export default AdminView
