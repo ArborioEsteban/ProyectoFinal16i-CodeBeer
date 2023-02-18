@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-
+import AcercaDe from '../components/AcercaDe';
 import NavBarCode from '../components/Navbar/Navbar';
 import Error404 from '../components/Error404';
 
@@ -15,9 +15,9 @@ const Router = () => {
      
       <Routes>
         <Route path='/' element={ <NavBarCode /> } >
-     
       
-        
+      
+        <Route path='AcercaDe' element={ <AcercaDe /> } />
         <Route path='Error404' element={ <Error404 /> } />
         <Route path='*' element={ <Navigate replace to="Error404"/> }/>
 
