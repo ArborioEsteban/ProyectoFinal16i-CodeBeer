@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Card, OverlayTrigger, Popover } from 'react-bootstrap';
-import './ProductItem.css';
-import { AiFillPlusCircle, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
+import './ProductItem.css';
 
 
 

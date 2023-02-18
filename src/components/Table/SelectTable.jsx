@@ -44,7 +44,7 @@ const SelectTable = () => {
       className="bg-transparent fs-3 my-5 text-center align-content-center"
 
       >
-        <label className='mt-5 bg-transparent align-content-center m-auto text-center w-100'>Seleccione su Mesa</label>
+        <label className='textBienvenidos mt-5 bg-transparent align-content-center m-auto text-center w-100'>Seleccione su Mesa</label>
         <select {...register("numMesa", { required: true })}
         className='mt-5 bg-transparent align-content-center m-auto text-center w-50'>
           <option value=""  className='bg-dark align-content-center text-center text-white'></option>
