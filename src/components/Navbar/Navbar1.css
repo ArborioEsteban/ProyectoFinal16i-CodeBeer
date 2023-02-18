@@ -1,21 +1,16 @@
 .navBg{
-  background-color: #030207c0;
+  background-color: #041c32ce;
   position: fixed;
 }
-
 
 .CodeBeer{
   width: 100px;
 }
 
-
-
- .btn{
-  background: rgba(235, 8, 8, 0.537) !important;
- 
+ /* .btn{
+  background: rgba(235, 8, 8, 0.537);
   border-radius: 40px;
-  
- }
+ }  */
 
 a.nav-link{
  color: rgba(253, 253, 253, 0.798);
@@ -28,9 +23,42 @@ span.navbar-toggler-icon{
   height: 30px;
 }
 
-button.ms-2.btn.btn-dark{
+/* button.ms-2.btn.btn-dark{
   color: white;
   font-size: 20px;
 margin: 15px;
+} */
+
+#loginButton{
+	background-color: #ecb46591;
+	border-radius: 10%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+	border:1px solid #ecb465;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
 }
 
+#myloginBtn{
+	background-color: transparent;
+	border-radius: 5%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+	border:1px solid #ecb465;
+	cursor:pointer;
+	color:#ecb465;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
+}
+#myloginBtn:focus:hover{
+  background-color: #ecb465;
+  box-shadow: 3px 4px 0px 0px #ecb465;
+  color: white;
+
+}

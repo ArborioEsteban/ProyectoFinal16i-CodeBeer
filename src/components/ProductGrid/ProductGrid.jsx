@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import {  Button, Col,  Container,  Offcanvas,  Row } from 'react-bootstrap'
 import axios, { all } from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
-import './ProductGrid.css';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 import Swal from 'sweetalert2';
 
+import './ProductGrid.css';
 
 
 
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
+const baseUrl = process.env.REACT_APP_BASE_URL;
 const userLS = localStorage.getItem("user");
 const numMesaSStorage = sessionStorage.getItem('mesa');
 
@@ -21,6 +21,10 @@ const numMesaSStorage = sessionStorage.getItem('mesa');
 let totalLS=0; 
 let countLS=0;
 
+console.log(carritoLS);
+
+
+if (carritoLS instanceof Array) {
 carritoLS.forEach(element => {
   totalLS = totalLS + (element.price * element.quantity)
 });
@@ -28,6 +32,7 @@ carritoLS.forEach(element => {
 carritoLS.forEach(element => {
    countLS = countLS + element.quantity; 
 });
+}
 
 
 
@@ -37,6 +42,7 @@ const ProductGrid = () => {
     // states para el carrito
 
     const [allProducts, setAllProducts] = useState(carritoLS);
+    
     const [total, setTotal] = useState(totalLS);
     const [countProducts, setCountProducts] = useState(countLS);
 
@@ -61,6 +67,7 @@ const ProductGrid = () => {
         const itemsFetch = async () => {
           const data = await axios.get(`${baseUrl}/products`);
           setItems(data.data);
+          
         };
         itemsFetch();
         
@@ -134,7 +141,7 @@ const ProductGrid = () => {
     <>
 
         
-      <div className='text-end fixed-top mt-3 mx-2 container'>
+      <div className='text-end fixed-bottom  mb-5 me-2 container'>
         <Button className="w-25" id='myCartBtn' onClick={handleShow}>
           {countProducts}<AiOutlineShoppingCart/>
         </Button>
