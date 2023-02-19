@@ -1,5 +1,5 @@
 import Form from "react-bootstrap/Form";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
 
 import { Button } from "react-bootstrap";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
@@ -8,10 +8,33 @@ import { HiEnvelope } from "react-icons/hi2";
 import "./FormLogin.css";
 
 const FormLogin = () => {
-  const { register, handleSubmit: handleLogin } = useForm();
+ 
+  const [emailLogin, setEmailLogin] = useState();
+  const [contraseñaLogin, setContraseñaLogin] = useState();
 
-  const handleSubmit = (data) => {
-    console.log(data);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+     // Validar email
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(emailLogin)) {
+       setEmailError(true);
+       return;
+     }
+     setEmailError(false);
+ 
+  // Validar contraseña
+  const passwordRegex = /^(?=.*[a-zA-Z]{2,})(?=.*\d{2,}).{6,}$/;
+  if (!passwordRegex.test(contraseñaLogin) || contraseñaLogin.lenght < 6) {
+    setPasswordError(true);
+    return;
+   }
+   setPasswordError(false);
+
+   console.log([emailLogin, contraseñaLogin]);
   };
 
   return (
@@ -24,7 +47,7 @@ const FormLogin = () => {
           </div>
           <div className="form">
             <Form
-              onSubmit={handleLogin(handleSubmit)}
+              onSubmit={handleSubmit}
               className="container px-4 pt-5"
             >
               <Form.Group className="container " controlId="email">
@@ -33,10 +56,12 @@ const FormLogin = () => {
                   Ingrese su Email
                 </Form.Label>
                 <Form.Control
-                  {...register("email", { required: true, maxLength: 20 })}
-                  type="email"
-                  placeholder="Coloque un Email"
+                  type="Email"
+                  value={emailLogin}
+                  onChange={(e)=>setEmailLogin(e.target.value)}
+                  placeholder="Ingrese su email"
                 />
+                 {emailError && <span className="helper-text">El formato del email no es válido.</span>}
               </Form.Group>
 
               <Form.Group className="container my-5" controlId="Password">
@@ -45,10 +70,12 @@ const FormLogin = () => {
                   Ingrese su contraseña
                 </Form.Label>
                 <Form.Control
-                  {...register("contraseña", { required: true, maxLength: 20 })}
-                  type="password"
-                  placeholder="****************"
-                />
+                   type="password"
+                   value={contraseñaLogin}
+                   onChange={(e)=>setContraseñaLogin(e.target.value)}
+                   placeholder="****************"
+                 />
+                 {passwordError && <span className="helper-text">La contraseña debe contener al menos 2 caracteres alfabéticos, 2 caracteres numéricos y tener una longitud mínima de 6 caracteres.</span>}
               </Form.Group>
               <div>
                 ¿Olvido su contraseña?
