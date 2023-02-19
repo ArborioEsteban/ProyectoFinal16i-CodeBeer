@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
 import ProductGrid from './components/ProductGrid/ProductGrid';
