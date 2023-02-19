@@ -1,3 +1,5 @@
+
+
 import "./AcercaDe.css";
 
 const AcercaDe = () => {
@@ -8,7 +10,7 @@ const AcercaDe = () => {
       </h2>
       <div className="container py-5 ">
         <div className="  ">
-          <div className="  pe-3 MG">
+          <div className="   MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre:Medina Juan Carlos
@@ -28,7 +30,7 @@ const AcercaDe = () => {
             />
           </div>
 
-          <div className=" pe-3 MG">
+          <div className="  MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre: Esteban Arborio
@@ -48,7 +50,7 @@ const AcercaDe = () => {
             />
           </div>
 
-          <div className=" pe-3 MG">
+          <div className="  MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre:Ruben
@@ -68,7 +70,7 @@ const AcercaDe = () => {
             />
           </div>
 
-          <div className=" pe-3 MG">
+          <div className="  MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre:Lancioni Florencia Noelia
@@ -88,7 +90,7 @@ const AcercaDe = () => {
             />
           </div>
 
-          <div className=" pe-3 MG">
+          <div className="  MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre:Paula Guillen
@@ -108,7 +110,7 @@ const AcercaDe = () => {
             />
           </div>
 
-          <div className=" pe-3 MG">
+          <div className="  MG">
             <ul className="list-group">
               <li className="list-group-item list-group-item-primary">
                 Nombre:Candela Mercado
@@ -143,109 +145,8 @@ const AcercaDe = () => {
           ></iframe>
         </div>
       </section>
-  
 
-  
-      <section id="bodyFormularioContacto ">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12">
-              <form
-                className="Formulario1 needs-validation"
-                onsubmit="validar()"
-                id="formContacto"
-                novalidate
-              >
-                <h3 className="display-5 text-dark text-center FC">
-                  Formulario Contacto
-                </h3>
-
-                <div className="form-group">
-                  <label for="nombreContacto" className="form-label">
-                    Nombre
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Nombre completo"
-                    className="form-control"
-                    required
-                    id="nombreContacto"
-                    name="nombre"
-                  />
-                  <div className="valid-feedback">Todo Bien</div>
-                  <div className="invalid-feedback">
-                    Es Necesario Poner El Nombre
-                  </div>
-
-                  <div>
-                    <label>Direccion</label>
-                    <input
-                      type="text"
-                      placeholder="Domicilio"
-                      className="form-control"
-                      required
-                      id="direccion"
-                      name="direccion"
-                    />
-                    <div className="valid-feedback">Todo Bien</div>
-                    <div className="invalid-feedback">
-                      Es Necesario Poner La Direccion
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <label for="telefonoContacto" className="form-label">
-                    Telefono
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Numero de celular"
-                    className="form-control"
-                    id="telefonoContacto"
-                    name="celular"
-                    required
-                  />
-                  <div className="valid-feedback">Todo Bien</div>
-                  <div className="invalid-feedback">
-                    Es Necesario Poner un celular
-                  </div>
-                </div>
-                <div>
-                  <label for="emailContacto" className="form-label">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="form-control"
-                    id="emailContacto"
-                    name="email"
-                    required
-                  />
-                  <div className="valid-feedback">Todo Bien</div>
-                  <div className="invalid-feedback">
-                    Es Necesario Poner email
-                  </div>
-                </div>
-                <div className="my-4">
-                  <textarea
-                    name="Mensaje"
-                    className="form-control"
-                    placeholder="Escriba aqui su mensaje"
-                  >
-                    
-                  </textarea>
-                </div>
-                <div className="form-group">
-                  <button type="submit" className="btn btn-dark form-control">
-                    Enviar
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </>
   );
 };
