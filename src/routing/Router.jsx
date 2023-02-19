@@ -22,7 +22,7 @@ const Router = () => {
         <Route path='/' element={ <NavBarCode /> } >
         </Route>
         
-        <Route path="/" element={<LoginPage/>}  />
+        <Route path="LoginPage" element={<LoginPage/>}  />
         <Route path="/SignInPage" element={<SignInPage/>}  />
         <Route path='*' element={ <Error404 /> } />
         {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}
