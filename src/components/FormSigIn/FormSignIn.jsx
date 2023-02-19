@@ -9,23 +9,32 @@ import { HiEnvelope, HiUser } from "react-icons/hi2";
 const FormSignIn = () => {
 
   const [nombreRegistro, setNombreRegistro] = useState();
+  const [apellidoRegistro, setApellidoRegistro] = useState();
   const [emailRegistro, setEmailRegistro] = useState();
   const [contraseñaRegistro, setContraseñaRegistro] = useState();
 
   //const para validar errores en campo email y password
   const [nombreError, setNombreError] = useState(false);
+  const [apellidoError, setApellidoError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
    
-    const nombreRegex = /^[a-zA-Z]{6,20}$/;
-    if(!nombreRegex.test(nombreRegistro.trim())){
+    const textoRegex = /^[a-zA-Z]{6,20}$/;
+    if(!textoRegex.test(nombreRegistro.trim())){
       setNombreError(true);
       return;
     }
     setNombreError(false);
+
+    
+    if(!textoRegex.test(apellidoRegistro.trim())){
+      setApellidoError(true);
+      return;
+    }
+    setApellidoError(false);
   // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailRegistro)) {
@@ -42,7 +51,7 @@ const FormSignIn = () => {
   }
   setPasswordError(false);
  
-  console.log([nombreRegistro, emailRegistro, contraseñaRegistro])
+  console.log([nombreRegistro, apellidoRegistro, emailRegistro, contraseñaRegistro])
    }
    
   return (
@@ -65,9 +74,23 @@ const FormSignIn = () => {
               type="text"
               value={nombreRegistro}
               onChange={(e) =>setNombreRegistro(e.target.value)}
-              placeholder="Ingrese su nombre"
+              placeholder="Nombre"
             />
              {nombreError && <span className="helper-text">Ingrese solo letras</span>}
+          </Form.Group>
+
+          <Form.Group className="mt-5" controlId="Nombre">
+            <Form.Label>
+              <HiUser className="me-2" />
+              Ingrese su apellido
+            </Form.Label>
+            <Form.Control
+              type="text"
+              value={apellidoRegistro}
+              onChange={(e) =>setApellidoRegistro(e.target.value)}
+              placeholder="Apellido"
+            />
+             {apellidoError && <span className="helper-text">Ingrese solo letras</span>}
           </Form.Group>
 
           <Form.Group className="mt-5" controlId="correo">
@@ -79,7 +102,7 @@ const FormSignIn = () => {
               type="Email"
               value={emailRegistro}
               onChange={(e)=>setEmailRegistro(e.target.value)}
-              placeholder="Ingrese su email"
+              placeholder="Email"
             />
              {emailError && <span className="helper-text">El formato del email no es válido.</span>}
           </Form.Group>
