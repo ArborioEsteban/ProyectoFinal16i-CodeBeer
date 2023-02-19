@@ -3,9 +3,8 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import NavBarCode from '../components/Navbar/Navbar';
 import Error404 from '../components/Error404';
-
-
-
+import SignInPage from '../pages/SignInPage';
+import LoginPage from '../pages/LoginPage';
 
 
 
@@ -24,6 +23,8 @@ const Router = () => {
 
         </Route>
         
+        <Route path="/" element={<LoginPage/>}  />
+        <Route path="/SignInPage" element={<SignInPage/>}  />
       </Routes>
       
     </BrowserRouter>
