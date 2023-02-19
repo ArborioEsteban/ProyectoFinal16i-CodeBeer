@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": "144",
+      "name": "Cerveza Anonima",
+      "price": 700,
+      "description": "() => {Dorado/ anaranjado profundo, de espuma blanca persistente y opalescencia característica - 4.5% de alcohol if(pintasConsumidas >= 1){!manejar}}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true,
+      "quantity": 1
+    },{
+      "id": "143",
+      "name": "Papas Clasicas HTML",
+      "price": 800,
+      "description": "Papas Fritas clasicas , son ricas pero le falta algo de estilo",
+      "image": "https://img.freepik.com/free-photo/delicious-hot-french-fries-with-red-sauce-served-table_632805-37.jpg?w=1380&t=st=1675782017~exp=1675782617~hmac=eb4a87b26b1dff99577674b94cfd5c4e6a249103f37ebc4732d7d3d14e3c7595",
+      "category" : "Papas Fritas",
+      "available" : false,
+      "quantity": 1
+    },{
+      "id": "142",
+      "name": "Hamburguesa 'no me la Container' ",
+      "price": 1200,
+      "description": "<Hamburguesa ClassName='noMeLaContainer' Viene con bacon Cheddar y Papas! />",
+      "image": "https://img.freepik.com/free-photo/front-view-burger-stand_141793-15542.jpg?w=1380&t=st=1675782027~exp=1675782627~hmac=90968162fe228eb1b65366e3549c39ca6833cbbffed54e8d89765479e4f87467",
+      "category" : "Cervezas",
+      "available" : true,
+      "quantity": 1
+    },{
+      "id": "141",
+      "name": "Cerveza 2",
+      "price": 600,
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true,
+      "quantity": 1
+    },{
+      "id": "144560",
+      "name": "Cerveza 3",
+      "price": 500,
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true,
+      "quantity": 1
+    },{
+      "id": "139",
+      "name": "Cerveza 4",
+      "price": 400,
+      "description": "() => {}",
+      "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
+      "category" : "Cervezas",
+      "available" : true,
+      "quantity": 1
+    }
+    
+  ]
+}
