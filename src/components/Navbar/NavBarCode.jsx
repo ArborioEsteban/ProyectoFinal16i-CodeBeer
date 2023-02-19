@@ -17,7 +17,7 @@ const NavBarCode = () => {
         <Container>
           <Navbar.Brand as={Link} to="/">
            
-           <img src="https://live.staticflickr.com/65535/52671878919_2a831d2f56_b.jpg" alt="Code&Beer" className="CodeBeer" />
+           <img src="https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg" alt="Code&Beer" className="CodeBeer" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -34,7 +34,8 @@ const NavBarCode = () => {
               <Button
               
                 variant="dark "
-                className="ms-2   "
+                className="ms-2"
+                id="myloginBtn"
                 onClick={() => handleClick("/login")}
               >
                 Login
