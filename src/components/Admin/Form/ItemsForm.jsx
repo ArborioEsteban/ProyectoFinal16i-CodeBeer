@@ -4,7 +4,7 @@ import {Button, Container,Form} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { getRandomId } from '../../../hellpers/getRandomId';
 import { validateDate } from '../../../hellpers/validateDate';
-// import ItemsTable from '../Table/ItemsTable';
+
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
@@ -52,7 +52,6 @@ const ItemsForm = (props) => {
             //Caso Editar
             if (modifyingItem){
                 const res = await axios.put (`${baseUrl}/products/${modifyingItem}`, { 
-                    id:getRandomId(),
                     name:name,
                     price:price,
                     description:description,
@@ -134,7 +133,7 @@ const ItemsForm = (props) => {
             });   
         }
         
-    }
+    };
 
 
      return (
@@ -148,21 +147,21 @@ const ItemsForm = (props) => {
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control
                         type='text'
-                        value={name || ""}
+                        value={name}
                         onChange={(e) => SetName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='mt-2'>
                     <Form.Label>Precio</Form.Label>
                     <Form.Control
                         type='number'
-                        value={price || ""}
+                        value={price}
                         onChange={(e) => setPrice(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='mt-2'>
                     <Form.Label>Imagen</Form.Label>
                     <Form.Control
                         type='url'
-                        value={image || ""}
+                        value={image}
                         onChange={(e) => setImage(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='mt-2'>
@@ -171,7 +170,7 @@ const ItemsForm = (props) => {
                         as='textarea'
                         rows='3'
                         type='text'
-                        value={description || ""}
+                        value={description}
                         onChange={(e) => setDescription(e.target.value)} 
                         className='formDescripcion'/>
                 </Form.Group>
@@ -181,7 +180,7 @@ const ItemsForm = (props) => {
                     <Form.Control
                         
                         type='text'
-                        value={category || ""}
+                        value={category}
                         onChange={(e) => setCategory(e.target.value)} 
                         className='formDescripcion'/>
                 </Form.Group>
@@ -190,7 +189,7 @@ const ItemsForm = (props) => {
                     <Form.Label>Disponible</Form.Label>
                     <Form.Control
                         type='text'
-                        value={available || ""}
+                        value={available}
                         onChange={(e) => setAvailable(e.target.value)} 
                         className='formDescripcion'/>
                 </Form.Group>
@@ -199,7 +198,7 @@ const ItemsForm = (props) => {
                     <Form.Label>Cantidad</Form.Label>
                     <Form.Control
                         type='number'
-                        value={quantity || ""}
+                        value={quantity}
                         onChange={(e) => setQuantity(e.target.value)} 
                         className='formDescripcion'/>
                 </Form.Group>
@@ -209,7 +208,7 @@ const ItemsForm = (props) => {
                     </div>
                  </Container>
             </Form>
-)
-}
+);
+};
 
-export default ItemsForm
+export default ItemsForm;
