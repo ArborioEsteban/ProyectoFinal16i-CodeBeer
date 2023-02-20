@@ -89,11 +89,13 @@ const FormLogin = () => {
                   </span>
                 )}
               </Form.Group>
-              <div onClick={()=> handleClick('/Error404')}>¿Olvido su contraseña?</div>
+              <div onClick={() => handleClick("/Error404")}>
+                ¿Olvido su contraseña?
+              </div>
               <div className="text-center">
                 <Button
                   type="submit"
-                  className="bg-transparent mt-3"
+                  className="botonLogin bg-transparent mt-3"
                   id="botonLogin"
                 >
                   Ingresar
@@ -108,7 +110,11 @@ const FormLogin = () => {
 
           <div className="text-center my-3">¿Aun no estas registrado?</div>
           <div className="d-flex column align-items-center justify-content-center">
-            <Button className="bg-transparent my-3" id="botonLogin" onClick={()=> handleClick('/FormSignIn')}>
+            <Button
+              className="botonLogin bg-transparent my-3"
+              id="botonLogin"
+              onClick={() => handleClick("/FormSignIn")}
+            >
               Registrate
               <HiOutlineClipboardList className="ms-2 icons" />
             </Button>

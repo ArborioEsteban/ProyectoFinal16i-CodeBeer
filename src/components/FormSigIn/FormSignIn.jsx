@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { Button, Container, Row, Col } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
@@ -18,6 +18,10 @@ const FormSignIn = () => {
   const [apellidoRegistro, setApellidoRegistro] = useState();
   const [emailRegistro, setEmailRegistro] = useState();
   const [contraseñaRegistro, setContraseñaRegistro] = useState();
+
+
+
+
 
   //const para validar errores en campo email y password
   const [nombreError, setNombreError] = useState(false);
@@ -74,6 +78,7 @@ const FormSignIn = () => {
           <hr />
           <h2 className="my-3 ms-2 ">Registrate</h2>
         </div>
+        
         <Form onSubmit={handleSubmit} className="form container py-4 px-4">
           <Form.Group className="mt-4" controlId="Nombre">
             <Form.Label>
@@ -122,9 +127,8 @@ const FormSignIn = () => {
               <span className="helper-text">
                 El formato del email no es válido.
               </span>
-
             )}
-
+          
           </Form.Group>
           <Form.Group className="my-4" controlId="Password">
             <Form.Label>
@@ -160,9 +164,11 @@ const FormSignIn = () => {
           </Form.Group>
 
           <div className="d-flex column align-items-center justify-content-center">
-            <Button className="bg-transparent my-3" id="botonLogin"
-            onClick={handleSubmit
-            }>
+            <Button
+              className="bg-transparent my-3"
+              id="botonLogin"
+              onClick={handleSubmit}
+            >
               Registrate
               <HiOutlineClipboardList className="ms-2 icons" />
             </Button>
@@ -178,6 +184,7 @@ const FormSignIn = () => {
               <Row
                 onClick={() => handleCLick("/Error404")}
                 className="border y-1"
+
               >
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaFacebookF />
@@ -188,7 +195,8 @@ const FormSignIn = () => {
               </Row>
               <Row
                 onClick={() => handleCLick("/Error404")}
-                className="border py-1 mt-3 bontonRegistroGF"
+                className="border py-1 mt-3 "
+               
               >
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaGoogle />
