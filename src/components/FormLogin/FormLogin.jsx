@@ -89,7 +89,7 @@ const FormLogin = () => {
                   </span>
                 )}
               </Form.Group>
-              <div>¿Olvido su contraseña?</div>
+              <div onClick={()=> handleClick('/Error404')}>¿Olvido su contraseña?</div>
               <div className="text-center">
                 <Button
                   type="submit"
