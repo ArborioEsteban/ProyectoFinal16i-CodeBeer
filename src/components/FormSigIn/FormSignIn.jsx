@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { Button, Container, Row, Col } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope, HiUser } from "react-icons/hi2";
 
 const FormSignIn = () => {
+
+  const navigate = useNavigate();
+
+  const handleCLick = (route) =>{
+    navigate(route);
+  }
 
   const [nombreRegistro, setNombreRegistro] = useState();
   const [apellidoRegistro, setApellidoRegistro] = useState();
@@ -65,7 +72,7 @@ const FormSignIn = () => {
           onSubmit={handleSubmit}
           className="form container py-4 px-4"
         >
-          <Form.Group className="mt-5" controlId="Nombre">
+          <Form.Group className="mt-4" controlId="Nombre">
             <Form.Label>
               <HiUser className="me-2" />
               Ingrese su nombre
@@ -79,7 +86,7 @@ const FormSignIn = () => {
              {nombreError && <span className="helper-text">Ingrese solo letras</span>}
           </Form.Group>
 
-          <Form.Group className="mt-5" controlId="Nombre">
+          <Form.Group className="mt-4" controlId="Nombre">
             <Form.Label>
               <HiUser className="me-2" />
               Ingrese su apellido
@@ -93,7 +100,7 @@ const FormSignIn = () => {
              {apellidoError && <span className="helper-text">Ingrese solo letras</span>}
           </Form.Group>
 
-          <Form.Group className="mt-5" controlId="correo">
+          <Form.Group className="mt-4" controlId="correo">
             <Form.Label>
               <HiEnvelope className="me-2" />
               Ingrese su Email
@@ -106,7 +113,7 @@ const FormSignIn = () => {
             />
              {emailError && <span className="helper-text">El formato del email no es válido.</span>}
           </Form.Group>
-          <Form.Group className="my-5" controlId="Password">
+          <Form.Group className="my-4" controlId="Password">
                 <Form.Label>
                   <HiLockClosed className="me-2" />
                   Ingrese su contraseña
@@ -124,7 +131,8 @@ const FormSignIn = () => {
             className="container"
             controlId="CheckboxTerminosYCondiciones"
           >
-            <Form.Check
+            <Form.Check 
+           
               type="checkbox"
               label="Al hacer click aqui acepta nuestros terminos y condiciones"
             />
@@ -136,6 +144,7 @@ const FormSignIn = () => {
            type="submit"
               className="bg-transparent mt-3"
               id="botonLogin"
+              onClick={()=> handleCLick('/FormSignIn')}
             >
               Registrarse
               <HiOutlineClipboardList className="icons ms-2" />
@@ -150,7 +159,7 @@ const FormSignIn = () => {
         <Container className="px-4  text-center">
           <Row className="justify-content-md-center">
             <Col xs={12} md={6}>
-              <Row className="py-1 border">
+              <Row onClick={()=> handleCLick('/Error404')}className="border y-1">
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaFacebookF />
                 </Col>
@@ -158,7 +167,7 @@ const FormSignIn = () => {
                   <p>Facebook</p>
                 </Col>
               </Row>
-              <Row className="py-1 mt-3 border">
+              <Row onClick={()=> handleCLick('/Error404')} className="border py-1 mt-3 bontonRegistroGF">
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaGoogle />
                 </Col>
@@ -178,6 +187,7 @@ const FormSignIn = () => {
 
             <div className="text-center">
               <Button
+              onClick={()=> handleCLick('/FormLogin')}
                 type="submit"
                 className="bg-transparent mt-2 mb-4"
                 id="botonLogin"

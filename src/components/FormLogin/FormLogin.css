@@ -3,7 +3,7 @@
 .login{
    height: auto;
    width: auto;
-    background-color: #041C32;
+   background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833));
     color: #ECB365;
     border-radius: 20%;
     
