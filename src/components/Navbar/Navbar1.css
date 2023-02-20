@@ -1,6 +1,7 @@
 .navBg{
   background-color: #041c32ce;
   position: fixed;
+  z-index: 900;
 }
 
 .CodeBeer{

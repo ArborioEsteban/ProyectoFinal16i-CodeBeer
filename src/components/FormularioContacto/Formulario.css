@@ -1,0 +1,22 @@
+
+
+#bodyFormularioContacto {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.Formulario1 {
+  max-width: 25em;
+  padding: 1.3em;
+  margin: 0 auto;
+  background-color: #041c32ce;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.95);
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+

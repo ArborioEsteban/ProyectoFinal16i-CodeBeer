@@ -131,8 +131,8 @@ const AcercaDe = () => {
           </div>
         </div>
       </div>
-      <section className="w-50 mx-auto text-center pt-5">
-        <h1 className="p-4 fs-2 border-top border-3">Direccion</h1>
+      <section className="w-50 mx-auto text-center pt-5 my-5">
+        <h1 className="p-4 fs-2 border-top text-light border-3">Direccion</h1>
 
         <div className="map-responsive ">
           <iframe
@@ -152,3 +152,5 @@ const AcercaDe = () => {
 };
 
 export default AcercaDe;
+
+
