@@ -1,13 +1,9 @@
-import axios from 'axios';
+import axios from '../../api/axios';
 import { useEffect, useState } from 'react'
 import {Button, Container,Form} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { getRandomId } from '../../../hellpers/getRandomId';
 import { validateDate } from '../../../hellpers/validateDate';
-
-
-const baseUrl = process.env.REACT_APP_BASE_URL;
-
 
 
 const ItemsForm = (props) => {
@@ -24,7 +20,7 @@ const ItemsForm = (props) => {
         
         useEffect(()=>{
                     const fetchItems = async () =>{
-                    const res = await axios.get(`${baseUrl}/products`);
+                    const res = await axios.get(`/products`);
                     const items = res.data;
                     
                     const itemToModify = items.find (
@@ -51,7 +47,7 @@ const ItemsForm = (props) => {
 
             //Caso Editar
             if (modifyingItem){
-                const res = await axios.put (`${baseUrl}/products/${modifyingItem}`, { 
+                const res = await axios.put (`/products/${modifyingItem}`, { 
                     name:name,
                     price:price,
                     description:description,
@@ -89,7 +85,7 @@ const ItemsForm = (props) => {
             }
 
         //caso crear
-           const res = await axios.post(`${baseUrl}/products`,{
+           const res = await axios.post(`/products`,{
                 id:getRandomId(),
                 name:name,
                 price:price,
@@ -137,7 +133,7 @@ const ItemsForm = (props) => {
 
 
      return (
-            <Form className='bg-dark text-light rounded w-100 Titulo'
+            <Form className='bg-dark text-light rounded w-100 Titulo mt-2'
             onSubmit={handleSubmit}>
                 
               <Container>

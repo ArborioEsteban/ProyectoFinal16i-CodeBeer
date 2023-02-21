@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import {  Button, Col,  Container,  Offcanvas,  Row } from 'react-bootstrap'
-import axios, { all } from 'axios';
+import {  Button, Col, Offcanvas,  Row } from 'react-bootstrap'
+import axios from '../api/axios';
 import ProductItem from '../ProductItem/ProductItem';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 import Swal from 'sweetalert2';
 import './ProductGrid.css';
-import NavBarCode from '../Navbar/NavBarCode';
+
 
 
 
 
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
-const baseUrl = process.env.REACT_APP_BASE_URL;
+
 const userLS = localStorage.getItem("user");
 const numMesaSStorage = sessionStorage.getItem('mesa');
-
-
-
-
 
 let totalLS=0; 
 let countLS=0;
@@ -64,7 +60,7 @@ const ProductGrid = () => {
 
     useEffect(() => {
         const itemsFetch = async () => {
-          const data = await axios.get(`${baseUrl}/products`);
+          const data = await axios.get(`/products`);
           setItems(data.data);
           const numMesaSStorage = sessionStorage.getItem('mesa');
           
