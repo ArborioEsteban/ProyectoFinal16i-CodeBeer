@@ -32,10 +32,9 @@ const SelectTable = () => {
 
       <form onSubmit={handleRHF((data) => {
         let nmesa = data.numMesa;
-        console.log(nmesa);
         sessionStorage.setItem('mesa', nmesa);
         setMesa(nmesa);
-        console.log(mesa);
+        
         
         Swal.fire({
                 title: 'Bienvenido a Code&Beer',

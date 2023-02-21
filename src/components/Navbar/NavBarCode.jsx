@@ -5,7 +5,10 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar1.css";
 
 
+const isLoggedIn = true;
+
 const NavBarCode = () => {
+  
   const navigate = useNavigate();
 
   const handleCLick = (route) =>{
@@ -43,7 +46,8 @@ const NavBarCode = () => {
                 id="myloginBtn"
                 
               >
-                Login
+                 `{isLoggedIn ?  'Logout' :
+                  'Login'}` 
               </Button>
               {/* Link o NavLink  */}
             </Nav>

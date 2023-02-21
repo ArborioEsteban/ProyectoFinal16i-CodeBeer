@@ -44,7 +44,7 @@ const FormLogin = () => {
 
   return (
     <div className="pt-5">
-      <div className=" mx-5">
+      <div className=" pt-5 mx-5">
         <div className="p-3 py-4 login rounded">
           <div>
             <h2 className="ms-2 my-2">Iniciar sesión</h2>

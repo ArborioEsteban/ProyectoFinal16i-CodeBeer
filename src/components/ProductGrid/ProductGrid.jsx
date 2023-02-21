@@ -139,7 +139,7 @@ const ProductGrid = () => {
 
   return (
     <>
-    {/* <NavBarCode></NavBarCode> */}
+    
 
         
       <div className='text-end fixed-bottom  mb-5 me-2 container'>
@@ -201,6 +201,7 @@ const ProductGrid = () => {
                 allProducts.length ? '' : 'disabled'
               }`}
               id='cartOrderButtons'>
+                
                   Confirmar
               </Button>
               <Button onClick={onCleanCart} className="w-50" id='cartOrderButtons'>
@@ -216,7 +217,8 @@ const ProductGrid = () => {
       </Offcanvas>
 
       </div>
-      <Row>
+
+      <Row className='mt-5'>
             {products.map((elemento) => {
                 return (
                     <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className='p-2'>
