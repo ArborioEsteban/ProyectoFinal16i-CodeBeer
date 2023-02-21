@@ -9,6 +9,7 @@ import './index.css';
 
 
 
+
 const App = () => {
   useEffect(() => {
     localStorage.setItem("user","Esteban");
@@ -18,9 +19,9 @@ const App = () => {
 
   return (
     <> 
-      <Container>
+
         <Router />  
-      </Container>
+    
       
     </>
   );

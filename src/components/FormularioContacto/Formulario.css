@@ -1,0 +1,41 @@
+
+
+#bodyFormularioContacto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+ 
+}
+
+.Formulario1 {
+  max-width: 25em;
+  padding: 1.3em;
+  margin: 0 auto;
+  background-color: #041c328a;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: inset 1px 1px 22px 4px rgba(8, 28, 70, 0.95);
+  margin-top: 160px;
+
+}
+
+.Button{
+  background-color: #ecb46591 !important;
+  border-radius: 10%;
+	border:1px solid #ee900d !important;
+	cursor:pointer;
+	color:white !important;
+	font-size:20px !important;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+
+
+
+label.form-label{
+
+  font-size: 20px;
+ color: #ecb46591; 
+}

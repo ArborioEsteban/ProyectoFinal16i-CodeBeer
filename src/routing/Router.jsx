@@ -8,6 +8,10 @@ import Error404 from '../components/Error404';
 import App from '../App';
 import ItemsForm from '../components/Admin/Form/ItemsForm';
 import AdminView from '../components/Admin/AdminView';
+import FormContacto from '../components/FormularioContacto/FormContacto';
+import AcercaDe from '../components/AcercaDe';
+
+
 
 
 const Router = () => {
@@ -19,6 +23,12 @@ const Router = () => {
         <Route path="/products" element={ <ProductGrid /> }/>
         <Route path="/selectTable" element={ <SelectTable/> }/>
         <Route path='/' element={ <NavBarCode /> } >
+        <Route path='FormContacto' element={ <FormContacto /> } />
+        <Route path='AcercaDe' element={ <AcercaDe /> } />
+        <Route path='Error404' element={ <Error404 /> } />
+        <Route path='*' element={ <Navigate replace to="Error404"/> }/>
+
+
         </Route>
         <Route path='*' element={ <Error404 /> } />
         {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}
