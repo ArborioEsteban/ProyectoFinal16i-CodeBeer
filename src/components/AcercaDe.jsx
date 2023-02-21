@@ -6,13 +6,15 @@ import "./AcercaDe.css";
 const AcercaDe = () => {
   return (
     <>
-      <Container className="text-center py-5 mt-5 ">
-      <h2 id="datosContacto" className="text-center py-5 mt-3">
+
+
+    <Container >
+      <h2 id="datosContacto" className="text-center H2Cont ">
         Datos De Contacto
       </h2>
-      <div className="py-5 text-center m-auto group">
-      <hr className="fs-1"></hr>
-        <Row className="mt-0 p-5 text-center">
+        
+      <div className="  py-3 text-center  group">
+        <Row className=" mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
