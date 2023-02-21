@@ -139,11 +139,6 @@ const ProductGrid = () => {
 
   return (
     <>
-
-    {/* <NavBarCode></NavBarCode> */}
-
-
-        
       <div className='text-end fixed-bottom  mb-5 me-2 container'>
         <Button className="w-25" id='myCartBtn' onClick={handleShow}>
           {countProducts}<AiOutlineShoppingCart/>
@@ -221,9 +216,10 @@ const ProductGrid = () => {
       </div>
 
       <Row className='mt-5'>
+        <div className='mt-5'></div>
             {products.map((elemento) => {
                 return (
-                    <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className='p-2'>
+                    <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className=' mt-2 p-2'>
                     <ProductItem {...elemento} 
 
                     allProducts={allProducts}
