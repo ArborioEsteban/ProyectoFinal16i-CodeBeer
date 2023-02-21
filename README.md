@@ -93,9 +93,9 @@ Se podrán modificar los productos, de ser necesario, permitiendo marcar como NO
  
 ### Contribuidores:
 
-- Candela M. Mercado
-- Rubén Vizcarra
-- Esteban David Arborio
-- Paula Lucía Guillén
-- Juan Carlos Medina
-- Florencia Noelia Lancioni 
+- Candela M. Mercado [CandelaMercado00](https://github.com/CandelaMercado00) 
+- Rubén Vizcarra [RuViz](https://github.com/RuViz)
+- Esteban David Arborio [ArborioEsteban](https://github.com/ArborioEsteban) 
+- Paula Lucía Guillén [paulag1](https://github.com/paulag1/) 
+- Juan Carlos Medina [Carlosgithub2030](https://github.com/Carlosgithub2030)
+- Florencia Noelia Lancioni [flor2030](https://github.com/flor2030)
