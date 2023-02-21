@@ -9,6 +9,7 @@ import FormLogin from "../components/FormLogin/FormLogin";
 import AdminView from '../components/Admin/AdminView';
 import FormContacto from '../components/FormularioContacto/FormContacto';
 import AcercaDe from '../components/AcercaDe';
+import MainView from "../components/View/MainView";
 
 
 
@@ -18,7 +19,7 @@ const Router = () => {
     <BrowserRouter>
       <NavBarCode />
       <Routes>
-        {/* <Route path="/" element={ <App/> }/> */}
+        <Route path="/" element={ <MainView/> }/>
         <Route path="/products" element={<ProductGrid />} />
         <Route path="/selectTable" element={<SelectTable />} />
         <Route path="/FormLogin" element={<FormLogin />} />
@@ -26,8 +27,6 @@ const Router = () => {
         <Route path='AcercaDe' element={ <AcercaDe /> } />
         <Route path='Error404' element={ <Error404 /> } />
         <Route path='*' element={ <Navigate replace to="Error404"/> }/>
-
-
         <Route path="/FormSignIn" element={<FormSignIn />} />
         <Route path="*" element={<Error404 />} />
         {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}

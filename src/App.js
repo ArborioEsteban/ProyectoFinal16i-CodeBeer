@@ -11,7 +11,9 @@ import './index.css';
 const App = () => {
   useEffect(() => {
     localStorage.setItem("user", "Esteban");
-    // localStorage.setItem("password","123456");
+    
+    
+    
   }, []);
 
   return (

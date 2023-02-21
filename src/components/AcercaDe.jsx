@@ -6,12 +6,13 @@ import "./AcercaDe.css";
 const AcercaDe = () => {
   return (
     <>
-      <h2 id="datosContacto" className="text-center py-5  ">
+
+      <Container className="text-center py-5 mt-5 ">
+      <h2 id="datosContacto" className="text-center py-5 mt-4">
         Datos De Contacto
       </h2>
-      <Container>
-      <div className=" py-5 text-center group">
-        <Row className="mb-5">
+      <div className=" mt-5 py-5 text-center m-auto group">
+        <Row className=" p-5 text-center">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
@@ -25,7 +26,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f3fb618d44f2c5b1011f/download/carlos.jpg"
               alt="Carlos"
             />
@@ -46,7 +47,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f10ed8dfb062168a1b4cc1/download/image.png"
               alt="Carlos"
             />
@@ -67,7 +68,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f5decb9a8590fa1b4900/download/IMG_20220812_160555748.jpg"
               alt="Carlos"
             />
@@ -88,7 +89,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f45a8efacaf3eca652da/download/FB_IMG_1659647280750~2%5B159%5D.jpg"
               alt="Carlos"
             />
@@ -109,7 +110,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3c86243d5399b3aa2d8e4/download/Paula_Guill%C3%A9n.png"
               alt="Carlos"
             />
@@ -130,7 +131,7 @@ const AcercaDe = () => {
           </ListGroup>
           <ListGroup as={Col} md="6">
             <img
-              className="rounded-circle  AVATAR "
+              className="rounded-circle AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f4093fba8a7b66490558f8/download/candela.png"
               alt="Carlos"
             />
