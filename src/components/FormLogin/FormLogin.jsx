@@ -40,10 +40,11 @@ const FormLogin = () => {
     setPasswordError(false);
 
     console.log([emailLogin, contraseñaLogin]);
+    // aqui hacer un navigate hacia la parte de pedir productos
   };
 
   return (
-    <div className="pt-5">
+    <div className="mt-3 pt-5">
       <div className=" pt-5 mx-5">
         <div className="p-3 py-4 login rounded">
           <div>
@@ -62,6 +63,7 @@ const FormLogin = () => {
                   value={emailLogin}
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
+                  autoComplete="username"
                 />
                 {emailError && (
                   <span className="helper-text">
@@ -80,6 +82,7 @@ const FormLogin = () => {
                   value={contraseñaLogin}
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
+                  autoComplete="username"
                 />
                 {passwordError && (
                   <span className="helper-text">

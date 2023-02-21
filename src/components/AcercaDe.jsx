@@ -6,18 +6,18 @@ import "./AcercaDe.css";
 const AcercaDe = () => {
   return (
     <>
-
       <Container className="text-center py-5 mt-5 ">
-      <h2 id="datosContacto" className="text-center py-5 mt-4">
+      <h2 id="datosContacto" className="text-center py-5 mt-3">
         Datos De Contacto
       </h2>
-      <div className=" mt-5 py-5 text-center m-auto group">
-        <Row className=" p-5 text-center">
+      <div className="py-5 text-center m-auto group">
+      <hr className="fs-1"></hr>
+        <Row className="mt-0 p-5 text-center">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
             </ListGroup.Item>
-            <ListGroup.Item >
+            <ListGroup.Item className="text-break">
               Email: Juan_carlos_medina2030@hotmail.com
             </ListGroup.Item>
             <ListGroup.Item >
@@ -32,7 +32,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5"  >
           <ListGroup  as={Col} md="6"  >
             <ListGroup.Item >
@@ -53,7 +53,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -74,7 +74,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -95,7 +95,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -116,7 +116,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
