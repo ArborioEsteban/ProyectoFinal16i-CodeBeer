@@ -12,7 +12,7 @@ const Error404 = () => {
         <h1 className='text-center error1'>UPS! AQUI NO HAY BIRRA</h1>
         <h4 className='text-center error'>No te preocupes, puedes seguir buscando tu favorita</h4>
       <div className=' my-5 butt' >
-        <Button className='Bc' href="/AcercaDe">Vuelve al pricipio</Button> 
+        <Button className='Bc' href="/">Vuelve al pricipio</Button> 
 
       </div>
 

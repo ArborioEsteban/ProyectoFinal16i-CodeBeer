@@ -26,11 +26,10 @@ const ProductItem = (props) => {
           return setAllProducts([...products]);
           };
             
-            
             setTotal(total + elemento.price * quantity);
             setCountProducts(countProducts + elemento.quantity);
             setAllProducts([...allProducts , elemento]);
-            
+
           };
 
     const popover = (
