@@ -12,8 +12,8 @@ const AcercaDe = () => {
       </h2>
       <div className="py-5 text-center m-auto group">
       <hr className="fs-1"></hr>
-        <Row className="mt-0 p-5 text-center">
-          <ListGroup as={Col} md="6">
+        <Row className="mt-0 text-center">
+          <ListGroup as={Col} md="6" className="mt-4">
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
             </ListGroup.Item>
@@ -34,7 +34,7 @@ const AcercaDe = () => {
         </Row>
         <hr className="fs-1"></hr>
         <Row className="mb-5"  >
-          <ListGroup  as={Col} md="6"  >
+          <ListGroup  as={Col} md="6"  className="mt-4">
             <ListGroup.Item >
               Nombre:Arborio Esteban David
             </ListGroup.Item>
@@ -55,7 +55,7 @@ const AcercaDe = () => {
         </Row>
         <hr className="fs-1"></hr>
         <Row className="mb-5">
-          <ListGroup as={Col} md="6">
+          <ListGroup as={Col} md="6"  className="mt-4">
             <ListGroup.Item >
               Nombre:Vizcarra Ruben
             </ListGroup.Item>
@@ -66,7 +66,7 @@ const AcercaDe = () => {
               Provincia: Tucuman
             </ListGroup.Item>
           </ListGroup>
-          <ListGroup as={Col} md="6">
+          <ListGroup as={Col} md="6"  className="mt-4">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f5decb9a8590fa1b4900/download/IMG_20220812_160555748.jpg"
@@ -76,7 +76,7 @@ const AcercaDe = () => {
         </Row>
         <hr className="fs-1"></hr>
         <Row className="mb-5">
-          <ListGroup as={Col} md="6">
+          <ListGroup as={Col} md="6"  className="mt-4">
             <ListGroup.Item >
               Nombre: Lancioni Florencia Noelia
             </ListGroup.Item>
@@ -97,7 +97,7 @@ const AcercaDe = () => {
         </Row>
         <hr className="fs-1"></hr>
         <Row className="mb-5">
-          <ListGroup as={Col} md="6">
+          <ListGroup as={Col} md="6"  className="mt-4">
             <ListGroup.Item >
               Nombre: Guillen Paula Lucia
             </ListGroup.Item>
@@ -118,7 +118,7 @@ const AcercaDe = () => {
         </Row>
         <hr className="fs-1"></hr>
         <Row className="mb-5">
-          <ListGroup as={Col} md="6">
+          <ListGroup as={Col} md="6"  className="mt-4">
             <ListGroup.Item >
               Nombre: Mercado Candela M.
             </ListGroup.Item>

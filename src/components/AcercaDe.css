@@ -23,8 +23,8 @@
   } */
 
   .AVATAR{
-    width: 255px;
-    height: 255px;
+    width: 165px;
+    height: 165px;
     /* position: relative; */
     /* left:  115px; */
     background-size: cover;
@@ -32,9 +32,9 @@
   }
     
   @media (min-width: 768px) {}
-    .group {
-      /* margin-left: 10px; */
-    }
+    /* .group {
+      margin-left: 10px;
+    } */
  
     div.list-group-item{
       background-color: #041c32ee;
