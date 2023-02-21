@@ -1,0 +1,44 @@
+
+.login {
+  height: auto;
+  width: auto;
+  background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833));
+  color: #ecb365;
+  border-radius: 20%;
+
+  box-shadow: 0px 0px 5px 5px #ecb465;
+}
+
+.colorBotones {
+  border: #041c32;
+  color: #ecb365;
+}
+.form {
+  background-color: #04293a;
+}
+
+.icons {
+  color: #ecb365;
+}
+
+#botonLogin {
+
+
+  background-color: #041c32;
+  border-radius: 20%;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ecb465;
+  cursor: pointer;
+  color: #ecb465;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.botonLogin:focus:hover {
+  background-color: #ecb465;
+  box-shadow: 3px 4px 0px 0px #ecb465;
+  color: white;
+}

@@ -4,7 +4,6 @@ import axios, { all } from 'axios';
 import ProductItem from '../ProductItem/ProductItem';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
 import Swal from 'sweetalert2';
-
 import './ProductGrid.css';
 import NavBarCode from '../Navbar/NavBarCode';
 
@@ -22,8 +21,6 @@ const numMesaSStorage = sessionStorage.getItem('mesa');
 
 let totalLS=0; 
 let countLS=0;
-
-console.log(carritoLS);
 
 
 if (carritoLS instanceof Array) {
@@ -69,9 +66,11 @@ const ProductGrid = () => {
         const itemsFetch = async () => {
           const data = await axios.get(`${baseUrl}/products`);
           setItems(data.data);
+          const numMesaSStorage = sessionStorage.getItem('mesa');
           
         };
         itemsFetch();
+
         
       
       }, []);
@@ -137,11 +136,12 @@ const ProductGrid = () => {
       
 
       
-    // console.log(numMesaSStorage);
 
   return (
     <>
+
     {/* <NavBarCode></NavBarCode> */}
+
 
         
       <div className='text-end fixed-bottom  mb-5 me-2 container'>
@@ -203,6 +203,7 @@ const ProductGrid = () => {
                 allProducts.length ? '' : 'disabled'
               }`}
               id='cartOrderButtons'>
+                
                   Confirmar
               </Button>
               <Button onClick={onCleanCart} className="w-50" id='cartOrderButtons'>
@@ -218,7 +219,8 @@ const ProductGrid = () => {
       </Offcanvas>
 
       </div>
-      <Row>
+
+      <Row className='mt-5'>
             {products.map((elemento) => {
                 return (
                     <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className='p-2'>

@@ -1,0 +1,103 @@
+.color {
+    background: rgba(169, 169, 169, 0.29);
+    margin-top: 5rem;
+  }
+
+  .info{background-color: rgba(167, 124, 14, 0.867);}
+
+  .info2{background-color:rgba(8, 6, 1, 0.814) ;
+   color: aliceblue;  
+  
+  }
+
+  #datosContacto{
+    font-size: 35px;
+    background-color: #ecb46542;
+    color: black;
+    /* padding-top:  150px !important; */
+   
+  }
+/* 
+  .MG{
+    margin: 20px;
+  } */
+
+  .AVATAR{
+    width: 255px;
+    height: 255px;
+    /* position: relative; */
+    /* left:  115px; */
+    background-size: cover;
+  
+  }
+    
+  @media (min-width: 768px) {}
+    .group {
+      /* margin-left: 10px; */
+    }
+ 
+    div.list-group-item{
+      background-color: #041c32ee;
+      color:  #ecb465db;
+      font-size: 17px;
+    }
+
+ 
+
+    
+
+/*  Maps Responsive */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 400px;  
+  position: relative;
+  height: 0;
+  
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+/*formulario de contacto*/
+
+#bodyFormularioContacto {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.Formulario1 {
+  max-width: 21em;
+  padding: 1.3em;
+  margin: 0 auto;
+  background-color:#080126df;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: inset 1px 1px 22px 4px rgba(40, 7, 173, 0.95);
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.FC{
+  background-color:  #ecb46591 ;
+}
+
+label.form-label{
+  color: #ecb46591 ;
+}
+
+label{
+  color: #ecb46591;
+}
+
+button.btn.btn-dark.form-control{
+
+  color: black;
+}
