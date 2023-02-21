@@ -6,15 +6,6 @@ import NavBarCode from "../components/Navbar/NavBarCode";
 import Error404 from "../components/Error404";
 import FormSignIn from "../components/FormSigIn/FormSignIn";
 import FormLogin from "../components/FormLogin/FormLogin";
-
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import ProductGrid from '../components/ProductGrid/ProductGrid';
-import SelectTable from '../components/Table/SelectTable';
-import '../components/ProductGrid/ProductGrid.css';
-import NavBarCode from '../components/Navbar/NavBarCode';
-import Error404 from '../components/Error404';
-import App from '../App';
-import ItemsForm from '../components/Admin/Form/ItemsForm';
 import AdminView from '../components/Admin/AdminView';
 import FormContacto from '../components/FormularioContacto/FormContacto';
 import AcercaDe from '../components/AcercaDe';
