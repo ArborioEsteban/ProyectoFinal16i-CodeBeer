@@ -38,7 +38,7 @@ const NavBarCode = () => {
               </Nav.Link>
             </Nav>
 
-            <Nav className="p-2  ">
+            <Nav className="p-2 mt-2  ">
               <Button
              onClick={()=> handleCLick ('/FormLogin')}
                 variant="dark "

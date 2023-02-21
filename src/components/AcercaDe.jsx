@@ -6,8 +6,10 @@ import "./AcercaDe.css";
 const AcercaDe = () => {
   return (
     <>
-      <Container className="text-center py-5 mt-5 ">
-      <h2 id="datosContacto" className="text-center py-5 mt-3">
+
+
+    <Container >
+      <h2 id="datosContacto" className="text-center H2Cont ">
         Datos De Contacto
       </h2>
       <div className="py-5 text-center m-auto group">

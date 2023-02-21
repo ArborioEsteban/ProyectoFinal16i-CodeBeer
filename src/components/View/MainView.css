@@ -20,8 +20,8 @@ body {
   #btnTable {
     background-color: transparent;
     border-radius: 20%;
-    margin-left: 0.5rem;
-    margin-bottom: 1rem;
+    margin-left: 0,5rem;
+   
     border: 1px solid #ecb465;
     cursor: pointer;
     color: #ffffff;
@@ -30,3 +30,32 @@ body {
     font-weight: bold;
     text-decoration: none;
   }
+
+
+  /*informacion*/
+
+  .color {
+    background: #041c32ce;
+  }
+
+
+  .info{background-color:#042f5868;}
+
+ 
+
+  .info2{background-color:rgba(8, 6, 1, 0.089) ;
+
+   color: #ecb465;  
+
+ 
+
+ }
+
+div.accordion-body{
+  background-color: #041c32ce !important;
+  color: black;
+}
+button.accordion-button.collapsed{
+  background-color: #041c32ce !important;
+  color:  #ecb465;
+}

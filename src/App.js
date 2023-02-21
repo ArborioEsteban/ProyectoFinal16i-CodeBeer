@@ -19,9 +19,9 @@ const App = () => {
 
   return (
     <>
-      <Container>
+
         <Router />
-      </Container>
+  
     </>
   );
 };

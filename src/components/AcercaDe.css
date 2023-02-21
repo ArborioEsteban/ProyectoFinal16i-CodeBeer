@@ -14,13 +14,14 @@
     font-size: 35px;
     background-color: #ecb46542;
     color: black;
-    /* padding-top:  150px !important; */
+    margin: 150px;
+    padding: 30px;
    
   }
-/* 
+
   .MG{
     margin: 20px;
-  } */
+  } 
 
   .AVATAR{
     width: 165px;
