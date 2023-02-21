@@ -141,7 +141,7 @@ const ProductGrid = () => {
 
   return (
     <>
-    <NavBarCode></NavBarCode>
+    {/* <NavBarCode></NavBarCode> */}
 
         
       <div className='text-end fixed-bottom  mb-5 me-2 container'>
