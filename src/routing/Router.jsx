@@ -10,7 +10,7 @@ import AdminView from '../components/Admin/AdminView';
 import FormContacto from '../components/FormularioContacto/FormContacto';
 import AcercaDe from '../components/AcercaDe';
 import MainView from "../components/View/MainView";
-
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -32,6 +32,7 @@ const Router = () => {
         {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}
         <Route path='adminForm' element={ <AdminView/> }/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
