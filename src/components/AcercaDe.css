@@ -14,26 +14,27 @@
     font-size: 35px;
     background-color: #ecb46542;
     color: black;
-   padding-top:  150px !important;
+    margin: 150px;
+    padding: 30px;
    
   }
 
   .MG{
     margin: 20px;
-  }
+  } 
 
   .AVATAR{
     width: 155px;
     height: 155px;
-    position: relative;
-    left:  115px;
+     position: relative;
+     left:  12px; 
     background-size: cover;
   
   }
     
   @media (min-width: 768px) {}
     .group {
-      margin-left: 10px;
+       margin-left: 10px; 
     }
  
     div.list-group-item{

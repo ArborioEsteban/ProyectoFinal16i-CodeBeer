@@ -8,11 +8,6 @@
   width: 100px;
 }
 
- .btn{
-  background: rgba(235, 8, 8, 0.537);
-  border-radius: 40px;
-   cursor:pointer;
- }  
 
 a.nav-link{
  color: #ecb46591;
@@ -25,11 +20,6 @@ span.navbar-toggler-icon{
   height: 30px;
 }
 
- button.ms-2.btn.btn-dark{
-  color: white;
-  font-size: 20px;
-margin: 15px;
-} 
 
 #loginButton{
 	background-color: #ecb46591;

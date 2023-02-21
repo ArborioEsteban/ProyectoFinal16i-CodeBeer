@@ -7,7 +7,7 @@ body {
 	background-attachment: fixed;
   }
   #myCartBtn{
-	background-color: #ecb465df;
+	background-color: #ecb465df !important;
 	border-radius: 20%;
     margin-left: 1rem;
     margin-bottom: 1rem;
@@ -28,7 +28,7 @@ body {
 }
 
 #cartOrderButtons{
-	background-color: #ecb46591;
+	background-color: #ecb46591 !important;
 	border-radius: 20%;
     margin-left: 1rem;
     margin-bottom: 1rem;

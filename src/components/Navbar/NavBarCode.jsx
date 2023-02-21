@@ -1,16 +1,21 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 
+
 import "../Navbar/Navbar1.css";
 
 
+const isLoggedIn = true;
+
 const NavBarCode = () => {
+  
   const navigate = useNavigate();
 
-  const handleClick = (route) => {
+  const handleCLick = (route) =>{
     navigate(route);
-  };
+  }
 
+ 
   return (
     <>
       <Navbar className="navBg fixed-top"  variant="dark" expand="lg">
@@ -33,15 +38,16 @@ const NavBarCode = () => {
               </Nav.Link>
             </Nav>
 
-            <Nav className="p-2  ">
+            <Nav className="p-2 mt-2  ">
               <Button
-              
+             onClick={()=> handleCLick ('/FormLogin')}
                 variant="dark "
                 className="ms-2"
                 id="myloginBtn"
-                onClick={() => handleClick("/login")}
+                
               >
-                Login
+                 `{isLoggedIn ?  'Logout' :
+                  'Login'}` 
               </Button>
               {/* Link o NavLink  */}
             </Nav>

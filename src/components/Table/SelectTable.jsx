@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +13,7 @@ const SelectTable = () => {
 
   const { register, handleSubmit: handleRHF } = useForm();
   // const [data, setData] = useState("");
-  // const [mesa, setMesa] = useState();
+  const [mesa, setMesa] = useState(0);
 
   
 
@@ -31,8 +32,9 @@ const SelectTable = () => {
 
       <form onSubmit={handleRHF((data) => {
         let nmesa = data.numMesa;
-        
         sessionStorage.setItem('mesa', nmesa);
+        setMesa(nmesa);
+        
         
         Swal.fire({
                 title: 'Bienvenido a Code&Beer',
