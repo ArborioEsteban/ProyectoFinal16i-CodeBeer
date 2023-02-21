@@ -2,6 +2,7 @@
 
 ***Repositorio del sitio web de Code&Beer - Front End***
 #### Grupo 1 - Comision 16i
+![](https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg)
 
 <br/>
 
