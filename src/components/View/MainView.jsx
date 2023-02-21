@@ -28,12 +28,7 @@ const MainView = () => {
           Bienvenidos a Code & Beer
         </h1>
 
-        {/* <Button 
-                onClick={()=>handleClick()}
-                className="align-self-center bg-transparent w-50 h-25 px-2 my-5fs-4" 
-                id="btnTable">
-                
-            </Button> */}
+        
         <p
           className="align-self-center bg-transparent w-100 h-25 px-2 my-5 fs-4"
           onClick={() => handleClick()}
@@ -48,11 +43,11 @@ const MainView = () => {
 
         <div className="col-sm-8 pt-3 pb-3"></div>
 
-        <h1 class="text-center py-5 info">Bienvenidos a Code&Beer</h1>
+        {/* <h1 className="text-center py-5 info">Bienvenidos a Code&Beer</h1> */}
 
-        <h2 className="info">¿Quienes Somos?</h2>
+        <h2 className="info text-center">¿Quienes Somos?</h2>
 
-        <p className="py-4 fs-4 info2">
+        <p className="py-4 fs-4 info2 text-center">
           Vive una experiencia única disfrutando de la variedad de cervezas y
           estilos nuevos usando productos frescos. Cervecería Code&Beer inauguró
           sus operaciones el 31 de octubre del 2014 en San Miguel de Tucuman
@@ -68,9 +63,9 @@ const MainView = () => {
           alt="quienes somos"
         />
 
-        <h2 className="info">Mision</h2>
+        <h2 className="info text-center">Mision</h2>
 
-        <p className="py-4 fs-4 info2">
+        <p className="py-4 fs-4 info2 text-center">
           “Brindamos al cliente una cerveza artesanal de calidad, ofreciendo
           experiencias exclusivas y diferentes, arraigadas a la esencia de la
           cultura artesanal en armonía con el medio que nos sostiene”
@@ -82,9 +77,9 @@ const MainView = () => {
           alt="diferencias "
         />
 
-        <h2 className="info">Vision</h2>
+        <h2 className="info text-center">Vision</h2>
 
-        <p className="py-4 fs-4 info2">
+        <p className="py-4 fs-4 info2 text-center">
           “Ser la cervecería artesanal líder en Tucuman, siendo reconocidos por
           la calidad, innovación permanente y sostenibilidad con el medio
           ambiente y el entorno social que nos rodea”
@@ -96,9 +91,9 @@ const MainView = () => {
           alt="nuestra vision"
         />
 
-        <h2 className="info">Valores</h2>
+        <h2 className="info text-center">Valores</h2>
 
-        <p className="py-4 fs-4 info2  ">
+        <p className="py-4 fs-4 info2  text-center">
           Innovación , Calidad y Sostenibilidad
         </p>
 
@@ -109,7 +104,7 @@ const MainView = () => {
         />
       </div>
 
-      <Container>
+    
         <div className="accordion m-5">
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
@@ -133,7 +128,7 @@ const MainView = () => {
             </Accordion.Item>
           </Accordion>
         </div>
-      </Container>
+      
     </>
   );
 };

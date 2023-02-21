@@ -5,8 +5,8 @@ import "./Footer.css";
 const Footer = () => {
   return (
    
-    <footer className=" text-light ">
-      <div className="  py-3 Lgg">
+    <footer className="container-fluid text-light ">
+      <div className="py-3 Lgg">
         <div className="row">
           <div className="col ">
             <h5 className="logo">Code&Beer</h5>
@@ -28,7 +28,7 @@ const Footer = () => {
 
             <Nav.Link as={Link} to="https://www.instagram.com/">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdPZr5jR16Pgq4yQ0Q5MG5C-wFfiFqXE0Iw&usqp=CAU"
+                src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
                 alt="Instagram"
                 className="SitiosWeb "
               />
