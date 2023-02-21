@@ -6,6 +6,9 @@ import { Button } from "react-bootstrap";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 
+import axios from '../api/axios';
+import Swal from 'sweetalert2';
+
 import "./FormLogin.css";
 
 const FormLogin = () => {
@@ -20,7 +23,10 @@ const FormLogin = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validar email
@@ -40,9 +46,37 @@ const FormLogin = () => {
     setPasswordError(false);
 
     console.log([emailLogin, contraseñaLogin]);
+
+    try {
+      const response = await axios.post('/login', {
+        username: emailLogin,
+        password: contraseñaLogin,
+      });
+
+      if (response.status === 200) {
+        setIsError(false);
+        const token = response.data.token;
+        console.log(token);
+        sessionStorage.setItem('token', token);
+
+        Swal.fire({
+          title: 'Bienvenido',
+          timer: 2000,
+          showCancelButton: false,
+          showConfirmButton: false,
+        }).then(() => {
+          navigate('/selectTable');
+          // aqui hacer un navigate hacia la parte de seleccionar Table
+        });
+      }
+    } catch (error) {
+      setIsError(true);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   return (
+
     <div className="pt-5 mb-5 mt-5">
       <div className=" pt-5 mx-5">
         <div className="p-3 py-4 login rounded">
@@ -62,6 +96,7 @@ const FormLogin = () => {
                   value={emailLogin}
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
+                  autoComplete="username"
                 />
                 {emailError && (
                   <span className="helper-text">
@@ -80,6 +115,7 @@ const FormLogin = () => {
                   value={contraseñaLogin}
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
+                  autoComplete="username"
                 />
                 {passwordError && (
                   <span className="helper-text">

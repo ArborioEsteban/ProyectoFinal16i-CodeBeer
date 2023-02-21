@@ -7,9 +7,14 @@ const AdminView = () => {
   const [modifyingItem,setModifyingItem] = useState(null);
 
   return (
-    <Container className='my-5'>
-      <h1 className='text-white'>Panel de Admin</h1>
-      <hr />
+    <Container className='mt-5'>
+      <hr className='mt-5'></hr>
+      <div className='text-white mt-5'>
+
+      </div>
+        <hr />
+        <h1 className='text-white mt-4'>Panel de Admin</h1> 
+        <hr />
       <ItemsForm modifyingItem={modifyingItem} />
       <ItemsTable setModifyingItem={setModifyingItem}/>
     </Container>

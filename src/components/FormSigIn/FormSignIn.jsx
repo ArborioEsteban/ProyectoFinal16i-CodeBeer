@@ -63,23 +63,27 @@ const FormSignIn = () => {
     }
     setPasswordError(false);
 
-    console.log([
-      nombreRegistro,
-      apellidoRegistro,
-      emailRegistro,
-      contraseñaRegistro,
-    ]);
+    
+    // console.log([
+    //   nombreRegistro,
+    //   apellidoRegistro,
+    //   emailRegistro,
+    //   contraseñaRegistro,
+    // ]);
+    // Aqui deberias mandar todos los campos al backend para registrar un usuario
   };
 
   return (
-    <div className="container">
-      <div className="mt-5 pt-5 px-4 container login rounded ">
-        <div className="container">
+    <Container className="container mt-5">
+    
+    <div className="container mt-5">
+      <div className="mt-5 pt-5 px-4  login rounded ">
+        <div className="">
           <hr />
           <h2 className="my-3 ms-2 ">Registrate</h2>
         </div>
         
-        <Form onSubmit={handleSubmit} className="form container py-4 px-4">
+        <Form onSubmit={handleSubmit} className="form py-4   px-4 ">
           <Form.Group className="mt-4" controlId="Nombre">
             <Form.Label>
               <HiUser className="me-2" />
@@ -90,13 +94,14 @@ const FormSignIn = () => {
               value={nombreRegistro}
               onChange={(e) => setNombreRegistro(e.target.value)}
               placeholder="Nombre"
+              autoComplete="username"
             />
             {nombreError && (
               <span className="helper-text">Ingrese solo letras</span>
             )}
           </Form.Group>
 
-          <Form.Group className="mt-4" controlId="Nombre">
+          <Form.Group className="mt-4" controlId="Apellido">
             <Form.Label>
               <HiUser className="me-2" />
               Ingrese su apellido
@@ -106,6 +111,7 @@ const FormSignIn = () => {
               value={apellidoRegistro}
               onChange={(e) => setApellidoRegistro(e.target.value)}
               placeholder="Apellido"
+              autoComplete="username"
             />
             {apellidoError && (
               <span className="helper-text">Ingrese solo letras</span>
@@ -140,6 +146,7 @@ const FormSignIn = () => {
               value={contraseñaRegistro}
               onChange={(e) => setContraseñaRegistro(e.target.value)}
               placeholder="****************"
+              autoComplete="current-password"
             />
             {passwordError && (
               <span className="helper-text">
@@ -230,6 +237,7 @@ const FormSignIn = () => {
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 

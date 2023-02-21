@@ -2,6 +2,7 @@
 
 ***Repositorio del sitio web de Code&Beer - Front End***
 #### Grupo 1 - Comision 16i
+![](https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg)
 
 <br/>
 
@@ -92,9 +93,9 @@ Se podrán modificar los productos, de ser necesario, permitiendo marcar como NO
  
 ### Contribuidores:
 
-- Candela M. Mercado
-- Rubén Vizcarra
-- Esteban David Arborio
-- Paula Lucía Guillén
-- Juan Carlos Medina
-- Florencia Noelia Lancioni 
+- [Candela M. Mercado](https://github.com/CandelaMercado00) 
+- [Rubén Vizcarra](https://github.com/RuViz)
+- [Esteban David Arborio](https://github.com/ArborioEsteban) 
+- [Paula Lucía Guillén](https://github.com/paulag1/) 
+- [Juan Carlos Medina](https://github.com/Carlosgithub2030)
+- [Florencia Noelia Lancioni](https://github.com/flor2030)

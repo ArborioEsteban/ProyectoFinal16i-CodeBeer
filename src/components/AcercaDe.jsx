@@ -7,6 +7,7 @@ const AcercaDe = () => {
   return (
     <>
 
+
     <Container >
       <h2 id="datosContacto" className="text-center H2Cont ">
         Datos De Contacto
@@ -18,7 +19,7 @@ const AcercaDe = () => {
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
             </ListGroup.Item>
-            <ListGroup.Item >
+            <ListGroup.Item className="text-break">
               Email: Juan_carlos_medina2030@hotmail.com
             </ListGroup.Item>
             <ListGroup.Item >
@@ -33,7 +34,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5"  >
           <ListGroup  as={Col} md="6"  >
             <ListGroup.Item >
@@ -54,7 +55,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -75,7 +76,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -96,7 +97,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
@@ -117,7 +118,7 @@ const AcercaDe = () => {
             />
           </ListGroup>
         </Row>
-
+        <hr className="fs-1"></hr>
         <Row className="mb-5">
           <ListGroup as={Col} md="6">
             <ListGroup.Item >
