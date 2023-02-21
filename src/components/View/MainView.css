@@ -20,8 +20,8 @@ body {
   #btnTable {
     background-color: transparent;
     border-radius: 20%;
-    margin-left: 0.5rem;
-    margin-bottom: 1rem;
+    margin-left: 0,5rem;
+   
     border: 1px solid #ecb465;
     cursor: pointer;
     color: #ffffff;
@@ -29,4 +29,28 @@ body {
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
+  }
+
+
+  /*informacion*/
+
+  .color {
+
+    background: #041c32ce;
+
+
+  }
+
+ 
+
+  .info{background-color:#f0a53d91;}
+
+ 
+
+  .info2{background-color:rgba(8, 6, 1, 0.814) ;
+
+   color: aliceblue;  
+
+ 
+
   }
