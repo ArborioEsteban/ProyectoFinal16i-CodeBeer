@@ -35,30 +35,27 @@ body {
   /*informacion*/
 
   .color {
-
     background: #041c32ce;
-
-
   }
 
 
-  .info{background-color:#f0a53d91;}
+  .info{background-color:#042f5868;}
 
  
 
-  .info2{background-color:rgba(8, 6, 1, 0.814) ;
+  .info2{background-color:rgba(8, 6, 1, 0.089) ;
 
-   color: aliceblue;  
+   color: #ecb465;  
 
  
 
  }
 
 div.accordion-body{
-  background-color: #041c32ce ;
+  background-color: #041c32ce !important;
   color: black;
 }
 button.accordion-button.collapsed{
-  background-color: #041c32ce;
+  background-color: #041c32ce !important;
   color:  #ecb465;
 }

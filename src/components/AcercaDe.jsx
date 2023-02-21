@@ -8,11 +8,11 @@ const AcercaDe = () => {
     <>
 
 
-    <Container >
+    
       <h2 id="datosContacto" className="text-center H2Cont ">
         Datos De Contacto
       </h2>
-        
+        <Container >
       <div className="  py-3 text-center  group">
         <Row className=" mb-5">
           <ListGroup as={Col} md="6">
