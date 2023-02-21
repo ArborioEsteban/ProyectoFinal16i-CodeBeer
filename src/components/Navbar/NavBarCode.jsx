@@ -13,7 +13,7 @@ const NavBarCode = () => {
 
   return (
     <>
-      <Navbar className="navBg"  variant="dark" expand="lg">
+      <Navbar className="navBg fixed-top"  variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
            
@@ -27,6 +27,9 @@ const NavBarCode = () => {
               </Nav.Link>
               <Nav.Link as={Link} to="/AcercaDe">
                 Acerca De Nosotros
+              </Nav.Link>
+              <Nav.Link as={Link} to="/FormContacto">
+                Contacto
               </Nav.Link>
             </Nav>
 

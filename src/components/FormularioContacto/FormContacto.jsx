@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { edadValidator } from "./validators";
 import { Alert, Form, Button, FormGroup, FormControl } from "react-bootstrap";
 
+import "./Formulario.css";
+
 const FormContacto = () => {
   const {
     register,
@@ -29,7 +31,7 @@ const FormContacto = () => {
                 </Alert>
               )}
 
-              <h2 className="display-5 text-light text-center">Formulario</h2>
+              <h2 className="display-5 FormH2 text-light text-center">Formulario</h2>
               <Form.Group>
                 <div className="py-2">
                   <Form.Label>Nombre</Form.Label>
@@ -62,7 +64,7 @@ const FormContacto = () => {
                 </div>
               </FormGroup>
               <FormGroup>
-                <div className="py-2 ">
+                <div className="py-2  ">
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="text"
@@ -75,8 +77,7 @@ const FormContacto = () => {
                   {errors.email?.type === "pattern" && (
                     <p>El formato del email es incorrecto</p>
                   )}
-            <div className="valid-feedback">Todo Bien</div>
-            <div className="invalid-feedback">Es Necesario Poner email</div>
+            
                 </div>
               </FormGroup>
 
@@ -125,7 +126,7 @@ const FormContacto = () => {
               <div className="  mt-3 ">
                <FormGroup>
               
-                <Button className=" btn-btn-dark form-control" type="submit" variant="dark" > 
+                <Button className=" btn-btn-dark form-control Button" type="submit" variant="dark" > 
                   Ingresar
                 </Button>
                

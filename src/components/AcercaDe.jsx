@@ -1,136 +1,143 @@
-
+import { Row, Col, Container } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 
 import "./AcercaDe.css";
 
 const AcercaDe = () => {
   return (
     <>
-      <h2 id="datosContacto" className="text-center py-5 ">
+      <h2 id="datosContacto" className="text-center py-5  ">
         Datos De Contacto
       </h2>
-      <div className="container py-5 ">
-        <div className="  ">
-          <div className="   MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre:Medina Juan Carlos
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Chufo2030@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className="   pt-2 text-center  py-5 ">
+      <Container>
+      <div className=" py-5 text-center group">
+        <Row className="mb-5">
+          <ListGroup as={Col} md="6">
+            <ListGroup.Item >
+              Nombre: Medina Juan Carlos
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: Juan_carlos_medina2030@hotmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f3fb618d44f2c5b1011f/download/carlos.jpg"
+              alt="Carlos"
             />
-          </div>
+          </ListGroup>
+        </Row>
 
-          <div className="  MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre: Esteban Arborio
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Chufo2030@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className=" pt-2 text-center  py-5 ">
+        <Row className="mb-5"  >
+          <ListGroup  as={Col} md="6"  >
+            <ListGroup.Item >
+              Nombre:Arborio Esteban David
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: estebanarborio@gmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f10ed8dfb062168a1b4cc1/download/image.png"
+              alt="Carlos"
             />
-          </div>
+          </ListGroup>
+        </Row>
 
-          <div className="  MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre:Ruben
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Chufo2030@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className=" pt-2 text-center  py-5 ">
+        <Row className="mb-5">
+          <ListGroup as={Col} md="6">
+            <ListGroup.Item >
+              Nombre:Vizcarra Ruben
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: fabri.vizcarra22@gmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f5decb9a8590fa1b4900/download/IMG_20220812_160555748.jpg"
+              alt="Carlos"
             />
-          </div>
+          </ListGroup>
+        </Row>
 
-          <div className="  MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre:Lancioni Florencia Noelia
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Florchuu1995@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className=" pt-2 text-center  py-5 ">
+        <Row className="mb-5">
+          <ListGroup as={Col} md="6">
+            <ListGroup.Item >
+              Nombre: Lancioni Florencia Noelia
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: Florchuu1995@hotmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f45a8efacaf3eca652da/download/FB_IMG_1659647280750~2%5B159%5D.jpg"
+              alt="Carlos"
             />
-          </div>
+          </ListGroup>
+        </Row>
 
-          <div className="  MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre:Paula Guillen
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Chufo2030@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className=" pt-2 text-center  py-5 ">
+        <Row className="mb-5">
+          <ListGroup as={Col} md="6">
+            <ListGroup.Item >
+              Nombre: Guillen Paula Lucia
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: paulaguillen.iq@gmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3c86243d5399b3aa2d8e4/download/Paula_Guill%C3%A9n.png"
+              alt="Carlos"
             />
-          </div>
+          </ListGroup>
+        </Row>
 
-          <div className="  MG">
-            <ul className="list-group">
-              <li className="list-group-item list-group-item-primary">
-                Nombre:Candela Mercado
-              </li>
-
-              <li className="list-group-item list-group-item-info">
-                Correo:Chufo2030@hotmail.com
-              </li>
-            </ul>
-          </div>
-
-          <div className=" pt-2 text-center  py-5 ">
+        <Row className="mb-5">
+          <ListGroup as={Col} md="6">
+            <ListGroup.Item >
+              Nombre: Mercado Candela M.
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Email: mercadocandela16@gmail.com
+            </ListGroup.Item>
+            <ListGroup.Item >
+              Provincia: Tucuman
+            </ListGroup.Item>
+          </ListGroup>
+          <ListGroup as={Col} md="6">
             <img
-              src="https://tse1.mm.bing.net/th?id=OIP.1okcWrIDOq94673hpeg2NQHaHa&pid=Api&P=0"
-              class="rounded-circle AVATAR"
-              alt="carlos"
+              className="rounded-circle  AVATAR "
+              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f4093fba8a7b66490558f8/download/candela.png"
+              alt="Carlos"
             />
-          </div>
-        </div>
+          </ListGroup>
+        </Row>
       </div>
+</Container>
       <section className="w-50 mx-auto text-center pt-5 my-5">
         <h1 className="p-4 fs-2 border-top text-light border-3">Direccion</h1>
 
@@ -145,12 +152,9 @@ const AcercaDe = () => {
           ></iframe>
         </div>
       </section>
-
-     
+      
     </>
   );
 };
 
 export default AcercaDe;
-
-

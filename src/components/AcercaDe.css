@@ -14,6 +14,7 @@
     font-size: 35px;
     background-color: #ecb46542;
     color: black;
+   padding-top:  150px !important;
    
   }
 
@@ -23,8 +24,27 @@
 
   .AVATAR{
     width: 155px;
+    height: 155px;
+    position: relative;
+    left:  115px;
+    background-size: cover;
+  
   }
+    
+  @media (min-width: 768px) {}
+    .group {
+      margin-left: 10px;
+    }
+ 
+    div.list-group-item{
+      background-color: #041c32ee;
+      color:  #ecb465db;
+      font-size: 17px;
+    }
 
+ 
+
+    
 
 /*  Maps Responsive */
 .map-responsive {
