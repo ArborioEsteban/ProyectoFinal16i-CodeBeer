@@ -41,7 +41,6 @@ body {
 
   }
 
- 
 
   .info{background-color:#f0a53d91;}
 
@@ -53,4 +52,13 @@ body {
 
  
 
-  }
+ }
+
+div.accordion-body{
+  background-color: #041c32ce ;
+  color: black;
+}
+button.accordion-button.collapsed{
+  background-color: #041c32ce;
+  color:  #ecb465;
+}
