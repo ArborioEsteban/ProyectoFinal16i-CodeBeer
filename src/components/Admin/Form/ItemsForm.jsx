@@ -96,7 +96,7 @@ const ItemsForm = (props) => {
                 quantity:quantity,
             });
             
-            if(res.status === 201){
+            if(res.status === 200){
                 Swal.fire ({
                 title:'Operacion exitosa',
                 text:'Elemento agregado correctamente',
@@ -133,7 +133,7 @@ const ItemsForm = (props) => {
 
 
      return (
-            <Form className='bg-dark text-light rounded w-100 Titulo mt-2'
+            <Form className='bg-dark text-light rounded w-100 Titulo mt-3'
             onSubmit={handleSubmit}>
                 
               <Container>
