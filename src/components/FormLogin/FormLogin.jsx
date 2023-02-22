@@ -48,7 +48,7 @@ const FormLogin = () => {
     }
     setPasswordError(false);
 
-    console.log([emailLogin, contraseñaLogin]);
+    
 
     try {
       const response = await axios.post('/login', {

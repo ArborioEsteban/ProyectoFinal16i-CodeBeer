@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from '../../api/axios';
 import {Button, Container,Form} from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import { getRandomId } from '../../../hellpers/getRandomId';
+
 import { validateDate } from '../../../hellpers/validateDate';
 
 
@@ -31,8 +31,7 @@ const ItemsForm = (props) => {
                     setDescription (itemToModify.description);
                     setImage (itemToModify.image);
                     setCategory (itemToModify.category);
-                    // setAvailable (itemToModify.available);
-                    // setQuantity (itemToModify.quantity);
+
                 };
                 if(modifyingItem){
                     fetchItems();
@@ -83,14 +82,13 @@ const ItemsForm = (props) => {
     
           //   Caso CREAR
           const res = await axios.post(`/product`, {
-            // id: getRandomId(),
+            
             name:name,
             price:price,
             description:description,
             image:image,
             category:category,
-            // isActive: true,
-            // quantity: 1,
+            
           });
     
           if (res.status === 200) {
@@ -116,7 +114,7 @@ const ItemsForm = (props) => {
           }
         } else {
           // muestro error
-          console.log('datos INVALIDOS');
+          
     
           Swal.fire({
             title: 'Error',
@@ -179,23 +177,7 @@ const ItemsForm = (props) => {
                         className='formDescripcion'/>
                 </Form.Group>
 
-                {/* <Form.Group className='mt-2'>
-                    <Form.Label>Disponible</Form.Label>
-                    <Form.Control
-                        type='text'
-                        value={available}
-                        onChange={(e) => setAvailable(e.target.value)} 
-                        className='formDescripcion'/>
-                </Form.Group> */}
-
-                {/* <Form.Group className='mt-2'>
-                    <Form.Label>Cantidad</Form.Label>
-                    <Form.Control
-                        type='number'
-                        value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)} 
-                        className='formDescripcion'/>
-                </Form.Group> */}
+                
 
                     <div className='text-end mt-3'>
                         <Button type='submit' className='botonGeneral'>Guardar</Button>

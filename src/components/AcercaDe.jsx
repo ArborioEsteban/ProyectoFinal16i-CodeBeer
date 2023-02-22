@@ -35,7 +35,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f3fb618d44f2c5b1011f/download/carlos.jpg"
+              src="https://live.staticflickr.com/65535/52705483608_0615db0944_n.jpg"
               alt="Carlos"
             />
           </ListGroup>
@@ -56,7 +56,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f10ed8dfb062168a1b4cc1/download/image.png"
+              src="https://live.staticflickr.com/65535/52705483643_f20c91d140_z.jpg"
               alt="esteban"
             />
           </ListGroup>
@@ -77,7 +77,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6"  className="mt-4">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f5decb9a8590fa1b4900/download/IMG_20220812_160555748.jpg"
+              src="https://live.staticflickr.com/65535/52704477132_5911b79ff3_c.jpg"
               alt="ruben"
             />
           </ListGroup>
@@ -98,7 +98,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f45a8efacaf3eca652da/download/FB_IMG_1659647280750~2%5B159%5D.jpg"
+              src="https://live.staticflickr.com/65535/52705250009_5225c5ea8d_c.jpg"
               alt="flor"
             />
           </ListGroup>
@@ -119,7 +119,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6">
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3c86243d5399b3aa2d8e4/download/Paula_Guill%C3%A9n.png"
+              src="https://live.staticflickr.com/65535/52705250049_48782fe6f6_c.jpg"
               alt="paula"
             />
           </ListGroup>
@@ -140,7 +140,7 @@ const AcercaDe = () => {
           <ListGroup as={Col} md="6">
             <img
               className="rounded-circle AVATAR m-auto mt-3"
-              src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f4093fba8a7b66490558f8/download/candela.png"
+              src="https://live.staticflickr.com/65535/52704996061_6be55c2459_c.jpg"
               alt="candela"
             />
           </ListGroup>

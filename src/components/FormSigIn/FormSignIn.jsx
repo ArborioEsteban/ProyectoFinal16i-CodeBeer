@@ -83,10 +83,7 @@ const FormSignIn = () => {
         setIsError(false);
         
        
-        // const token = response.data.token;
-        // sessionStorage.setItem('token', token);
-       
-        // sessionStorage.setItem('token', token);
+
 
         Swal.fire({
           title: 'Usuario registrado, Por favor inicie Sesion para continuar',
