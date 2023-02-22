@@ -47,7 +47,9 @@ const ItemsForm = (props) => {
 
             //Caso Editar
             if (modifyingItem){
+
                 const res = await axios.put(`/product/${modifyingItem}`, { 
+
                     name:name,
                     price:price,
                     description:description,

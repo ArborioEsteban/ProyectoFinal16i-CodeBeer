@@ -8,14 +8,20 @@ const AcercaDe = () => {
     <>
 
 
-    <Container >
+    
       <h2 id="datosContacto" className="text-center H2Cont ">
         Datos De Contacto
       </h2>
-      <div className="py-5 text-center m-auto group">
-      <hr className="fs-1"></hr>
-        <Row className="mt-0 text-center">
-          <ListGroup as={Col} md="6" className="mt-4">
+
+        <Container >
+      <div className="  py-3 text-center  group">
+         <hr className="fs-1"></hr>
+        <Row className=" mb-5">
+          <ListGroup as={Col} md="6">
+
+      
+   
+       
             <ListGroup.Item >
               Nombre: Medina Juan Carlos
             </ListGroup.Item>
@@ -51,7 +57,7 @@ const AcercaDe = () => {
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f10ed8dfb062168a1b4cc1/download/image.png"
-              alt="Carlos"
+              alt="esteban"
             />
           </ListGroup>
         </Row>
@@ -72,7 +78,7 @@ const AcercaDe = () => {
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f5decb9a8590fa1b4900/download/IMG_20220812_160555748.jpg"
-              alt="Carlos"
+              alt="ruben"
             />
           </ListGroup>
         </Row>
@@ -93,7 +99,7 @@ const AcercaDe = () => {
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3f45a8efacaf3eca652da/download/FB_IMG_1659647280750~2%5B159%5D.jpg"
-              alt="Carlos"
+              alt="flor"
             />
           </ListGroup>
         </Row>
@@ -114,7 +120,7 @@ const AcercaDe = () => {
             <img
               className="rounded-circle  AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f3c86243d5399b3aa2d8e4/download/Paula_Guill%C3%A9n.png"
-              alt="Carlos"
+              alt="paula"
             />
           </ListGroup>
         </Row>
@@ -135,7 +141,7 @@ const AcercaDe = () => {
             <img
               className="rounded-circle AVATAR m-auto mt-3"
               src="https://trello.com/1/cards/63f0f49470d2cf0664031c33/attachments/63f4093fba8a7b66490558f8/download/candela.png"
-              alt="Carlos"
+              alt="candela"
             />
           </ListGroup>
         </Row>
