@@ -32,7 +32,7 @@ carritoLS.forEach(element => {
 
 
 const ProductGrid = () => {
-  const [products,setItems] = useState([]);
+  const [products,setProducts] = useState([]);
 
     // states para el carrito
 
@@ -59,16 +59,11 @@ const ProductGrid = () => {
     
 
     useEffect(() => {
-        const itemsFetch = async () => {
+        const itemsFetch = async (e) => {
           const data = await axios.get(`/products`);
-          setItems(data.data);
-          // const numMesaSStorage = sessionStorage.getItem('mesa');
-          
+          setProducts(data.data);  
         };
         itemsFetch();
-
-        
-      
       }, []);
 
       const onRemoveProduct = products => {
