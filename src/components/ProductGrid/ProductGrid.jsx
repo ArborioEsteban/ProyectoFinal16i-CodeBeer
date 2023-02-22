@@ -14,7 +14,7 @@ const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
 // el [] despues del || va con o sin comillas?
 
 const userLS = localStorage.getItem("user");
-const numMesaSStorage = sessionStorage.getItem('mesa');
+const numMesaSStorage = localStorage.getItem('mesa');
 
 let totalLS=0; 
 let countLS=0;
@@ -69,7 +69,9 @@ const ProductGrid = () => {
 
       const onRemoveProduct = products => {
         const results = allProducts.filter(
-          item => item.id !== products.id
+          item => item.productID
+          !== products.productID
+
         );
 
         setTotal(total - products.price * products.quantity);
@@ -150,7 +152,8 @@ const ProductGrid = () => {
               {allProducts.length ? (
                 <>
                   {allProducts.map( elemento =>(
-                          <div key={elemento.id}>
+                          <div key={elemento.productID
+                          }>
                             <div className='d-flex flex-direction-row align-items-center bg-dark'>
                               <p className='w-25'>{elemento.quantity} x </p>
                               <p className='ms-1 w-50'>{elemento.name}</p>
@@ -212,7 +215,8 @@ const ProductGrid = () => {
             <div className='mt-5'></div>
                 {products.map((elemento) => {
                     return (
-                        <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className='mt-4'>
+                        <Col xs={6} sm={4} md={4} lg={2} key={elemento.productID
+                        } className='mt-4'>
                         <ProductItem {...elemento} 
 
                         allProducts={allProducts}
