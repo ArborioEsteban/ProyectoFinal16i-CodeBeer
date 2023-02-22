@@ -58,28 +58,29 @@ const FormLogin = () => {
 
       if (response.status === 200) {
         setIsError(false);
-        console.log(response.data);
+        
         const token = response.data.token;
-        console.log(token);
-
-        // const isAdmin = response.data.isAdmin;
-        // console.log(isAdmin);
+        
         sessionStorage.setItem('token', token);
-        localStorage.setItem('response', response);
+        
 
         const dataDecoded = jwt_decode(token);
-        console.log(dataDecoded);
         
+
+        let adminLogeado = dataDecoded.isAdmin;
+        
+
         Swal.fire({
           title: 'Bienvenido',
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
-          if(dataDecoded.isAdmin === true){
+          if(adminLogeado === true){
             navigate('/adminForm');
+          }else{
+            navigate('/selectTable'); 
           }
-          navigate('/selectTable');
         
           
         });
