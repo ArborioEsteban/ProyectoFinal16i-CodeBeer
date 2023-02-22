@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
-import { Button } from "react-bootstrap";
+
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 
@@ -39,7 +39,7 @@ const FormLogin = () => {
     }
     setPasswordError(false);
 
-    console.log([emailLogin, contraseñaLogin]);
+    
   };
 
   return (
@@ -93,14 +93,14 @@ const FormLogin = () => {
                 ¿Olvido su contraseña?
               </div>
               <div className="text-center">
-                <Button
+                <button
                   type="submit"
                   className="botonLogin bg-transparent mt-3"
                   id="botonLogin"
                 >
                   Ingresar
                   <HiLogin className="icons ms-2" />
-                </Button>
+                </button>
               </div>
             </Form>
           </div>
@@ -110,14 +110,14 @@ const FormLogin = () => {
 
           <div className="text-center my-3">¿Aun no estas registrado?</div>
           <div className="d-flex column align-items-center justify-content-center">
-            <Button
+            <button
               className="botonLogin bg-transparent my-3"
-              id="botonLogin"
+              id="botonRegistroLogin"
               onClick={() => handleClick("/FormSignIn")}
             >
               Registrate
               <HiOutlineClipboardList className="ms-2 icons" />
-            </Button>
+            </button>
           </div>
         </div>
       </div>

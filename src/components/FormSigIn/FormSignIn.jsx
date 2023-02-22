@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import { Button, Container, Row, Col } from "react-bootstrap";
-import {  useNavigate } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
@@ -18,10 +18,6 @@ const FormSignIn = () => {
   const [apellidoRegistro, setApellidoRegistro] = useState();
   const [emailRegistro, setEmailRegistro] = useState();
   const [contraseñaRegistro, setContraseñaRegistro] = useState();
-
-
-
-
 
   //const para validar errores en campo email y password
   const [nombreError, setNombreError] = useState(false);
@@ -62,13 +58,6 @@ const FormSignIn = () => {
       return;
     }
     setPasswordError(false);
-
-    console.log([
-      nombreRegistro,
-      apellidoRegistro,
-      emailRegistro,
-      contraseñaRegistro,
-    ]);
   };
 
   return (
@@ -78,7 +67,7 @@ const FormSignIn = () => {
           <hr />
           <h2 className="my-3 ms-2 ">Registrate</h2>
         </div>
-        
+
         <Form onSubmit={handleSubmit} className="form container py-4 px-4">
           <Form.Group className="mt-4" controlId="Nombre">
             <Form.Label>
@@ -96,7 +85,7 @@ const FormSignIn = () => {
             )}
           </Form.Group>
 
-          <Form.Group className="mt-4" controlId="Nombre">
+          <Form.Group className="mt-4" controlId="Apellido">
             <Form.Label>
               <HiUser className="me-2" />
               Ingrese su apellido
@@ -128,7 +117,6 @@ const FormSignIn = () => {
                 El formato del email no es válido.
               </span>
             )}
-          
           </Form.Group>
           <Form.Group className="my-4" controlId="Password">
             <Form.Label>
@@ -155,7 +143,7 @@ const FormSignIn = () => {
             controlId="CheckboxTerminosYCondiciones"
           >
             <div onClick={() => handleCLick("/Error404")}>
-              <p className="">Terminos y condiciones</p>
+              <p >Terminos y condiciones</p>
             </div>
             <Form.Check
               type="checkbox"
@@ -164,14 +152,14 @@ const FormSignIn = () => {
           </Form.Group>
 
           <div className="d-flex column align-items-center justify-content-center">
-            <Button
-              className="bg-transparent my-3"
-              id="botonLogin"
+            <button
+              className="botonLogin bg-transparent my-3"
+              id="botonRegistro"
               onClick={handleSubmit}
             >
               Registrate
               <HiOutlineClipboardList className="ms-2 icons" />
-            </Button>
+            </button>
           </div>
         </Form>
 
@@ -184,7 +172,7 @@ const FormSignIn = () => {
               <Row
                 onClick={() => handleCLick("/Error404")}
                 className="border y-1"
-
+                id="RegistroFace"
               >
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaFacebookF />
@@ -196,7 +184,7 @@ const FormSignIn = () => {
               <Row
                 onClick={() => handleCLick("/Error404")}
                 className="border py-1 mt-3 "
-               
+                id="RegistroGoogle"
               >
                 <Col xs={2} md={2} className="ms-4 pt-2 text-center">
                   <FaGoogle />
@@ -216,15 +204,15 @@ const FormSignIn = () => {
             <p>¿ya tenes cuenta?</p>
 
             <div className="text-center">
-              <Button
+              <button
                 onClick={() => handleCLick("/FormLogin")}
                 type="submit"
-                className="bg-transparent my-3"
-                id="botonLogin"
+                className="botonLogin bg-transparent my-3"
+                id="botonLoginRegistro"
               >
                 Ingresar
                 <HiLogin className="icons ms-2" />
-              </Button>
+              </button>
             </div>
           </div>
         </div>

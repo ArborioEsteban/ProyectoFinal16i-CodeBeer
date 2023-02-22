@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductGrid from "../components/ProductGrid/ProductGrid";
 import SelectTable from "../components/Table/SelectTable";
 import "../components/ProductGrid/ProductGrid.css";
@@ -7,7 +7,7 @@ import Error404 from "../components/Error404";
 import FormSignIn from "../components/FormSigIn/FormSignIn";
 import FormLogin from "../components/FormLogin/FormLogin";
 
-import App from "../App";
+
 
 const Router = () => {
   return (
