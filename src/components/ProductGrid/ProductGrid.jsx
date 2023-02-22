@@ -62,7 +62,7 @@ const ProductGrid = () => {
         const itemsFetch = async () => {
           const data = await axios.get(`/products`);
           setItems(data.data);
-          const numMesaSStorage = sessionStorage.getItem('mesa');
+          // const numMesaSStorage = sessionStorage.getItem('mesa');
           
         };
         itemsFetch();

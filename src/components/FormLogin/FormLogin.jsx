@@ -66,7 +66,8 @@ const FormLogin = () => {
           showConfirmButton: false,
         }).then(() => {
           navigate('/selectTable');
-          // aqui hacer un navigate hacia la parte de seleccionar Table
+          // aqui hacer un navigate dependiendo quien se logea, si es admin tiene q ir a la parte de adminde productos
+          
         });
       }
     } catch (error) {
