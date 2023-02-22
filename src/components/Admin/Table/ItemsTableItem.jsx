@@ -60,7 +60,7 @@ const ItemsTableItem = (props) => {
                 </td>
                 <td>{description}</td>
                 <td>{category}</td>
-                <td>{quantity}</td>
+                {/* <td>{quantity}</td> */}
                 <td>
                     <Button  className='me-1 botonGeneral' onClick={handleEdit}>Editar</Button>
                     <Button className='botonGeneral' variant='danger' onClick={handleDelete}>Borrar</Button>

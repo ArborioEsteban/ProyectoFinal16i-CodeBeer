@@ -1,8 +1,8 @@
-import axios from '../../api/axios';
 import { useEffect, useState } from 'react'
+import axios from '../../api/axios';
 import {Button, Container,Form} from 'react-bootstrap';
 import Swal from 'sweetalert2';
-import { getRandomId } from '../../../hellpers/getRandomId';
+// import { getRandomId } from '../../../hellpers/getRandomId';
 import { validateDate } from '../../../hellpers/validateDate';
 
 
@@ -39,99 +39,185 @@ const ItemsForm = (props) => {
                 } 
         }, [modifyingItem]);
      
-        const handleSubmit = async (e)=>{
-            e.preventDeFault();
+    //     const handleSubmit = async (e)=>{
+    //         e.preventDeFault();
         
-        if (validateDate(name, price, description, image)){
+    //         if (validateDate(name, price, description, image)){
             
 
-            //Caso Editar
-            if (modifyingItem){
+    //         //Caso Editar
+    //         if (modifyingItem){
+    //             const res = await axios.put(`/product/${modifyingItem}`, { 
+    //                 name:name,
+    //                 price:price,
+    //                 description:description,
+    //                 image:image,
+    //                 category:category,
+    //                 // isActive:available, 
+    //                 // quantity:quantity,
 
-                const res = await axios.put(`/product/${modifyingItem}`, { 
-
-                    name:name,
-                    price:price,
-                    description:description,
-                    image:image,
-                    category:category,
-                    // isActive:available, 
-                    // quantity:quantity,
-
-                });
-                if(res.status === 200){
-                    Swal.fire ({
-                    title:'Operacion exitosa',
-                    text:'Elemento modificado correctamente',
-                    icon:'success',
-                    timer:2000,
-                    showCancelButton: false,
-                    showConfirmButton: false,
-                }).then(()=>{
-                    window.location.reload();
-                }); 
+    //             });
+    //             if(res.status === 200){
+    //                 Swal.fire ({
+    //                 title:'Operacion exitosa',
+    //                 text:'Elemento modificado correctamente',
+    //                 icon:'success',
+    //                 timer:2000,
+    //                 showCancelButton: false,
+    //                 showConfirmButton: false,
+    //             }).then(()=>{
+    //                 window.location.reload();
+    //             }); 
             
     
-            }   else{
-                Swal.fire ({
-                    title:'Error',
-                    text:`Ocurrio un error al editar el elemento,que es: ${res.statusText} `,
-                    icon:'error',
-                    timer:2000,
-                    showCancelButton: false,
-                    showConfirmButton: false,
-                });  
-            }  
+    //         }   else{
+    //             Swal.fire ({
+    //                 title:'Error',
+    //                 text:`Ocurrio un error al editar el elemento,que es: ${res.statusText} `,
+    //                 icon:'error',
+    //                 timer:2000,
+    //                 showCancelButton: false,
+    //                 showConfirmButton: false,
+    //             });  
+    //         }  
         
-            return;
-            }
+    //         return;
+    //         }
 
-        //caso crear
-           const res = await axios.post(`/product`,{
-                id:getRandomId(),
+    //     //caso crear
+    //        const res = await axios.post(`/product`,{
+                
+    //             name:name,
+    //             price:price,
+    //             description:description,
+    //             image:image,
+    //             category:category,
+    //             // isActive:available,
+    //             // quantity:quantity,
+    //         });
+            
+    //         if(res.status === 200){
+    //             Swal.fire ({
+    //             title:'Operacion exitosa',
+    //             text:'Elemento agregado correctamente',
+    //             icon:'success',
+    //             timer:2000,
+    //             showCancelButton: false,
+    //             showConfirmButton: false,
+    //         }).then(()=>{
+    //             window.location.reload();
+    //         });
+
+    //     }   else{
+    //         Swal.fire ({
+    //             title:'Error',
+    //             text:`Ocurrio algun error ,que es: ${res.statusText} `,
+    //             icon:'error',
+    //             timer:2000,
+    //             showCancelButton: false,
+    //             showConfirmButton: false,
+    //         });  
+    //     }  
+    //     } else{
+    //         Swal.fire ({
+    //             title:'Error',
+    //             text:'Revise los campos',
+    //             icon:'error',
+    //             timer:2000,
+    //             showCancelButton: false,
+    //             showConfirmButton: false,
+    //         });   
+    //     }
+        
+    // };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log("funciona el submit")
+        if (validateDate(name, price, description, image)) {
+          // guardo los datos
+          console.log('datos VALIDOS');
+    
+          //   Caso EDITAR
+          if (modifyingItem) {
+            const res = await axios.put(`/product/${modifyingItem}`, {
                 name:name,
                 price:price,
                 description:description,
                 image:image,
                 category:category,
-                // isActive:available,
-                // quantity:quantity,
             });
-            
-            if(res.status === 200){
-                Swal.fire ({
-                title:'Operacion exitosa',
-                text:'Elemento agregado correctamente',
-                icon:'success',
-                timer:2000,
+    
+            if (res.status === 200) {
+              Swal.fire({
+                title: 'Operacion exitosa',
+                text: 'Elemento modificado correctamente',
+                icon: 'success',
+                timer: 2000,
                 showCancelButton: false,
                 showConfirmButton: false,
-            }).then(()=>{
+              }).then(() => {
                 window.location.reload();
+              });
+            } else {
+              Swal.fire({
+                title: 'Error',
+                text: `Ocurrio un error al editar el elemento, que es: ${res.statusText}`,
+                icon: 'error',
+                timer: 2000,
+                showCancelButton: false,
+                showConfirmButton: false,
+              });
+            }
+    
+            return;
+          }
+    
+          //   Caso CREAR
+          const res = await axios.post(`/products`, {
+            name:name,
+            price:price,
+            description:description,
+            image:image,
+            category:category,
+            isActive: true,
+            quantity: 1,
+          });
+    
+          if (res.status === 200) {
+            Swal.fire({
+              title: 'Operacion exitosa',
+              text: 'Elemento agregado correctamente',
+              icon: 'success',
+              timer: 2000,
+              showCancelButton: false,
+              showConfirmButton: false,
+            }).then(() => {
+              window.location.reload();
             });
-
-        }   else{
-            Swal.fire ({
-                title:'Error',
-                text:`Ocurrio algun error ,que es: ${res.statusText} `,
-                icon:'error',
-                timer:2000,
-                showCancelButton: false,
-                showConfirmButton: false,
-            });  
-        }  
-        } else{
-            Swal.fire ({
-                title:'Error',
-                text:'Revise los campos',
-                icon:'error',
-                timer:2000,
-                showCancelButton: false,
-                showConfirmButton: false,
-            });   
+          } else {
+            Swal.fire({
+              title: 'Error',
+              text: `Ocurrio un error al guardar el elemento, que es: ${res.statusText}`,
+              icon: 'error',
+              timer: 2000,
+              showCancelButton: false,
+              showConfirmButton: false,
+            });
+          }
+        } else {
+          // muestro error
+          console.log('datos INVALIDOS');
+    
+          Swal.fire({
+            title: 'Error',
+            text: `Revise los campos`,
+            icon: 'error',
+            timer: 2000,
+            showCancelButton: false,
+            showConfirmButton: false,
+          });
         }
-        
-    };
+      };
 
 
      return (
