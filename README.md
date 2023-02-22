@@ -1,12 +1,12 @@
 <h1 style="display:block; text-align:center;">Code & Beer - Proyecto Final Rolling Code School</h1>
 
 ***Repositorio del sitio web de Code&Beer - Front End***
-#### Grupo 1 - Comision 16i
+## Grupo 1 - Comision 16i
 ![](https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg)
 
 <br/>
 
-### Se podrán realizar las siguientes funciones:
+## Se podrán realizar las siguientes funciones:
 - Clientes:
      - Iniciar sesión / registrarse en la aplicación, editar nombre y apellido, dar de baja el usuario.
      - Visualización del listado de productos, número de mesa, pedido.
@@ -18,7 +18,23 @@
      
 <br/>
 
-### Páginas informativas
+## Repositorio del Backend 💻
+
+El repositorio del backend, su descripción y link del deploy se encuentra en
+[GITHUB](https://github.com/paulag1/proyectoFinalBE-Code-Beer)
+
+## ¿Cómo utilizo la app de Code & Beer? 🤔
+
+Para poder utilizar la interfaz como *USUARIO*, primero debés _registrarte_ y luego usar la misma cuenta para _loguearte_. Esto permitirá que puedas acceder a la plataforma para realizar los pedidos. Por otro lado, si querés acceder a la interfaz del **ADMINISTRADOR**, utilizá los siguientes datos para loguearte:
+
+```bash
+  Email: codebeer@gmail.com
+  Password: comision16i
+```
+
+Y accederás a la plataforma para administradores, donde podras gestionar todo el menu de la cerveceria!.
+
+## Páginas informativas
 
 - Página Principal: bienvenida al sitio. Incluye un botón en el header para acceder a la 
 aplicación de pedidos / administración. 
@@ -29,7 +45,7 @@ interesadas puedan enviar consultas.
 
 <br/>
 
-### Panel de Login y Registro
+## Panel de Login y Registro
 
 Esta pantalla del sitio contiene el formulario de logeo y la opción de crear una cuenta.
 - Los datos indispensables para registrarse son:
@@ -43,7 +59,7 @@ Esta pantalla del sitio contiene el formulario de logeo y la opción de crear un
 
 <br/>
 
-### Listado de Productos que visualiza el CLIENTE
+## Listado de Productos que visualiza el CLIENTE
 
 Para poder acceder a esta pantalla, el usuario primero deberá logearse y luego ingresar el numero de mesa en la cual está sentado.
 El usuario podrá:
@@ -55,7 +71,7 @@ El usuario podrá:
 
 <br/>
 
-### Panel del Pedido
+## Panel del Pedido
 
 Para poder acceder a esta pantalla, el usuario deberá estar logeado y haber ingresado el numero de mesa en la cual está sentado.
 En esta pantalla el usuario podrá visualizar su pedido para:
@@ -65,14 +81,14 @@ En esta pantalla el usuario podrá visualizar su pedido para:
      - Cerrar el pedido.
 <br/>
 
-### Panel de Cuenta
+## Panel de Cuenta
 
 Para poder acceder a esta pantalla, el usuario deberá estar logeado.
 En esta pantalla el usuario podrá visualizar sus datos, modificar su nombre y apellido de ser necesario y cerrar sesión.
 
 <br/>
 
-### Listado de Productos que visualiza el ADMINISTRADOR
+## Listado de Productos que visualiza el ADMINISTRADOR
 
 Solo el administrador podrá acceder a esta pantalla.
 Contiene un formulario para agregar nuevos productos y una tabla listando todos los ya existentes con sus datos correspondientes.
@@ -87,11 +103,11 @@ Los datos para crear un producto serán:
 Se podrán modificar los productos, de ser necesario, permitiendo marcar como NO disponible el producto en cuestión.
 
 
-### Sitio de prueba:
+## Sitio de prueba:
 [Code&Beer](https://codebeer.netlify.app/)
  <br/>
  
-### Contribuidores:
+## Contribuidores:
 
 - [Candela M. Mercado](https://github.com/CandelaMercado00) 
 - [Rubén Vizcarra](https://github.com/RuViz)
