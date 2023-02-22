@@ -7,7 +7,7 @@
       "description": "() => {Dorado/ anaranjado profundo, de espuma blanca persistente y opalescencia característica - 4.5% de alcohol if(pintasConsumidas >= 1){!manejar}}",
       "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
       "category": "Cervezas",
-      "available": true,
+      "isActive": true,
       "quantity": 1
     },
     {
@@ -27,7 +27,7 @@
       "description": "<Hamburguesa ClassName='noMeLaContainer' Viene con bacon Cheddar y Papas! />",
       "image": "https://img.freepik.com/free-photo/front-view-burger-stand_141793-15542.jpg?w=1380&t=st=1675782027~exp=1675782627~hmac=90968162fe228eb1b65366e3549c39ca6833cbbffed54e8d89765479e4f87467",
       "category": "Cervezas",
-      "available": true,
+      "isActive": true,
       "quantity": 1
     },
     {
@@ -37,7 +37,7 @@
       "description": "() => {}",
       "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
       "category": "Cervezas",
-      "available": true,
+      "isActive": true,
       "quantity": 1
     },
     {
@@ -47,25 +47,10 @@
       "description": "() => {}",
       "image": "https://escuelagourmetonline.com.ar/wp-content/uploads/2021/03/que-es-una-pinta-min-1024x575.jpeg",
       "category": "Cervezas",
-      "available": true,
+      "isActive": true,
       "quantity": 1
     },
-    {
-      "name": "cerveza",
-      "price": "700",
-      "description": "cerveza",
-      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
-      "category": "cerveza",
-      "id": "vtbCSak"
-    },
-    {
-      "name": "cerveza",
-      "price": "700",
-      "description": "cerveza",
-      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
-      "category": "cerveza",
-      "id": "Co2p4Ou"
-    },
+    
     {
       "name": "cerveza",
       "price": "123",

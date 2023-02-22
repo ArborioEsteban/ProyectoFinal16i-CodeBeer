@@ -7,7 +7,7 @@ import './ProductItem.css';
 
 
 const ProductItem = (props) => {
-    const {id,name,price,description,image,category,available,quantity} = props;
+    const {id,name,price,description,image,category,isActive,quantity} = props;
     const {allProducts , setAllProducts , countProducts, setCountProducts ,total , setTotal} = props;
     
     const {...elemento} = props;
@@ -47,7 +47,7 @@ const ProductItem = (props) => {
             <div className='divImagen'>
             <p className='text-center'>+ info</p>
             <Card.Img src={`${
-                available ? image : 'https://img.freepik.com/free-vector/404-error-template-flat-style_23-2147759636.jpg?w=826&t=st=1675871123~exp=1675871723~hmac=d506aee3005de3475235f0ac680d1a69430d9266eea5a2630e9509cfb5358cbd'
+                isActive ? image : 'https://img.freepik.com/free-vector/404-error-template-flat-style_23-2147759636.jpg?w=826&t=st=1675871123~exp=1675871723~hmac=d506aee3005de3475235f0ac680d1a69430d9266eea5a2630e9509cfb5358cbd'
             }`
               
             }
@@ -61,7 +61,7 @@ const ProductItem = (props) => {
         {/* <Card.Text className='cardProductos text-center'>{description}</Card.Text> */}
         
         <div className='text-center my-2'>
-          <h5>$ {price}</h5>
+          <h5 className='text-card'>$ {price}</h5>
 
              
           <Button 
@@ -70,12 +70,12 @@ const ProductItem = (props) => {
             className={`
            btnCardProductos mt-
             ${
-						available ? '' : 'disabled'
+						isActive ? '' : 'disabled'
 					}`}
 
           >
           
-            {`${available ? Button.innerHTML = `Agregar`  : Button.innerHTML = ''}`}
+            {`${isActive ? Button.innerHTML = `Agregar`  : Button.innerHTML = ''}`}
             <AiOutlineShoppingCart/>
           </Button>
         </div>

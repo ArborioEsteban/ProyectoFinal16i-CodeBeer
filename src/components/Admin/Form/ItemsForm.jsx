@@ -173,7 +173,7 @@ const ItemsForm = (props) => {
           }
     
           //   Caso CREAR
-          const res = await axios.post(`/products`, {
+          const res = await axios.post(`/product`, {
             name:name,
             price:price,
             description:description,
