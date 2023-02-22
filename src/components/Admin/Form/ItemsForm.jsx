@@ -53,7 +53,7 @@ const ItemsForm = (props) => {
                     description:description,
                     image:image,
                     category:category,
-                    available:available, 
+                    isActive:available, 
                     quantity:quantity,
 
                 });
@@ -92,7 +92,7 @@ const ItemsForm = (props) => {
                 description:description,
                 image:image,
                 category:category,
-                available:available,
+                isActive:available,
                 quantity:quantity,
             });
             
