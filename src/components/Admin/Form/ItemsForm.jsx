@@ -132,10 +132,10 @@ const ItemsForm = (props) => {
     // };
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+        console.log("funciona el submit")
         if (validateDate(name, price, description, image)) {
           // guardo los datos
-        //   console.log('datos VALIDOS');
+          console.log('datos VALIDOS');
     
           //   Caso EDITAR
           if (modifyingItem) {
@@ -173,12 +173,14 @@ const ItemsForm = (props) => {
           }
     
           //   Caso CREAR
-          const res = await axios.post(`/product`, {
+          const res = await axios.post(`/products`, {
             name:name,
             price:price,
             description:description,
             image:image,
             category:category,
+            isActive: true,
+            quantity: 1,
           });
     
           if (res.status === 200) {

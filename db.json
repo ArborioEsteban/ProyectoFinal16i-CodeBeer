@@ -49,6 +49,42 @@
       "category": "Cervezas",
       "available": true,
       "quantity": 1
+    },
+    {
+      "name": "cerveza",
+      "price": "700",
+      "description": "cerveza",
+      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
+      "category": "cerveza",
+      "id": "vtbCSak"
+    },
+    {
+      "name": "cerveza",
+      "price": "700",
+      "description": "cerveza",
+      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
+      "category": "cerveza",
+      "id": "Co2p4Ou"
+    },
+    {
+      "name": "cerveza",
+      "price": "123",
+      "description": "cerveza",
+      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
+      "category": "cerveza",
+      "isActive": true,
+      "quantity": 1,
+      "id": "ysWr_ou"
+    },
+    {
+      "name": "cerveza123",
+      "price": "123",
+      "description": "cerveza",
+      "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
+      "category": "cerveza",
+      "isActive": true,
+      "quantity": 1,
+      "id": "1T0fsyJ"
     }
   ]
 }
