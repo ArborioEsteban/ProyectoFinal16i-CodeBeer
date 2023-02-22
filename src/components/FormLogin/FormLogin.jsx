@@ -8,8 +8,11 @@ import { HiEnvelope } from "react-icons/hi2";
 
 import axios from '../api/axios';
 import Swal from 'sweetalert2';
+import jwt_decode from "jwt-decode";
 
 import "./FormLogin.css";
+
+
 
 const FormLogin = () => {
   const navigate = useNavigate();
@@ -58,27 +61,26 @@ const FormLogin = () => {
         console.log(response.data);
         const token = response.data.token;
         console.log(token);
-        
-        const isAdmin = response.data.isAdmin;
-        console.log(isAdmin);
+
+        // const isAdmin = response.data.isAdmin;
+        // console.log(isAdmin);
         sessionStorage.setItem('token', token);
         localStorage.setItem('response', response);
 
-
+        const dataDecoded = jwt_decode(token);
+        console.log(dataDecoded);
+        
         Swal.fire({
           title: 'Bienvenido',
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
-          if(isAdmin === true){
+          if(dataDecoded.isAdmin === true){
             navigate('/adminForm');
           }
           navigate('/selectTable');
-          // aqui hacer un navigate dependiendo quien se logea, si es admin tiene q ir a la parte de adminde productos
-          // if(isAdmin == true){
-            // navigate('/adminForm');else{a seleccionar tabla}
-          // }
+        
           
         });
       }
