@@ -53,7 +53,7 @@ const ItemsForm = (props) => {
                     description:description,
                     image:image,
                     category:category,
-                    available:available, 
+                    isActive:available, 
                     quantity:quantity,
 
                 });
@@ -92,7 +92,7 @@ const ItemsForm = (props) => {
                 description:description,
                 image:image,
                 category:category,
-                available:available,
+                isActive:available,
                 quantity:quantity,
             });
             
@@ -133,7 +133,7 @@ const ItemsForm = (props) => {
 
 
      return (
-            <Form className='bg-dark text-light rounded w-100 Titulo mt-2'
+            <Form className='bg-dark text-light rounded w-100 Titulo mt-3'
             onSubmit={handleSubmit}>
                 
               <Container>
