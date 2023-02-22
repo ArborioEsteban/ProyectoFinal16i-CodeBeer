@@ -86,7 +86,7 @@ const ItemsForm = (props) => {
 
         //caso crear
            const res = await axios.post(`/product`,{
-                id:getRandomId(),
+                
                 name:name,
                 price:price,
                 description:description,

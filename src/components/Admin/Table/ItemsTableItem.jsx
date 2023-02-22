@@ -24,7 +24,7 @@ const ItemsTableItem = (props) => {
    }).then(async (res) =>{
     if(res.isConfirmed){
         //eliminar
-     const res = await axios.delete(`/products/${id}`);
+     const res = await axios.delete(`/product/${id}`);
         if (res.status === 200){
             Swal.fire({
                 title:'Operacion exitosa',
@@ -60,7 +60,7 @@ const ItemsTableItem = (props) => {
                 </td>
                 <td>{description}</td>
                 <td>{category}</td>
-                <td>{quantity}</td>
+                {/* <td>{quantity}</td> */}
                 <td>
                     <Button  className='me-1 botonGeneral' onClick={handleEdit}>Editar</Button>
                     <Button className='botonGeneral' variant='danger' onClick={handleDelete}>Borrar</Button>
