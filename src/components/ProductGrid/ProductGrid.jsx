@@ -65,8 +65,8 @@ const ProductGrid = () => {
           setProducts(data.data);  
         };
         itemsFetch();
-        // recargar la pagina
-        window.location.reload();
+        
+        
       }, []);
 
       const onRemoveProduct = products => {
@@ -135,7 +135,7 @@ const ProductGrid = () => {
 
   return (
     <>
-      <div className='text-end fixed-bottom  mb-5 me-2 container'>
+      <div className='text-end fixed-bottom  mb-0 me-1 container'>
         <Button className="w-25" id='myCartBtn' onClick={handleShow}>
           {countProducts}<AiOutlineShoppingCart/>
         </Button>

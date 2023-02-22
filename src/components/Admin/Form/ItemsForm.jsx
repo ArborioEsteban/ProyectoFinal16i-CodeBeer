@@ -10,7 +10,7 @@ const ItemsForm = (props) => {
 
         const {modifyingItem} = props;
 
-        const[name,SetName]= useState();
+        const[name,setName]= useState();
         const[price,setPrice]=useState();
         const[image,setImage]=useState();
         const[description,setDescription]=useState(); 
@@ -26,7 +26,7 @@ const ItemsForm = (props) => {
                     const itemToModify = items.find (
                         (element) => element.id === modifyingItem);
                         
-                    SetName (itemToModify.name);
+                    setName(itemToModify.name);
                     setPrice (itemToModify.price);
                     setDescription (itemToModify.description);
                     setImage (itemToModify.image);
@@ -41,10 +41,9 @@ const ItemsForm = (props) => {
      
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log("funciona el submit")
+        
         if (validateDate(name, price, description, image)) {
-          // guardo los datos
-        //   console.log('datos VALIDOS');
+     
     
           //   Caso EDITAR
           if (modifyingItem) {
@@ -143,7 +142,7 @@ const ItemsForm = (props) => {
                     <Form.Control
                         type='text'
                         value={name}
-                        onChange={(e) => SetName(e.target.value)} />
+                        onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className='mt-2'>
                     <Form.Label>Precio</Form.Label>

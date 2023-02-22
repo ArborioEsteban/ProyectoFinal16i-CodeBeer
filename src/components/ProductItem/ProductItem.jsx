@@ -38,7 +38,7 @@ const ProductItem = (props) => {
           };
 
     const popover = (
-        <Popover id="popover-basic" Name='popOverInfo bg-transparent'>
+        <Popover id="popover-basic" name='popOverInfo bg-transparent'>
           {/* <Popover.Header as="h4" className='popOverInfo bg-transparent'>{name}</Popover.Header> */}
           <Popover.Body className='popOverInfo text-white'>
             {description}
