@@ -10,10 +10,10 @@
 }
 .cardProductos{
     background-color: #06466338 !important;
-    color: #ECB365;
+    color: #ECB365 !important;
     border-radius: 10px;
-	border-color: #ECB365;
-	border: 2px solid #ECB365;
+	/* border-color: #ecb4659d !important; */
+	border: 1px solid #ecb4658c !important;
 	min-height: 18rem;
 	
 }

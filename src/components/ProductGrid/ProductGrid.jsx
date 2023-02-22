@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {  Button, Col, Offcanvas,  Row } from 'react-bootstrap'
+import {  Button, Col, Container, Offcanvas,  Row } from 'react-bootstrap'
 import axios from '../api/axios';
 import ProductItem from '../ProductItem/ProductItem';
 import { AiOutlineShoppingCart , AiFillCloseSquare} from 'react-icons/ai';
@@ -211,25 +211,27 @@ const ProductGrid = () => {
 
       </div>
 
-      <Row className='mt-5'>
-        <div className='mt-5'></div>
-            {products.map((elemento) => {
-                return (
-                    <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className=' mt-2 p-2'>
-                    <ProductItem {...elemento} 
+      <Container>
+          <Row className='mt-5'>
+            <div className='mt-5'></div>
+                {products.map((elemento) => {
+                    return (
+                        <Col xs={6} sm={4} md={4} lg={2} key={elemento.id} className='mt-4'>
+                        <ProductItem {...elemento} 
 
-                    allProducts={allProducts}
-                    setAllProducts={setAllProducts}
-                    total={total}
-                    setTotal={setTotal}
-                    countProducts={countProducts}
-                    setCountProducts={setCountProducts}/>
-                    
-                </Col>
-                );
-            })}
-            
-        </Row>
+                        allProducts={allProducts}
+                        setAllProducts={setAllProducts}
+                        total={total}
+                        setTotal={setTotal}
+                        countProducts={countProducts}
+                        setCountProducts={setCountProducts}/>
+                        
+                    </Col>
+                    );
+                })}
+                
+          </Row>
+      </Container>
     </>
   )
 }

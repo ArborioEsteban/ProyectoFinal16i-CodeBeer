@@ -1,10 +1,11 @@
 import React from "react";
-import { Button, Container, Accordion } from "react-bootstrap";
+import {Container, Accordion } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./MainView.css";
-import { FaBeer } from "react-icons/fa";
-import { IconName, IoMdBeer } from "react-icons/io";
+
+import { IoMdBeer } from "react-icons/io";
+import Footer from "../Footer/Footer";
 
 const MainView = () => {
   const navigate = useNavigate();
@@ -128,6 +129,9 @@ const MainView = () => {
             </Accordion.Item>
           </Accordion>
         </div>
+        <Container>
+            <Footer/>
+        </Container>
       
     </>
   );

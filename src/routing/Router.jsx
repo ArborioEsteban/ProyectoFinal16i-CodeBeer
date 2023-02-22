@@ -32,7 +32,7 @@ const Router = () => {
         {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}
         <Route path='adminForm' element={ <AdminView/> }/>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
   );
 };
