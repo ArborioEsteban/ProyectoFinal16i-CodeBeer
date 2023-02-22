@@ -70,13 +70,6 @@ const FormSignIn = () => {
     }
     setPasswordError(false);
 
-    // console.log([
-    //   nombreRegistro,
-    //   apellidoRegistro,
-    //   emailRegistro,
-    //   contraseñaRegistro,
-    // ]);
-    // Aqui deberias mandar todos los campos al backend para registrar un usuario
     try {
       const response = await axios.post('/user', {
        name: nombreRegistro,

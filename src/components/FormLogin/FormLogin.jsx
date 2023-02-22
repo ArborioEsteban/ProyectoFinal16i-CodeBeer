@@ -56,6 +56,8 @@ const FormLogin = () => {
       if (response.status === 200) {
         setIsError(false);
         const token = response.data.token;
+        const isAdmin = response.data.isAdmin;
+        console.log(isAdmin);
         console.log(token);
         sessionStorage.setItem('token', token);
 
