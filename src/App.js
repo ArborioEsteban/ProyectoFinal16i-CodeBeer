@@ -6,7 +6,7 @@ import './index.css';
 
 const App = () => {
   useEffect(() => {
-    localStorage.setItem("user", "Esteban");
+    localStorage.setItem("user", "Usuario");
     // localStorage.setItem("carrito", []);
 
   }, []);
