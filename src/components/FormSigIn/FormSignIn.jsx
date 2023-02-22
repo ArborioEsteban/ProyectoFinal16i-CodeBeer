@@ -82,10 +82,10 @@ const FormSignIn = () => {
       if (response.status === 200) {
         setIsError(false);
         
-        // console.log(token);
-        sessionStorage.setItem('token', token);
-        const tokenNuevo = response.data.token;
-        console.log(token);
+       
+        // const token = response.data.token;
+        // sessionStorage.setItem('token', token);
+       
         // sessionStorage.setItem('token', token);
 
         Swal.fire({
