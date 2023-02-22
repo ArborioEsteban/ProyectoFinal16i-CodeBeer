@@ -50,7 +50,6 @@
       "isActive": true,
       "quantity": 1
     },
-    
     {
       "name": "cerveza",
       "price": "123",
@@ -62,14 +61,22 @@
       "id": "ysWr_ou"
     },
     {
-      "name": "cerveza123",
-      "price": "123",
-      "description": "cerveza",
+      "name": "cervezA",
+      "price": "12",
+      "description": "cercvveezzaaa",
       "image": "https://imgmedia.buenazo.pe/650x358/buenazo/original/2021/10/01/6157433df6b717001a4ec64a.jpg",
       "category": "cerveza",
+      "id": "ipk073Z"
+    },
+    {
+      "name": "papiitas",
+      "price": "22",
+      "description": "papita",
+      "image": "https://images.pagina12.com.ar/styles/focal_3_2_470x313/public/2022-08/613089-44529-d-25c3-25ada-2520de-2520la-2520papa-2520frita.jpg?itok=b4N9AKGr",
+      "category": "papas",
       "isActive": true,
       "quantity": 1,
-      "id": "1T0fsyJ"
+      "id": "NWSVO9D"
     }
   ]
 }
