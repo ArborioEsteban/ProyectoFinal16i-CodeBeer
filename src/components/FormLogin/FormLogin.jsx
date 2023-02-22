@@ -55,11 +55,15 @@ const FormLogin = () => {
 
       if (response.status === 200) {
         setIsError(false);
+        console.log(response.data);
         const token = response.data.token;
         console.log(token);
-        const emailAdmin = response.data.email;
-        console.log(emailAdmin);
+        
+        const isAdmin = response.data.isAdmin;
+        console.log(isAdmin);
         sessionStorage.setItem('token', token);
+        localStorage.setItem('response', response);
+
 
         Swal.fire({
           title: 'Bienvenido',
@@ -67,7 +71,7 @@ const FormLogin = () => {
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
-          if(emailAdmin === "codebeer@gmail.com"){
+          if(isAdmin === true){
             navigate('/adminForm');
           }
           navigate('/selectTable');

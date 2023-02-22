@@ -65,6 +65,7 @@ const ProductGrid = () => {
           setProducts(data.data);  
         };
         itemsFetch();
+        // recargar la pagina
       }, []);
 
       const onRemoveProduct = products => {
