@@ -8,7 +8,7 @@ import './ProductGrid.css';
 
 
 
-// let token2 = JSON.parse(sessionStorage.getItem('token'));
+
 // localStorage.setItem("carrito", []);
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
 // el [] despues del || va con o sin comillas?
@@ -60,7 +60,6 @@ const ProductGrid = () => {
     
 
     useEffect(() => {
-      // let token3 = JSON.parse(sessionStorage.getItem('token'));
         const itemsFetch = async (e) => {
           const data = await axios.get(`/products`);
           setProducts(data.data);  
@@ -136,7 +135,7 @@ const ProductGrid = () => {
 
   return (
     <>
-      <div className='text-end fixed-bottom  mb-0 me-1 container'>
+      <div className='text-end fixed-bottom  mb-2 me-1 container'>
         <Button className="w-25" id='myCartBtn' onClick={handleShow}>
           {countProducts}<AiOutlineShoppingCart/>
         </Button>
