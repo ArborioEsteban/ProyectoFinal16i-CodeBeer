@@ -57,6 +57,8 @@ const FormLogin = () => {
         setIsError(false);
         const token = response.data.token;
         console.log(token);
+        const emailAdmin = response.data.email;
+        console.log(emailAdmin);
         sessionStorage.setItem('token', token);
 
         Swal.fire({
@@ -65,7 +67,9 @@ const FormLogin = () => {
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
-
+          if(emailAdmin === "codebeer@gmail.com"){
+            navigate('/adminForm');
+          }
           navigate('/selectTable');
           // aqui hacer un navigate dependiendo quien se logea, si es admin tiene q ir a la parte de adminde productos
           // if(isAdmin == true){
@@ -79,6 +83,8 @@ const FormLogin = () => {
       setErrorMessage(error.response.data.message);
     }
   };
+
+
 
   return (
 
