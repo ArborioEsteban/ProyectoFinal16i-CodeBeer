@@ -56,8 +56,6 @@ const FormLogin = () => {
       if (response.status === 200) {
         setIsError(false);
         const token = response.data.token;
-        const isAdmin = response.data.isAdmin;
-        console.log(isAdmin);
         console.log(token);
         sessionStorage.setItem('token', token);
 
@@ -67,8 +65,12 @@ const FormLogin = () => {
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
+
           navigate('/selectTable');
           // aqui hacer un navigate dependiendo quien se logea, si es admin tiene q ir a la parte de adminde productos
+          // if(isAdmin == true){
+            // navigate('/adminForm');else{a seleccionar tabla}
+          // }
           
         });
       }

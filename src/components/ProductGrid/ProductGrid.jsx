@@ -9,8 +9,9 @@ import './ProductGrid.css';
 
 
 
-
-const carritoLS = JSON.parse(localStorage.getItem("carrito")) || '[]';
+// localStorage.setItem("carrito", []);
+const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
+// el [] despues del || va con o sin comillas?
 
 const userLS = localStorage.getItem("user");
 const numMesaSStorage = sessionStorage.getItem('mesa');
