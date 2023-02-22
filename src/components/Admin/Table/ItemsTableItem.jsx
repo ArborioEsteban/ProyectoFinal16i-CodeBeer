@@ -7,11 +7,12 @@ import './table.css'
 
 
 const ItemsTableItem = (props) => {
-    const {id,name,price,image, category,description, available,quantity, setModifyingItem}= props;
+    const {productID
+        ,name,price,image, category,description, available,quantity, setModifyingItem}= props;
 
    const handleEdit = ()=>{
     
-    setModifyingItem(id);
+    setModifyingItem(productID);
    }
 
    const handleDelete = ()=>{
@@ -24,7 +25,8 @@ const ItemsTableItem = (props) => {
    }).then(async (res) =>{
     if(res.isConfirmed){
         //eliminar
-     const res = await axios.delete(`/product/${id}`);
+     const res = await axios.delete(`/product/${productID
+     }`);
         if (res.status === 200){
             Swal.fire({
                 title:'Operacion exitosa',
@@ -52,7 +54,7 @@ const ItemsTableItem = (props) => {
 
   return ( 
             <tr>
-                <td>{id}</td>
+                <td>{productID}</td>
                 <td>{name}</td>
                 <td>${price}</td>
                 <td>

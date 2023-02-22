@@ -41,7 +41,8 @@ const ItemsTable = (props) => {
         {items.map((elemento) => {
         return (
           <ItemsTableItem
-            key={elemento.id}
+            key={elemento.productID
+            }
             {...elemento}
             setModifyingItem={setModifyingItem}
           />

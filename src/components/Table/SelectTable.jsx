@@ -33,7 +33,7 @@ const SelectTable = () => {
 
       <form onSubmit={handleRHF((data) => {
         let nmesa = data.numMesa;
-        sessionStorage.setItem('mesa', nmesa);
+        localStorage.setItem('mesa', nmesa);
         setMesa(nmesa);
         
         

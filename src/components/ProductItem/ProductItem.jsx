@@ -7,16 +7,21 @@ import './ProductItem.css';
 
 
 const ProductItem = (props) => {
-    const {id,name,price,description,image,category,isActive,quantity} = props;
+    const {productID
+      ,name,price,description,image,category,isActive,quantity} = props;
     const {allProducts , setAllProducts , countProducts, setCountProducts ,total , setTotal} = props;
     
     const {...elemento} = props;
     
 
     const onAddProduct = elemento  => {
-      if(allProducts.find(item => item.id === elemento.id)){
+      if(allProducts.find(item => item.productID
+ === elemento.productID
+)){
         const products = allProducts.map(item => 
-          item.id === elemento.id 
+          item.productID
+ === elemento.productID
+ 
           ? {...item, quantity: item.quantity+1}
           : item);
           
@@ -33,7 +38,7 @@ const ProductItem = (props) => {
           };
 
     const popover = (
-        <Popover id="popover-basic" className='popOverInfo bg-transparent'>
+        <Popover id="popover-basic" Name='popOverInfo bg-transparent'>
           {/* <Popover.Header as="h4" className='popOverInfo bg-transparent'>{name}</Popover.Header> */}
           <Popover.Body className='popOverInfo text-white'>
             {description}
