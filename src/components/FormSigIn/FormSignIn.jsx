@@ -76,7 +76,7 @@ const FormSignIn = () => {
        lastName:apellidoRegistro ,
        email: emailRegistro,
        password: contraseñaRegistro,
-
+       
       });
 
       if (response.status === 200) {
