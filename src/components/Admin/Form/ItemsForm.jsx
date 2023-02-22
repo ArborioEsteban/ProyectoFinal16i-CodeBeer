@@ -47,7 +47,7 @@ const ItemsForm = (props) => {
 
             //Caso Editar
             if (modifyingItem){
-                const res = await axios.put (`/products/${modifyingItem}`, { 
+                const res = await axios.put(`/products/${modifyingItem}`, { 
                     name:name,
                     price:price,
                     description:description,
@@ -96,7 +96,7 @@ const ItemsForm = (props) => {
                 quantity:quantity,
             });
             
-            if(res.status === 201){
+            if(res.status === 200){
                 Swal.fire ({
                 title:'Operacion exitosa',
                 text:'Elemento agregado correctamente',

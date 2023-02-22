@@ -49,7 +49,7 @@ const FormLogin = () => {
 
     try {
       const response = await axios.post('/login', {
-        username: emailLogin,
+        email: emailLogin,
         password: contraseñaLogin,
       });
 

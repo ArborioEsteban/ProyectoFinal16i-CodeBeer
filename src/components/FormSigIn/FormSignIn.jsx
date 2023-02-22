@@ -7,6 +7,9 @@ import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope, HiUser } from "react-icons/hi2";
 
+import axios from '../api/axios';
+import Swal from 'sweetalert2';
+
 const FormSignIn = () => {
   const navigate = useNavigate();
 
@@ -29,7 +32,11 @@ const FormSignIn = () => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-  const handleSubmit = (e) => {
+  
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async  (e) => {
     e.preventDefault();
 
     const textoRegex = /^[a-zA-Z]{6,20}$/;
@@ -63,7 +70,6 @@ const FormSignIn = () => {
     }
     setPasswordError(false);
 
-    
     // console.log([
     //   nombreRegistro,
     //   apellidoRegistro,
@@ -71,6 +77,35 @@ const FormSignIn = () => {
     //   contraseñaRegistro,
     // ]);
     // Aqui deberias mandar todos los campos al backend para registrar un usuario
+    try {
+      const response = await axios.post('/user', {
+       name: nombreRegistro,
+       lastName:apellidoRegistro ,
+       email: emailRegistro,
+       password: contraseñaRegistro,
+
+      });
+
+      if (response.status === 200) {
+        setIsError(false);
+        const token = response.data.token;
+        console.log(token);
+        sessionStorage.setItem('token', token);
+
+        Swal.fire({
+          title: 'Bienvenido',
+          timer: 2000,
+          showCancelButton: false,
+          showConfirmButton: false,
+        }).then(() => {
+          navigate('/selectTable');
+          // aqui hacer un navigate hacia la parte de seleccionar Table
+        });
+      }
+    } catch (error) {
+      setIsError(true);
+      setErrorMessage(error.response.data.message);
+    }
   };
 
   return (
