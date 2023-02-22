@@ -46,8 +46,9 @@ const NavBarCode = () => {
                 id="myloginBtn"
                 
               >
-                 `{isLoggedIn ?  'Logout' :
-                  'Login'}` 
+                 {/* `{isLoggedIn ?  'Logout' :
+                  'Login'}`  */}
+                  LOGIN
               </Button>
               {/* Link o NavLink  */}
             </Nav>
