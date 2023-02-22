@@ -81,19 +81,22 @@ const FormSignIn = () => {
 
       if (response.status === 200) {
         setIsError(false);
-        const token = response.data.token;
-        console.log(token);
-        sessionStorage.setItem('token', token);
+        
+       
+        // const token = response.data.token;
+        // sessionStorage.setItem('token', token);
+       
+        // sessionStorage.setItem('token', token);
 
         Swal.fire({
-          title: 'Bienvenido',
-          timer: 2000,
+          title: 'Usuario registrado, Por favor inicie Sesion para continuar',
+          timer: 4000,
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
-          navigate('/selectTable');
-
-          // aqui hacer un navigate hacia la parte de seleccionar Table por que el nuevo q se registre seran usuarios nunca administradores
+          navigate('/FormLogin');
+          
+         
 
         });
       }

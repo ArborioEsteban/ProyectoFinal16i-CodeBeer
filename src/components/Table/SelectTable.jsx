@@ -20,6 +20,7 @@ const SelectTable = () => {
   const navigate = useNavigate();
 
   const userLS = localStorage.getItem("user");
+  // aqui tengo que obtener el nombre del usuario q inicie sesion
 
   return (
     <>
