@@ -99,7 +99,9 @@ const FormSignIn = () => {
           showConfirmButton: false,
         }).then(() => {
           navigate('/selectTable');
-          // aqui hacer un navigate hacia la parte de seleccionar Table
+
+          // aqui hacer un navigate hacia la parte de seleccionar Table por que el nuevo q se registre seran usuarios nunca administradores
+
         });
       }
     } catch (error) {

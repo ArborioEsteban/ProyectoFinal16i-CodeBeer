@@ -31,8 +31,8 @@ const ItemsForm = (props) => {
                     setDescription (itemToModify.description);
                     setImage (itemToModify.image);
                     setCategory (itemToModify.category);
-                    setAvailable (itemToModify.available);
-                    setQuantity (itemToModify.quantity);
+                    // setAvailable (itemToModify.available);
+                    // setQuantity (itemToModify.quantity);
                 };
                 if(modifyingItem){
                     fetchItems();
@@ -47,14 +47,16 @@ const ItemsForm = (props) => {
 
             //Caso Editar
             if (modifyingItem){
-                const res = await axios.put(`/products/${modifyingItem}`, { 
+
+                const res = await axios.put(`/product/${modifyingItem}`, { 
+
                     name:name,
                     price:price,
                     description:description,
                     image:image,
                     category:category,
-                    isActive:available, 
-                    quantity:quantity,
+                    // isActive:available, 
+                    // quantity:quantity,
 
                 });
                 if(res.status === 200){
@@ -85,15 +87,15 @@ const ItemsForm = (props) => {
             }
 
         //caso crear
-           const res = await axios.post(`/products`,{
+           const res = await axios.post(`/product`,{
                 id:getRandomId(),
                 name:name,
                 price:price,
                 description:description,
                 image:image,
                 category:category,
-                isActive:available,
-                quantity:quantity,
+                // isActive:available,
+                // quantity:quantity,
             });
             
             if(res.status === 200){
@@ -181,23 +183,23 @@ const ItemsForm = (props) => {
                         className='formDescripcion'/>
                 </Form.Group>
 
-                <Form.Group className='mt-2'>
+                {/* <Form.Group className='mt-2'>
                     <Form.Label>Disponible</Form.Label>
                     <Form.Control
                         type='text'
                         value={available}
                         onChange={(e) => setAvailable(e.target.value)} 
                         className='formDescripcion'/>
-                </Form.Group>
+                </Form.Group> */}
 
-                <Form.Group className='mt-2'>
+                {/* <Form.Group className='mt-2'>
                     <Form.Label>Cantidad</Form.Label>
                     <Form.Control
                         type='number'
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)} 
                         className='formDescripcion'/>
-                </Form.Group>
+                </Form.Group> */}
 
                     <div className='text-end mt-3'>
                         <Button type='submit' className='botonGeneral'>Guardar</Button>
