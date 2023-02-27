@@ -29,6 +29,8 @@ const FormLogin = () => {
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -64,9 +66,10 @@ const FormLogin = () => {
         sessionStorage.setItem('token', token);
         
 
+        // decodificamos info del token del user
         const dataDecoded = jwt_decode(token);
-        
-
+        let nameUser= dataDecoded.name;
+        sessionStorage.setItem('userName', nameUser);
         let adminLogeado = dataDecoded.isAdmin;
         
 
@@ -79,7 +82,7 @@ const FormLogin = () => {
           if(adminLogeado === true){
             navigate('/adminForm');
           }else{
-            navigate('/selectTable'); 
+            navigate('/selectTable',{nameUser}); 
           }
         
           

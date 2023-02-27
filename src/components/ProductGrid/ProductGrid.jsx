@@ -9,12 +9,12 @@ import './ProductGrid.css';
 
 
 
-// localStorage.setItem("carrito", []);
-const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
-// el [] despues del || va con o sin comillas?
 
-const userLS = localStorage.getItem("user");
-const numMesaSStorage = localStorage.getItem('mesa');
+const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
+
+
+let userLS = sessionStorage.getItem("userName");
+const numMesaSStorage = sessionStorage.getItem('mesa');
 
 let totalLS=0; 
 let countLS=0;
@@ -48,6 +48,7 @@ const ProductGrid = () => {
     
     
 
+    // guardamos los productos en localStorage a medida que se agregan productos al pedido  
     const saveLS = () =>{
       localStorage.setItem("carrito", JSON.stringify(allProducts));
     }
@@ -94,7 +95,7 @@ const ProductGrid = () => {
       const onConfirmOrder = () => {
         setstateOrder('Realizado');
 
-        // podriamos agregar numeros de pedido para guardarlos
+        
 
         Swal.fire({
           title: 'Pedido Confirmado!',

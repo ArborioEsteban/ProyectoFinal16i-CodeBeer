@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect } from "react";
 import { Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -10,31 +10,40 @@ import "./Table.css";
 
 
 const SelectTable = () => {
+  // let {userName} = props;
 
   const { register, handleSubmit: handleRHF } = useForm();
   // const [data, setData] = useState("");
-  const [mesa, setMesa] = useState(0);
+  // const [mesa, setMesa] = useState(0);
 
   
 
   const navigate = useNavigate();
 
-  const userLS = localStorage.getItem("user");
+  useEffect(() => {
+    
+    
+    
+  }, [])
+  
+
+
   // aqui tengo que obtener el nombre del usuario q inicie sesion
+  let userName = sessionStorage.getItem("userName");
 
   return (
     <>
       <NavBarCode></NavBarCode>
     <div className="d-flex  justify-content-center flex-column text-center my-2 vh-100">
       <h2 className="textBienvenidos my-2">
-        Bienvenido {userLS}
+        Bienvenido {userName}
       </h2>
       
 
       <form onSubmit={handleRHF((data) => {
         let nmesa = data.numMesa;
-        localStorage.setItem('mesa', nmesa);
-        setMesa(nmesa);
+        // setMesa(nmesa);
+        sessionStorage.setItem('mesa', nmesa);
         
         
         Swal.fire({
