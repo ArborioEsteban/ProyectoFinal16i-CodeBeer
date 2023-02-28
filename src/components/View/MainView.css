@@ -47,8 +47,6 @@ body {
 
    color: #ecb465;  
 
- 
-
  }
 
 div.accordion-body{
@@ -58,4 +56,13 @@ div.accordion-body{
 button.accordion-button.collapsed{
   background-color: #041c32ce !important;
   color:  #ecb465;
+}
+
+@media (mix-width: 600px) {
+  
+  .logoTapaCerveza{
+    width: 25% !important;
+    height: 50%;
+  
+  }
 }

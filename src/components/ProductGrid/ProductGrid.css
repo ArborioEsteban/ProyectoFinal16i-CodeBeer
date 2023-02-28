@@ -7,7 +7,7 @@ body {
 	background-attachment: fixed;
   }
   #myCartBtn{
-	background-color: #ecb465df !important;
+	background-color: #ecb465c8 !important;
 	border-radius: 20%;
     margin-left: 1rem;
     margin-bottom: 1rem;
@@ -15,7 +15,7 @@ body {
 	cursor:pointer;
 	color:#000000;
 	font-family:Arial;
-	font-size:17px;
+	font-size:12px;
 	font-weight:bold;
 	text-decoration:none;
 }
