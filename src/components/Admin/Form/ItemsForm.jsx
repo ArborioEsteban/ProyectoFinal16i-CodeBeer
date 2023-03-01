@@ -20,7 +20,7 @@ const ItemsForm = (props) => {
         
         useEffect(()=>{
                     const fetchItems = async () =>{
-                    const res = await axios.get(`/products`);
+                    const res = await axios().get(`/products`);
                     const items = res.data;
                     
                     const itemToModify = items.find (
@@ -46,7 +46,7 @@ const ItemsForm = (props) => {
     
           //   Caso EDITAR
           if (modifyingItem) {
-            const res = await axios.put(`/product/${modifyingItem}`, {
+            const res = await axios().put(`/product/${modifyingItem}`, {
 
                 productID:modifyingItem,
                 name:name,
@@ -84,7 +84,7 @@ const ItemsForm = (props) => {
           }
     
           //   Caso CREAR
-          const res = await axios.post(`/product`, {
+          const res = await axios().post(`/product`, {
             
             name:name,
             price:price,

@@ -71,7 +71,7 @@ const FormSignIn = () => {
     setPasswordError(false);
 
     try {
-      const response = await axios.post('/user', {
+      const response = await axios().post('/user', {
        name: nombreRegistro,
        lastName:apellidoRegistro ,
        email: emailRegistro,

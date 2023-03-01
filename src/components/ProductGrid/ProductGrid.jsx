@@ -12,7 +12,7 @@ import './ProductGrid.css';
 
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
+// corregir saludo despues de cambiar de una sesion a la otra
 let userLS = sessionStorage.getItem("userName");
 const numMesaSStorage = sessionStorage.getItem('mesa');
 
@@ -62,7 +62,7 @@ const ProductGrid = () => {
 
     useEffect(() => {
         const itemsFetch = async (e) => {
-          const data = await axios.get(`/products`);
+          const data = await axios().get(`/products`);
           setProducts(data.data);  
         };
         itemsFetch();

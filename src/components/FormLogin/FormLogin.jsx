@@ -53,7 +53,8 @@ const FormLogin = () => {
     
 
     try {
-      const response = await axios.post('/login', {
+      // axios.() para llamadas a funcion con parentesis
+      const response = await axios().post('/login', {
         email: emailLogin,
         password: contraseñaLogin,
       });

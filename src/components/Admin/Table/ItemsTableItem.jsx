@@ -9,7 +9,7 @@ import './table.css'
 const ItemsTableItem = (props) => {
     const {productID
         ,name,price,image, category,description, isActive,quantity, setModifyingItem}= props;
-        console.log(isActive);
+        
 
    const handleEdit = ()=>{
     
@@ -27,7 +27,7 @@ const ItemsTableItem = (props) => {
    }).then(async (res) =>{
     if(res.isConfirmed){
         //eliminar
-     const res = await axios.delete(`/product/${productID
+     const res = await axios().delete(`/product/${productID
      }`);
         if (res.status === 200){
             Swal.fire({
