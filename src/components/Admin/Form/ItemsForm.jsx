@@ -24,7 +24,7 @@ const ItemsForm = (props) => {
                     const items = res.data;
                     
                     const itemToModify = items.find (
-                        (element) => element.id === modifyingItem);
+                        (element) => element.productID === modifyingItem);
                         
                     setName(itemToModify.name);
                     setPrice (itemToModify.price);
@@ -48,11 +48,14 @@ const ItemsForm = (props) => {
           if (modifyingItem) {
             const res = await axios.put(`/product/${modifyingItem}`, {
 
+                productID:modifyingItem,
                 name:name,
                 price:price,
-                description:description,
                 image:image,
+                description:description,
                 category:category,
+                // quantity:quantity,
+                // isActive:true,
             });
     
             if (res.status === 200) {
@@ -176,6 +179,16 @@ const ItemsForm = (props) => {
                         onChange={(e) => setCategory(e.target.value)} 
                         className='formDescripcion'/>
                 </Form.Group>
+
+                {/* <Form.Group className='mt-2'>
+                    <Form.Label>Cantidad</Form.Label>
+                    <Form.Control
+                        
+                        type='number'
+                        value={1}
+                        // onChange={(e) => setCategory(e.target.value)} 
+                        className='formDescripcion'/>
+                </Form.Group> */}
 
                 
 
