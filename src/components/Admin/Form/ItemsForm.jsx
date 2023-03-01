@@ -181,6 +181,15 @@ const ItemsForm = (props) => {
                 </Form.Group>
 
                 {/* <Form.Group className='mt-2'>
+                <Form.Label>Producto disponible?</Form.Label>
+                  <Form.Select aria-label="Estado del producto" className='formDescripcion bg-white'>
+                    <option value="true" className='formDescripcion bg-dark text-light'>Disponible</option>
+                    <option value="2" className='formDescripcion bg-dark text-light'>No disponible</option>
+                    
+                  </Form.Select>
+                </Form.Group> */}
+
+                {/* <Form.Group className='mt-2'>
                     <Form.Label>Cantidad</Form.Label>
                     <Form.Control
                         

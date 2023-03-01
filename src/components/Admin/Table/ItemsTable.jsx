@@ -33,7 +33,7 @@ const ItemsTable = (props) => {
             <th>Imagen</th>
             <th>Descripcion</th>
             <th>Categoria</th>
-            <th>cantidad</th>
+            <th>Estado</th>
             <th>Acciones</th>
           </tr>
         </thead>
