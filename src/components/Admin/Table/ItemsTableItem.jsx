@@ -69,7 +69,8 @@ const ItemsTableItem = (props) => {
                 
                 <td>
                     <Button  className='me-1 botonGeneral' onClick={handleEdit}>Editar</Button>
-                    <Button className='botonGeneral' variant='danger' onClick={handleDelete}>Habilitar/Deshabilitar</Button>
+                    <Button className='botonGeneral' variant='danger' onClick={handleDelete}>
+                        {isActive ? 'Desactivar' : 'Activar' }</Button>
                 </td>
             </tr>
   )
