@@ -26,8 +26,8 @@ const ItemsTable = (props) => {
         <Table responsive
         className='mt-3 bg-dark text-white rounded'>
         <thead>
-          <tr>
-            <th>#</th>
+          <tr className='text-center'>
+            
             <th>Nombre</th>
             <th>Precio</th>
             <th>Imagen</th>
@@ -37,7 +37,7 @@ const ItemsTable = (props) => {
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-center'>
         {items.map((elemento) => {
         return (
           <ItemsTableItem

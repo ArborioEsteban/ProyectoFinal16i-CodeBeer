@@ -115,7 +115,7 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="Email"
-                  value={emailLogin}
+                  value={emailLogin || ''}
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
                   autoComplete="username"
@@ -134,7 +134,7 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="password"
-                  value={contraseñaLogin}
+                  value={contraseñaLogin || ''}
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
                   autoComplete="username"

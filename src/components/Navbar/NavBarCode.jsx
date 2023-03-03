@@ -12,20 +12,16 @@ const NavBarCode = () => {
   const handleCLick = (route) => {
     navigate(route);
   };
-
-  // decodificamos info del token del user
-  // if( !token === []){
-    //     const dataDecoded = jwt_decode(token);
-    //     let isActive = dataDecoded.isActive;
-    // }
     
     const [isActive, setIsActive] = useState(false);
     
   useEffect(() => {
     let token = sessionStorage.getItem("token") || "";
+    
     if (token) {
     const dataDecoded = jwt_decode(token);
-    setIsActive(!!dataDecoded.isActive);
+    console.log(dataDecoded.isActive);
+    setIsActive(dataDecoded.isActive);
     }
     
   }, [])
@@ -47,12 +43,13 @@ const NavBarCode = () => {
           confirmButtonText: 'Si, Cerrar Sesion'
         }).then((result) => {
           if (result.isConfirmed) {
-            Swal.fire(
-              'Regresa Pronto',
-              'Su sesion finalizó correctamente',
-              'success'
+            Swal.fire({
+
+              text:'Regresa Pronto!. Su sesion finalizó correctamente',
+              timer: 3000,
+            }
             )
-            localStorage.setItem("carrito" , "");
+
             sessionStorage.setItem("token", "");
             sessionStorage.setItem('userName', "");
             sessionStorage.setItem('mesa', "");

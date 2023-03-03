@@ -56,7 +56,7 @@ const ItemsTableItem = (props) => {
 
   return ( 
             <tr>
-                <td>{productID}</td>
+                
                 <td>{name}</td>
                 <td>${price}</td>
                 <td>
