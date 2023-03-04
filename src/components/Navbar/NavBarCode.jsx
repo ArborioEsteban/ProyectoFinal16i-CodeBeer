@@ -6,6 +6,7 @@ import "../Navbar/Navbar1.css";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
+import axios from "../api/axios";
 
 
 const NavBarCode = () => {
@@ -16,6 +17,9 @@ const NavBarCode = () => {
   };
     
   const [isActive, setIsActive] = useState(false);
+
+  const [userName, setUserName] = useState("");
+  const [userLastName, setUserLastName] = useState("");
     
   useEffect(() => {
     let token = sessionStorage.getItem("token") || "";
@@ -23,13 +27,15 @@ const NavBarCode = () => {
     const dataDecoded = jwt_decode(token);
     
     setIsActive(!!dataDecoded.isActive);
-    
+    setUserName(dataDecoded.name);
+    setUserLastName(dataDecoded.lastName);
     }
     
   }, [])
   
 
 
+  
   const handleClickLogin = () => {
     let token = sessionStorage.getItem("token") || "";
     if (token) {
@@ -73,10 +79,37 @@ const NavBarCode = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = data => {
-    
+  const onSubmit = async(data) => {
+
     console.log(data.Nombre)
+    
     console.log(data.Apellido)
+    console.log(data.id)
+    const res = await axios().put(`/iser/${data.id}`, {
+      
+    });
+
+    if (res.status === 200) {
+      Swal.fire({
+        title: "Operacion exitosa",
+        text: "Elemento modificado correctamente",
+        icon: "success",
+        timer: 2000,
+        showCancelButton: false,
+        showConfirmButton: false,
+      }).then(() => {
+        window.location.reload();
+      });
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: `Ocurrio un error al editar el elemento, que es: ${res.statusText}`,
+        icon: "error",
+        timer: 2000,
+        showCancelButton: false,
+        showConfirmButton: false,
+      });
+    }
 
 
   }
@@ -136,16 +169,17 @@ const NavBarCode = () => {
       </section>
 
 
-      <Offcanvas show={show} onHide={handleClose}  className="bg-dark d-flex vh-100 justify-content-center align-items-center flex-column m-auto bg-edit">
+                <div className="d-flex justify-content-center flex-column text-center my-1">
+      <Offcanvas show={show} onHide={handleClose}  className="bg-dark m-auto bg-edit">
         <Offcanvas.Header closeButton >
-          <Offcanvas.Title>Editar Datos</Offcanvas.Title>
+          <Offcanvas.Title className="fs-2">Editar Datos</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className="d-flex justify-content-center flex-column text-center my-1">
         <form onSubmit={handleSubmit(onSubmit)} className="bg-transparent m-auto">
             <label>Editar Nombre</label>    
             <input
             type="text" 
-            placeholder="Nombre"
+            placeholder={userName}
              {...register("Nombre", {required: true, max: 20, min: 2, maxLength: 20, pattern: /^[a-zA-Z]{6,20}$/i})} 
              maxLength={20}
              minLength={2}
@@ -155,17 +189,30 @@ const NavBarCode = () => {
             <label>Editar Apellido</label>
             <input
              type="text"
-             placeholder="Apellido"
+             placeholder={userLastName}
              {...register("Apellido", {required: true, max: 20, min: 2, maxLength: 20, pattern: /^[a-zA-Z]{6,20}$/i})}
              maxLength={20}
              minLength={2}
              required
              className="w-100 align-self-center bg-transparent text-white"/>
 
-            <input type="submit" id="editButton" className="text-end mt-3"/>
+            <Button type="submit" 
+            id="editButton" 
+            className="text-center w-50 me-2 mt-3"
+            placeholder="Editar">
+              Editar
+            </Button>
+            <Button
+              onClick={handleClose}
+              className="w-50 mt-3"
+              id="editButton"
+            >
+              Cancelar
+            </Button>
          </form>
         </Offcanvas.Body>
       </Offcanvas>
+      </div>
     </>
   );
 };

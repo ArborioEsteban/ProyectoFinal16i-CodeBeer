@@ -57,9 +57,7 @@ span.navbar-toggler-icon{
 
 #editButton{
 	background-color: #ecb46591;
-	border-radius: 10%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+	border-radius: 20%;
 	border:1px solid #ecb465;
 	cursor:pointer;
 	color:white;
