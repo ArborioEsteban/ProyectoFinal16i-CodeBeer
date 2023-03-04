@@ -36,6 +36,8 @@ const FormSignIn = () => {
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+
+  
   const handleSubmit = async  (e) => {
     e.preventDefault();
 
@@ -103,6 +105,8 @@ const FormSignIn = () => {
     }
   };
 
+
+  
   return (
     <Container className="container mt-5">
     
@@ -121,13 +125,16 @@ const FormSignIn = () => {
             </Form.Label>
             <Form.Control
               type="text"
-              value={nombreRegistro}
+              value={nombreRegistro || ''}
               onChange={(e) => setNombreRegistro(e.target.value)}
               placeholder="Nombre"
               autoComplete="username"
+              maxLength={20}
+              minLength={6}
+              
             />
             {nombreError && (
-              <span className="helper-text">Ingrese solo letras</span>
+              <span className="helper-text">Ingrese minimo 6 caracteres y un maximo de 20</span>
             )}
           </Form.Group>
 
@@ -138,10 +145,12 @@ const FormSignIn = () => {
             </Form.Label>
             <Form.Control
               type="text"
-              value={apellidoRegistro}
+              value={apellidoRegistro || ''}
               onChange={(e) => setApellidoRegistro(e.target.value)}
               placeholder="Apellido"
               autoComplete="username"
+              maxLength={20}
+              minLength={6}
             />
             {apellidoError && (
               <span className="helper-text">Ingrese solo letras</span>
@@ -155,7 +164,7 @@ const FormSignIn = () => {
             </Form.Label>
             <Form.Control
               type="Email"
-              value={emailRegistro}
+              value={emailRegistro || ''}
               onChange={(e) => setEmailRegistro(e.target.value)}
               placeholder="Email"
             />
@@ -173,7 +182,7 @@ const FormSignIn = () => {
             </Form.Label>
             <Form.Control
               type="password"
-              value={contraseñaRegistro}
+              value={contraseñaRegistro|| ''}
               onChange={(e) => setContraseñaRegistro(e.target.value)}
               placeholder="****************"
               autoComplete="current-password"
