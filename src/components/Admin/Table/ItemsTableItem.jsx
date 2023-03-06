@@ -22,6 +22,7 @@ const ItemsTableItem = (props) => {
         title:'Cambiar estado del Producto',
         text:'¿Estas seguro?',
         icon:'warning',
+        background: "#ecb465",
         showCancelButton: true,
         cancelButtonText:'Cancelar'
    }).then(async (res) =>{
@@ -35,6 +36,7 @@ const ItemsTableItem = (props) => {
                 text:'Estado modificado correctamente',
                 icon:'success',
                 timer:2000,
+                background: "#ecb465",
                 showCancelButton: false,
                 showConfirmButton: false,
             }).then(()=>{
@@ -46,6 +48,7 @@ const ItemsTableItem = (props) => {
                 text:`Ocurrio un error al modificar el estado, que es: ${res.statusText}`,
                 icon:'success',
                 timer:2000,
+                background: "#ecb465",
                 showCancelButton: false,
                 showConfirmButton: false,
             });

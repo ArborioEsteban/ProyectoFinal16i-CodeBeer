@@ -68,6 +68,7 @@ const ItemsForm = (props) => {
             text: `Ocurrio un error al editar el elemento, que es: ${res.statusText}`,
             icon: "error",
             timer: 2000,
+            background: "#ecb465",
             showCancelButton: false,
             showConfirmButton: false,
           });
@@ -91,6 +92,7 @@ const ItemsForm = (props) => {
           text: "Elemento agregado correctamente",
           icon: "success",
           timer: 2000,
+          background: "#ecb465",
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
@@ -101,6 +103,7 @@ const ItemsForm = (props) => {
           title: "Error",
           text: `Ocurrio un error al guardar el elemento, que es: ${res.statusText}`,
           icon: "error",
+          background: "#ecb465",
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
@@ -113,6 +116,7 @@ const ItemsForm = (props) => {
         title: "Error",
         text: `Revise los campos`,
         icon: "error",
+        background: "#ecb465",
         timer: 2000,
         showCancelButton: false,
         showConfirmButton: false,

@@ -41,7 +41,7 @@ const ProductItem = (props) => {
         <Popover id="popover-basic" name='popOverInfo bg-transparent'>
           {/* <Popover.Header as="h4" className='popOverInfo bg-transparent'>{name}</Popover.Header> */}
           <Popover.Body className='popOverInfo text-white'>
-            {description}
+            { isActive ? description : 'Disculpe , el producto no se encuentra disponible actualmente'}
           </Popover.Body>
         </Popover>
       );

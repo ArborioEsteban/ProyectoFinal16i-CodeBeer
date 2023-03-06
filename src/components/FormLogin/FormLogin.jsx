@@ -75,7 +75,7 @@ const FormLogin = () => {
         
 
         Swal.fire({
-          title: 'Bienvenido' + {nameUser},
+          title: 'Bienvenido',
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,

@@ -85,7 +85,7 @@ const NavBarCode = () => {
     
     console.log(data.Apellido)
     console.log(data.id)
-    const res = await axios().put(`/iser/${data.id}`, {
+    const res = await axios().put(`/user/${data.id}`, {
       
     });
 
@@ -106,6 +106,7 @@ const NavBarCode = () => {
         text: `Ocurrio un error al editar el elemento, que es: ${res.statusText}`,
         icon: "error",
         timer: 2000,
+        background: "#ecb465",
         showCancelButton: false,
         showConfirmButton: false,
       });
