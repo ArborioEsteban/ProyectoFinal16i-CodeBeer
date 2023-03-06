@@ -13,4 +13,4 @@ const myAxios = () => {
   });
 };
 
-export default myAxios();
+export default myAxios;

@@ -8,16 +8,18 @@ import './table.css'
 
 const ItemsTableItem = (props) => {
     const {productID
-        ,name,price,image, category,description, available,quantity, setModifyingItem}= props;
+        ,name,price,image, category,description, isActive,quantity, setModifyingItem}= props;
+        
 
    const handleEdit = ()=>{
     
     setModifyingItem(productID);
    }
 
+
    const handleDelete = ()=>{
     Swal.fire({
-        title:'Eliminar',
+        title:'Cambiar estado del Producto',
         text:'¿Estas seguro?',
         icon:'warning',
         showCancelButton: true,
@@ -25,12 +27,12 @@ const ItemsTableItem = (props) => {
    }).then(async (res) =>{
     if(res.isConfirmed){
         //eliminar
-     const res = await axios.delete(`/product/${productID
+     const res = await axios().delete(`/product/${productID
      }`);
         if (res.status === 200){
             Swal.fire({
                 title:'Operacion exitosa',
-                text:'Elemento eliminado correctamente',
+                text:'Estado modificado correctamente',
                 icon:'success',
                 timer:2000,
                 showCancelButton: false,
@@ -41,7 +43,7 @@ const ItemsTableItem = (props) => {
         } else {
             Swal.fire({
                 title:'Error',
-                text:`Ocurrio un error al eliminar el elemento, que es: ${res.statusText}`,
+                text:`Ocurrio un error al modificar el estado, que es: ${res.statusText}`,
                 icon:'success',
                 timer:2000,
                 showCancelButton: false,
@@ -54,7 +56,7 @@ const ItemsTableItem = (props) => {
 
   return ( 
             <tr>
-                <td>{productID}</td>
+                
                 <td>{name}</td>
                 <td>${price}</td>
                 <td>
@@ -62,10 +64,13 @@ const ItemsTableItem = (props) => {
                 </td>
                 <td>{description}</td>
                 <td>{category}</td>
+
+                <td>{isActive ? 'Habilitado' : 'Desactivado'}</td>
                 
                 <td>
                     <Button  className='me-1 botonGeneral' onClick={handleEdit}>Editar</Button>
-                    <Button className='botonGeneral' variant='danger' onClick={handleDelete}>Deshabilitar</Button>
+                    <Button className='botonGeneral' variant='danger' onClick={handleDelete}>
+                        {isActive ? 'Desactivar' : 'Activar' }</Button>
                 </td>
             </tr>
   )

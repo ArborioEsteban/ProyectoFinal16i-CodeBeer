@@ -54,3 +54,24 @@ span.navbar-toggler-icon{
   color: white;
 
 }
+
+#editButton{
+	background-color: #ecb46591;
+	border-radius: 20%;
+	border:1px solid #ecb465;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.bg-edit{
+	background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
+	  url("https://www.camarero10.com/wp-content/uploads/2022/01/Comandero-pda-para-bares-y-restaurantes.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ecb465 !important;
+}

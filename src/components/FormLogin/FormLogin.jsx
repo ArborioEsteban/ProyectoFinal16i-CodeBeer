@@ -29,6 +29,8 @@ const FormLogin = () => {
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,7 +53,8 @@ const FormLogin = () => {
     
 
     try {
-      const response = await axios.post('/login', {
+      // axios.() para llamadas a funcion con parentesis
+      const response = await axios().post('/login', {
         email: emailLogin,
         password: contraseñaLogin,
       });
@@ -64,22 +67,24 @@ const FormLogin = () => {
         sessionStorage.setItem('token', token);
         
 
+        // decodificamos info del token del user
         const dataDecoded = jwt_decode(token);
-        
-
+        let nameUser= dataDecoded.name;
+        sessionStorage.setItem('userName', nameUser);
         let adminLogeado = dataDecoded.isAdmin;
         
 
         Swal.fire({
-          title: 'Bienvenido',
+          title: 'Bienvenido' + {nameUser},
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
+          background: "#ecb465",
         }).then(() => {
           if(adminLogeado === true){
             navigate('/adminForm');
           }else{
-            navigate('/selectTable'); 
+            navigate('/selectTable',{nameUser}); 
           }
         
           
@@ -88,6 +93,13 @@ const FormLogin = () => {
     } catch (error) {
       setIsError(true);
       setErrorMessage(error.response.data.message);
+      Swal.fire({
+        title: 'Usuario o Contraseña incorrecta , intente nuevamente',
+        timer: 2000,
+        showCancelButton: false,
+        showConfirmButton: false,
+        background: "#ecb465",
+      })
     }
   };
 
@@ -111,10 +123,13 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="Email"
-                  value={emailLogin}
+                  value={emailLogin || ''}
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
                   autoComplete="username"
+                  maxLength={35}
+                  minLength={6}
+                  required
                 />
                 {emailError && (
                   <span className="helper-text">
@@ -130,10 +145,13 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="password"
-                  value={contraseñaLogin}
+                  value={contraseñaLogin || ''}
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
                   autoComplete="username"
+                  maxLength={35}
+                  minLength={6}
+                  required
                 />
                 {passwordError && (
                   <span className="helper-text">

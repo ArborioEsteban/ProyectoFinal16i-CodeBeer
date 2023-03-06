@@ -13,7 +13,7 @@ const ItemsTable = (props) => {
 
       useEffect (() =>{
         const itemsFetch = async (e) => {
-          const data = await axios.get(`/products`);
+          const data = await axios().get(`/products`);
           SetItems(data.data)
         };
         itemsFetch ();
@@ -26,18 +26,18 @@ const ItemsTable = (props) => {
         <Table responsive
         className='mt-3 bg-dark text-white rounded'>
         <thead>
-          <tr>
-            <th>#</th>
+          <tr className='text-center'>
+            
             <th>Nombre</th>
             <th>Precio</th>
             <th>Imagen</th>
             <th>Descripcion</th>
             <th>Categoria</th>
-            <th>cantidad</th>
+            <th>Estado</th>
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-center'>
         {items.map((elemento) => {
         return (
           <ItemsTableItem
