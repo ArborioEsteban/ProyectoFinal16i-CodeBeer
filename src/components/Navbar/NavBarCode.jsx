@@ -24,7 +24,7 @@ const NavBarCode = () => {
     if (token) {
       const dataDecoded = jwt_decode(token);
 
-      setIsActive(!!dataDecoded.isActive);
+      setIsActive(dataDecoded.isActive);
       setUserName(dataDecoded.name);
       setUserLastName(dataDecoded.lastName);
     }
@@ -48,6 +48,7 @@ const NavBarCode = () => {
             Swal.fire({
               text: "Regresa Pronto!. Su sesion finalizó correctamente",
               timer: 3000,
+              background: "#ecb465",
             });
 
             sessionStorage.setItem("token", "");

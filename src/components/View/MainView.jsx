@@ -40,8 +40,6 @@ const MainView = () => {
 
         <div className="col-sm-8 pt-3 pb-3"></div>
 
-        
-
         <h2 className="info text-center">¿Quienes Somos?</h2>
 
         <p className="py-4 fs-4 info2 text-center">
