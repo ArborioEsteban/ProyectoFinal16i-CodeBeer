@@ -138,6 +138,11 @@ const NavBarCode = () => {
               <Nav.Link as={Link} to="/FormContacto">
                 Contacto
               </Nav.Link>
+              <Nav.Link as={Link} to="/products" className={` ${
+                  isActive ? "" : "d-none"
+                }`}>
+                Mi pedido
+              </Nav.Link>
             </Nav>
 
             <Nav className="p-2 mt-2  ">

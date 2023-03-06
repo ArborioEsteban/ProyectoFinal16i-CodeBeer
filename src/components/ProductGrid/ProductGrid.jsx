@@ -6,7 +6,7 @@ import { AiOutlineShoppingCart, AiFillCloseSquare } from "react-icons/ai";
 import Swal from "sweetalert2";
 import "./ProductGrid.css";
 
-const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
+const carritoLS = JSON.parse(localStorage.getItem("carrito"));
 
 
 let totalLS = 0;
@@ -39,6 +39,7 @@ const ProductGrid = () => {
   const [stateOrder, setstateOrder] = useState("en Espera");
 
   // actualizamos el carrito del localStorage en cada cambio
+  
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(allProducts));
   }, [allProducts]);
