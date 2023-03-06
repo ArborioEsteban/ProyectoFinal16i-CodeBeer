@@ -90,6 +90,7 @@ const FormSignIn = () => {
         Swal.fire({
           title: 'Usuario registrado, Por favor inicie Sesion para continuar',
           timer: 4000,
+          background: "#ecb465",
           showCancelButton: false,
           showConfirmButton: false,
         }).then(() => {
@@ -131,6 +132,7 @@ const FormSignIn = () => {
               autoComplete="username"
               maxLength={20}
               minLength={6}
+              required
               
             />
             {nombreError && (
@@ -151,6 +153,7 @@ const FormSignIn = () => {
               autoComplete="username"
               maxLength={20}
               minLength={6}
+              required
             />
             {apellidoError && (
               <span className="helper-text">Ingrese solo letras</span>
@@ -167,6 +170,10 @@ const FormSignIn = () => {
               value={emailRegistro || ''}
               onChange={(e) => setEmailRegistro(e.target.value)}
               placeholder="Email"
+              autoComplete="username"
+              maxLength={35}
+              minLength={6}
+              required
             />
             {emailError && (
               <span className="helper-text">

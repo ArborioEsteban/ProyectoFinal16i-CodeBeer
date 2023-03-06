@@ -57,6 +57,7 @@ const ItemsForm = (props) => {
             text: "Elemento modificado correctamente",
             icon: "success",
             timer: 2000,
+            background: "#ecb465",
             showCancelButton: false,
             showConfirmButton: false,
           }).then(() => {
