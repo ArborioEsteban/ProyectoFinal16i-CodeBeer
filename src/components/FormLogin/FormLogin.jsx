@@ -75,10 +75,11 @@ const FormLogin = () => {
         
 
         Swal.fire({
-          title: 'Bienvenido',
+          title: 'Bienvenido' + {nameUser},
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
+          background: "#ecb465",
         }).then(() => {
           if(adminLogeado === true){
             navigate('/adminForm');
@@ -92,6 +93,13 @@ const FormLogin = () => {
     } catch (error) {
       setIsError(true);
       setErrorMessage(error.response.data.message);
+      Swal.fire({
+        title: 'Usuario o Contraseña incorrecta , intente nuevamente',
+        timer: 2000,
+        showCancelButton: false,
+        showConfirmButton: false,
+        background: "#ecb465",
+      })
     }
   };
 
@@ -119,6 +127,9 @@ const FormLogin = () => {
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
                   autoComplete="username"
+                  maxLength={35}
+                  minLength={6}
+                  required
                 />
                 {emailError && (
                   <span className="helper-text">
@@ -138,6 +149,9 @@ const FormLogin = () => {
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
                   autoComplete="username"
+                  maxLength={35}
+                  minLength={6}
+                  required
                 />
                 {passwordError && (
                   <span className="helper-text">
