@@ -144,7 +144,9 @@ const NavBarCode = () => {
               <Button
                 onClick={() => handleClickLogin()}
                 variant="dark "
-                className="ms-2"
+                className={`ms-2 ${
+                  isActive ? "" : "d-none"
+                }`}
                 id="myloginBtn"
               >
                 {isActive ? "Cerrar Sesion" : "Login"}
