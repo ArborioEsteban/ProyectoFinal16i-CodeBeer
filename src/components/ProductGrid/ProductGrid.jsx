@@ -8,7 +8,6 @@ import "./ProductGrid.css";
 
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
 let totalLS = 0;
 let countLS = 0;
 
@@ -23,13 +22,12 @@ if (carritoLS instanceof Array) {
 }
 
 const ProductGrid = () => {
-
   // states para el saludo del usuario y su numero de mesa
   const [usuario, setUsuario] = useState("");
   const [mesa, setMesa] = useState("");
-  
+
   // states para el carrito
-  
+
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState(carritoLS);
   const [total, setTotal] = useState(totalLS);
@@ -45,11 +43,13 @@ const ProductGrid = () => {
 
   // guardamos los productos en localStorage a medida que se agregan productos al pedido
   useEffect(() => {
+
     const itemsFetch = async (e) => {
       const data = await axios().get(`/products`);
       setProducts(data.data);
     };
     itemsFetch();
+
 
     // si existe el token de la sesion de usuario , mostramos su nombre de usuario y su mesa
     let token = sessionStorage.getItem("token") || "";
@@ -60,20 +60,7 @@ const ProductGrid = () => {
       setMesa(numMesaSStorage);
     }
 
-    
 
-    let totalLS = 0;
-    let countLS = 0;
-
-    if (carritoLS instanceof Array) {
-      carritoLS.forEach((element) => {
-        totalLS = totalLS + element.price * element.quantity;
-      });
-
-      carritoLS.forEach((element) => {
-        countLS = countLS + element.quantity;
-      });
-    }
   }, []);
 
   const onRemoveProduct = (products) => {

@@ -1,10 +1,8 @@
 import React from "react";
-import {Container, Accordion } from "react-bootstrap";
+import { Container, Accordion } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./MainView.css";
-
-import { IoMdBeer } from "react-icons/io";
 import Footer from "../Footer/Footer";
 
 const MainView = () => {
@@ -26,23 +24,21 @@ const MainView = () => {
     <>
       <Container className="d-flex  justify-content-center flex-column text-center mt-5 vh-100 ">
         <h1 className="align-items-center mt-5 pt-4 titulo textBienvenidos">
-          Bienvenidos a Code & Beer
+          Bienvenidos a <br></br>Code & Beer
         </h1>
 
-        
-        <img src="https://imageup.me/images/7252be06-9860-4ef9-80cc-17cd3e79cee8.png" alt="Code&Beer" 
-        className="CodeBeer logoTapaCerveza w-50 align-self-center bg-transparent px-2" 
-        onClick={() => handleClick()}/>
-
-        
+        <img
+          src="https://imageup.me/images/7252be06-9860-4ef9-80cc-17cd3e79cee8.png"
+          alt="Code&Beer"
+          className="CodeBeer logoTapaCerveza w-50 align-self-center bg-transparent px-2"
+          onClick={() => handleClick()}
+        />
       </Container>
 
       <div className=" container  color col-lg-8 col-sm-8 col-md-8">
         <div className="row justify-content-center"></div>
 
         <div className="col-sm-8 pt-3 pb-3"></div>
-
-        {/* <h1 className="text-center py-5 info">Bienvenidos a Code&Beer</h1> */}
 
         <h2 className="info text-center">¿Quienes Somos?</h2>
 
@@ -103,37 +99,33 @@ const MainView = () => {
         />
       </div>
 
-    
-        <div className="accordion m-5">
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>Beber con moderacion</Accordion.Header>
-              <Accordion.Body>
-                Moderación significa que beber no es intoxicarse (o embriagarse)
-                y que usted no consuma más de 1 trago al día si es una mujer y
-                no más de 2 si es un hombre. Un trago se define como 12 onzas
-                (350 mL) de cerveza.
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Beneficios de beber cerveza</Accordion.Header>
-              <Accordion.Body>
-                Rica en vitaminas, proteínas, ácido fólico y antioxidantes,
-                algunos estudios apuntan que su consumo moderado se asocia a
-                beneficios cardiovasculares, de salud ósea y hasta contra la
-                obesidad. Eso sí, siempre dentro de una alimentación
-                equilibrada.
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
-        <Container>
-            <Footer/>
-        </Container>
-      
+      <div className="accordion m-5">
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Beber con moderacion</Accordion.Header>
+            <Accordion.Body>
+              Moderación significa que beber no es intoxicarse (o embriagarse) y
+              que usted no consuma más de 1 trago al día si es una mujer y no
+              más de 2 si es un hombre. Un trago se define como 12 onzas (350
+              mL) de cerveza.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Beneficios de beber cerveza</Accordion.Header>
+            <Accordion.Body>
+              Rica en vitaminas, proteínas, ácido fólico y antioxidantes,
+              algunos estudios apuntan que su consumo moderado se asocia a
+              beneficios cardiovasculares, de salud ósea y hasta contra la
+              obesidad. Eso sí, siempre dentro de una alimentación equilibrada.
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
+      <Container>
+        <Footer />
+      </Container>
     </>
   );
 };
 
 export default MainView;
-

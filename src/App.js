@@ -1,21 +1,16 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import Router from "./routing/Router";
-import './index.css';
-
 
 
 const App = () => {
   useEffect(() => {
-    // localStorage.setItem("user", "Usuario");
-    // localStorage.setItem("carrito", []);
-
-  }, []);
-
+    // sessionStorage.setItem("isAdmin", false);
+    // sessionStorage.setItem('isActive', false);
+    
+  }, [])
   return (
     <>
-
-        <Router />
-  
+      <Router />
     </>
   );
 };

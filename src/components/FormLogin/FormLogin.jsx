@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
-import { Button } from "react-bootstrap";
+import { Alert, Button } from "react-bootstrap";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 
@@ -69,13 +69,19 @@ const FormLogin = () => {
 
         // decodificamos info del token del user
         const dataDecoded = jwt_decode(token);
+        console.log(dataDecoded);
         let nameUser= dataDecoded.name;
-        sessionStorage.setItem('userName', nameUser);
         let adminLogeado = dataDecoded.isAdmin;
+        let isActive = dataDecoded.isActive;
+        sessionStorage.setItem('userName', nameUser);
+        sessionStorage.setItem('isActive', isActive);
+        sessionStorage.setItem("isAdmin", adminLogeado);
+        console.log(adminLogeado);
+        console.log(isActive);
         
 
         Swal.fire({
-          title: 'Bienvenido' + {nameUser},
+          title: 'Bienvenido',
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
@@ -93,13 +99,8 @@ const FormLogin = () => {
     } catch (error) {
       setIsError(true);
       setErrorMessage(error.response.data.message);
-      Swal.fire({
-        title: 'Usuario o Contraseña incorrecta , intente nuevamente',
-        timer: 2000,
-        showCancelButton: false,
-        showConfirmButton: false,
-        background: "#ecb465",
-      })
+      
+      
     }
   };
 
@@ -116,6 +117,7 @@ const FormLogin = () => {
           </div>
           <div className="form">
             <Form onSubmit={handleSubmit} className="container px-4 pt-5">
+              {isError && <Alert variant="danger"> Revise los campos</Alert>}
               <Form.Group className="container " controlId="email">
                 <Form.Label>
                   <HiEnvelope className="me-2" />

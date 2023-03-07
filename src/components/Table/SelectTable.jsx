@@ -2,7 +2,6 @@ import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import NavBarCode from "../Navbar/NavBarCode";
 
 import "./Table.css";
 
@@ -16,7 +15,6 @@ const SelectTable = () => {
 
   return (
     <>
-      <NavBarCode></NavBarCode>
       <div className="d-flex  justify-content-center flex-column text-center my-2 vh-100">
         <h2 className="textBienvenidos my-2">Bienvenido {userName}</h2>
 

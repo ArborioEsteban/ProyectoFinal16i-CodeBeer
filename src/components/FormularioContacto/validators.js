@@ -1,5 +1,5 @@
 const edadValidator = (value) => {
-    return value >= 18 && value <= 65;
+    return value >= 18 && value <= 95;
 }
 
 export { edadValidator }
