@@ -24,7 +24,7 @@ const MainView = () => {
     <>
       <Container className="d-flex  justify-content-center flex-column text-center mt-5 vh-100 ">
         <h1 className="align-items-center mt-5 pt-4 titulo textBienvenidos">
-          Bienvenidos a Code & Beer
+          Bienvenidos a <br></br>Code & Beer
         </h1>
 
         <img

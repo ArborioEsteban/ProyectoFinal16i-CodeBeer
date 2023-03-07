@@ -10,7 +10,9 @@ import AdminView from "../components/Admin/AdminView";
 import FormContacto from "../components/FormularioContacto/FormContacto";
 import AcercaDe from "../components/AcercaDe";
 import MainView from "../components/View/MainView";
-import Footer from "../components/Footer/Footer";
+import PrivateRoute from "./PrivateRoute";
+import PrivateRouteUser from "./PrivateRouteUser";
+
 
 const Router = () => {
   return (
@@ -18,7 +20,6 @@ const Router = () => {
       <NavBarCode />
       <Routes>
         <Route path="/" element={<MainView />} />
-        <Route path="/products" element={<ProductGrid />} />
         <Route path="/selectTable" element={<SelectTable />} />
         <Route path="/FormLogin" element={<FormLogin />} />
         <Route path="FormContacto" element={<FormContacto />} />
@@ -27,10 +28,23 @@ const Router = () => {
         <Route path="*" element={<Navigate replace to="Error404" />} />
         <Route path="/FormSignIn" element={<FormSignIn />} />
         <Route path="*" element={<Error404 />} />
-        {/* <Route path='*' element={ <Navigate replace to="Error404"/> }/> */}
-        <Route path="adminForm" element={<AdminView />} />
+        {/* <Route path="/products" element={<ProductGrid />} /> */}
+        {/* <Route path="/adminForm" element={<AdminView />} /> */}
+
+        {/* rutas protegidas Admin*/}
+
+        <Route path="/" element={<PrivateRoute/>}>
+          <Route path="/adminForm" element={<AdminView />} />
+        </Route>
+
+        {/* rutas protegidas, solo para usuario logeado */}
+        <Route path="/" element={<PrivateRouteUser/>}>
+          <Route path="/products" element={<ProductGrid />} />
+        </Route>
+        {/* fin rutas protegidas */}
+
       </Routes>
-      {/* <Footer/> */}
+      
     </BrowserRouter>
   );
 };

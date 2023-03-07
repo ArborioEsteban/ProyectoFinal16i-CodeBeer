@@ -15,9 +15,9 @@ const NavBarCode = () => {
   };
 
   const [isActive, setIsActive] = useState(false);
-
   const [userName, setUserName] = useState("");
   const [userLastName, setUserLastName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
     let token = sessionStorage.getItem("token") || "";
@@ -27,10 +27,13 @@ const NavBarCode = () => {
       setIsActive(dataDecoded.isActive);
       setUserName(dataDecoded.name);
       setUserLastName(dataDecoded.lastName);
+      setUserEmail(dataDecoded.email);
+      
     }
   }, []);
 
   const handleClickLogin = () => {
+
     let token = sessionStorage.getItem("token") || "";
     if (token) {
       if (isActive) {
@@ -51,11 +54,13 @@ const NavBarCode = () => {
               background: "#ecb465",
             });
 
-            sessionStorage.setItem("token", "");
-            sessionStorage.setItem("userName", "");
-            sessionStorage.setItem("mesa", "");
+            // sessionStorage.setItem("token", "");
+            // sessionStorage.setItem("userName", "");
+            // sessionStorage.setItem("mesa", "");
+            // sessionStorage.setItem("isAdmin", false);
+            sessionStorage.clear();
             setIsActive(false);
-            navigate("/FormLogin");
+            navigate("/");
           }
         });
       }
@@ -74,28 +79,37 @@ const NavBarCode = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data.Nombre);
 
+    console.log(data.Nombre);
     console.log(data.Apellido);
-    console.log(data.id);
-    const res = await axios().put(`/user/${data.id}`, {});
+    console.log(userEmail);
+
+    const res = await axios().put(`/user/${userEmail}`,{
+
+      name:data.Nombre,
+      lastName:data.Apellido,
+      email:userEmail,
+      
+    });
 
     if (res.status === 200) {
       Swal.fire({
         title: "Operacion exitosa",
-        text: "Elemento modificado correctamente",
+        text: "Usuario modificado correctamente. Por favor inicie sesion nuevamente para ver sus datos",
         icon: "success",
-        timer: 2000,
+        timer: 5000,
         background: "#ecb465",
         showCancelButton: false,
         showConfirmButton: false,
       }).then(() => {
+        sessionStorage.clear();
+        navigate("/FormLogin");
         window.location.reload();
       });
     } else {
       Swal.fire({
         title: "Error",
-        text: `Ocurrio un error al editar el elemento, que es: ${res.statusText}`,
+        text: `Ocurrio un error al editar el usuario, que es: ${res.statusText}`,
         icon: "error",
         timer: 2000,
         background: "#ecb465",
@@ -186,8 +200,9 @@ const NavBarCode = () => {
                   max: 20,
                   min: 2,
                   maxLength: 20,
-                  pattern: /^[a-zA-Z]{6,20}$/i,
+                  pattern: /^[a-zA-Z]{2,20}$/i,
                 })}
+                // value={userName }
                 maxLength={20}
                 minLength={2}
                 required
@@ -203,8 +218,9 @@ const NavBarCode = () => {
                   max: 20,
                   min: 2,
                   maxLength: 20,
-                  pattern: /^[a-zA-Z]{6,20}$/i,
+                  pattern: /^[a-zA-Z]{2,20}$/i,
                 })}
+                // value={userLastName}
                 maxLength={20}
                 minLength={2}
                 required

@@ -19,7 +19,7 @@ const FormContacto = () => {
       title: "Gracias por comunicarte! Nos contactaremos a la brevedad",
       width: 600,
       padding: "3em",
-      color: "#ecb465",
+      color: "#fff",
       allowOutsideClick: false,
       allowEscapeKey: false,
       confirmButtonText: "Continuar",
@@ -118,7 +118,9 @@ const FormContacto = () => {
                       pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
                     })}
                     required
-                    placeholder="Email"
+                    placeholder="Email@mail.com"
+                    maxLength={30}
+                    
                   />
                   {errors.email?.type === "pattern" && (
                     <p className="text-danger">
@@ -135,11 +137,11 @@ const FormContacto = () => {
                   {...register("edad", {
                     validate: edadValidator,
                   })}
-                  placeholder="Edad"
+                  placeholder="18-95"
                 />
                 {errors.edad && (
                   <p className="text-danger">
-                    La edad debe estar entre 18 y 65
+                    La edad debe estar entre 18 y 95
                   </p>
                 )}
               </div>
