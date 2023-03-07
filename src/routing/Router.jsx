@@ -45,8 +45,8 @@ setIsActive(sessionStorage.getItem("isActive"));
         <Route path="*" element={<Navigate replace to="Error404" />} />
         <Route path="/FormSignIn" element={<FormSignIn />} />
         <Route path="*" element={<Error404 />} />
-        {/* <Route path="/products" element={<ProductGrid />} /> 
-        <Route path="/FormLogin" element={<FormLogin />} /> */}
+        <Route path="/products" element={<ProductGrid />} /> 
+        <Route path="/FormLogin" element={<FormLogin />} />
         
 
         {/* rutas protegidas Admin*/}
@@ -58,12 +58,12 @@ setIsActive(sessionStorage.getItem("isActive"));
         {/* rutas protegidas, solo para usuario logeado */}
 
         <Route path="/" element={<PrivateRouteUser isActive={isActive}/>}>
-          <Route path="/products" element={<ProductGrid />} />
+          {/* <Route path="/products" element={<ProductGrid />} /> */}
         </Route>
 
         {/* usuario logeado que no pueda ver pantalla de login*/}
         <Route path="/" element={<PrivateRouteActiveUser isActive={isActive}/>}>
-          <Route path="/FormLogin" element={<FormLogin />} />
+          {/* <Route path="/FormLogin" element={<FormLogin />} /> */}
         </Route>
 
         {/* fin rutas protegidas */}
