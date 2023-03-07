@@ -20,7 +20,7 @@ const NavBarCode = () => {
   const [userEmail, setUserEmail] = useState("");
 
   useEffect(() => {
-    let token = sessionStorage.getItem("token") || "";
+    let token = sessionStorage.getItem("token");
     if (token) {
       const dataDecoded = jwt_decode(token);
 
@@ -28,12 +28,10 @@ const NavBarCode = () => {
       setUserName(dataDecoded.name);
       setUserLastName(dataDecoded.lastName);
       setUserEmail(dataDecoded.email);
-      
     }
-  }, []);
+  }, [sessionStorage.getItem("token")]);
 
   const handleClickLogin = () => {
-
     let token = sessionStorage.getItem("token") || "";
     if (token) {
       if (isActive) {
@@ -79,17 +77,14 @@ const NavBarCode = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-
     console.log(data.Nombre);
     console.log(data.Apellido);
     console.log(userEmail);
 
-    const res = await axios().put(`/user/${userEmail}`,{
-
-      name:data.Nombre,
-      lastName:data.Apellido,
-      email:userEmail,
-      
+    const res = await axios().put(`/user/${userEmail}`, {
+      name: data.Nombre,
+      lastName: data.Apellido,
+      email: userEmail,
     });
 
     if (res.status === 200) {

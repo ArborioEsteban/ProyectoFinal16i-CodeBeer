@@ -1,47 +1,35 @@
-.SitiosWeb{
-    width: 50px;
-    padding: 2px;
-;
+.SitiosWeb {
+  width: 50px;
+  padding: 2px;
 }
 
-
-
-.logo{
-    width: 120px;
-
-   
+.logo {
+  width: 120px;
 }
 
-@media (min-width:360px) {
-
-    .LOGO{
-       width: 100px;
-       
-    }
-}
-
-h5.logo{
-    color: white;
-    padding-left: 18px;
-
- 
-}
-
-h5{
-    color: white;
-}
-
-a.nav-link{
-    color:#ecb46591 ;
-}
-
-li{
-    color:#ecb46591 ;
-}
-
-.Lgg{
-    background-color:  #041c32ce;
-
+@media (min-width: 360px) {
+  .LOGO {
+    width: 100px;
   }
+}
 
+h5.logo {
+  color: white;
+  padding-left: 18px;
+}
 
+h5 {
+  color: white;
+}
+
+a.nav-link {
+  color: #ecb46591;
+}
+
+li {
+  color: #ecb46591;
+}
+
+.Lgg {
+  background-color: #041c32ce;
+}

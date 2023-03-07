@@ -60,28 +60,6 @@ const ProductGrid = () => {
       setMesa(numMesaSStorage);
     }
 
-    // Swal.fire({
-    //   title: "bienvenido",
-    //   width: 600,
-    //   padding: "3em",
-    //   color: "#fff",
-    //   allowOutsideClick: false,
-    //   allowEscapeKey: false,
-    //   input:'number',
-    //   confirmButtonText: "Continuar",
-    //   confirmButtonColor: "#ecb465",
-    //   background:
-    //   "#064663 url(https://i.pinimg.com/originals/33/7d/11/337d113e8745328fb8d68c951c49eec6.gif)",
-    // backdrop: `
-    //       rgba(0,0,45,0.6)
-    //       url("")
-    //       center
-    //       repeat
-    //     `,
-    // }).then(() => {
-    //   console.log();
-      
-    // });
 
   }, []);
 

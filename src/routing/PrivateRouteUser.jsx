@@ -1,13 +1,10 @@
-
 import { Navigate, Outlet } from "react-router-dom";
 
-
-const isActive = JSON.parse(sessionStorage.getItem("isActive"));
-console.log(isActive);
-
-const PrivateRouteUser = () => {
-  
-  return isActive ? <Outlet /> : <Navigate to="/FormLogin" />;
+const PrivateRouteUser = ({ isActive }) => {
+  if (!isActive) {
+    return <Navigate to="/" />;
+  }
+  return <Outlet />;
 };
 
 export default PrivateRouteUser;

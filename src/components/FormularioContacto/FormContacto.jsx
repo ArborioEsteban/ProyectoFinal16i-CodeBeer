@@ -44,8 +44,8 @@ const FormContacto = () => {
 
   return (
    
-      <div className="container">
-        <div className="row">
+      <div className="container mt-5 py-5">
+        <div className="row mt-5 py-2">
           <div className="col-sm-12 col-md-12 col-lg-12">
             <Form className="Formulario1" onSubmit={handleRHF(handleSubmit)}>
               {isError && (

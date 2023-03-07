@@ -141,6 +141,7 @@ const ItemsForm = (props) => {
             type="text"
             value={name || ""}
             onChange={(e) => setName(e.target.value)}
+            maxLength={30}
           />
         </Form.Group>
         <Form.Group className="mt-2">
@@ -157,6 +158,7 @@ const ItemsForm = (props) => {
             type="url"
             value={image || ""}
             onChange={(e) => setImage(e.target.value)}
+            maxLength={100}
           />
         </Form.Group>
         <Form.Group className="mt-2">
@@ -168,6 +170,7 @@ const ItemsForm = (props) => {
             value={description || ""}
             onChange={(e) => setDescription(e.target.value)}
             className="formDescripcion"
+            maxLength={50}
           />
         </Form.Group>
 
@@ -178,6 +181,7 @@ const ItemsForm = (props) => {
             value={category || ""}
             onChange={(e) => setCategory(e.target.value)}
             className="formDescripcion"
+            maxLength={60}
           />
         </Form.Group>
 
