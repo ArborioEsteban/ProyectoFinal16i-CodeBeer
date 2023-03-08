@@ -52,10 +52,7 @@ const NavBarCode = () => {
               background: "#ecb465",
             });
 
-            // sessionStorage.setItem("token", "");
-            // sessionStorage.setItem("userName", "");
-            // sessionStorage.setItem("mesa", "");
-            // sessionStorage.setItem("isAdmin", false);
+            
             sessionStorage.clear();
             setIsActive(false);
             navigate("/");
