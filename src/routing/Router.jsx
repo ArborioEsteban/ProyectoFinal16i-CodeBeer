@@ -23,19 +23,21 @@ import "../components/ProductGrid/ProductGrid.css";
 
 const Router = () => {
 
-const [isAdmin,setIsAdmin]  = useState();
+const [isAdmin,setIsAdmin]  = useState(false);
 const [isActive,setIsActive]  = useState(false);
 
 useEffect(() => {
 
   let token = sessionStorage.getItem("token");
   console.log(token);
+  
   if (token) {
     const dataDecoded = jwt_decode(token);
-    if(dataDecoded.isAdmin == true){
+    setIsAdmin(true);    
+    // if(dataDecoded.isAdmin === true){
+    //   setIsAdmin(true);    
 
-      setIsAdmin(true);    
-    }
+    // }
   }
   setIsActive(true);
 

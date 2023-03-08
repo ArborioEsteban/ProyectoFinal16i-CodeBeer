@@ -6,13 +6,11 @@ import { Alert, Button } from "react-bootstrap";
 import { HiLogin, HiOutlineClipboardList, HiLockClosed } from "react-icons/hi";
 import { HiEnvelope } from "react-icons/hi2";
 
-import axios from '../api/axios';
-import Swal from 'sweetalert2';
+import axios from "../api/axios";
+import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
 
 import "./FormLogin.css";
-
-
 
 const FormLogin = () => {
   const navigate = useNavigate();
@@ -27,9 +25,7 @@ const FormLogin = () => {
   const [passwordError, setPasswordError] = useState(false);
 
   const [isError, setIsError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-
-  
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,64 +46,51 @@ const FormLogin = () => {
     }
     setPasswordError(false);
 
-    
-
     try {
       // axios.() para llamadas a funcion con parentesis
-      const response = await axios().post('/login', {
+      const response = await axios().post("/login", {
         email: emailLogin,
         password: contraseñaLogin,
       });
 
       if (response.status === 200) {
         setIsError(false);
-        
+
         const token = response.data.token;
-        
-        sessionStorage.setItem('token', token);
-        
+
+        sessionStorage.setItem("token", token);
 
         // decodificamos info del token del user
         const dataDecoded = jwt_decode(token);
-        console.log(dataDecoded);
-        let nameUser= dataDecoded.name;
+
+        let nameUser = dataDecoded.name;
         let adminLogeado = dataDecoded.isAdmin;
         let isActive = dataDecoded.isActive;
-        sessionStorage.setItem('userName', nameUser);
-        sessionStorage.setItem('isActive', isActive);
+        sessionStorage.setItem("userName", nameUser);
+        sessionStorage.setItem("isActive", isActive);
         sessionStorage.setItem("isAdmin", adminLogeado);
-        console.log(adminLogeado);
-        console.log(isActive);
-        
 
         Swal.fire({
-          title: 'Bienvenido',
+          title: "Bienvenido",
           timer: 2000,
           showCancelButton: false,
           showConfirmButton: false,
           background: "#ecb465",
         }).then(() => {
-          if(adminLogeado === true){
-            navigate('/adminForm');
-          }else{
-            navigate('/selectTable',{nameUser}); 
+          if (adminLogeado === true) {
+            navigate("/adminForm");
+          } else {
+            navigate("/selectTable", { nameUser });
           }
-        
-          
         });
       }
     } catch (error) {
       setIsError(true);
       setErrorMessage(error.response.data.message);
-      
-      
     }
   };
 
-
-
   return (
-
     <div className="pt-5 mb-5 mt-5">
       <div className=" pt-5 mx-5">
         <div className="p-3 py-4 login rounded">
@@ -125,7 +108,7 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="Email"
-                  value={emailLogin || ''}
+                  value={emailLogin || ""}
                   onChange={(e) => setEmailLogin(e.target.value)}
                   placeholder="Ingrese su email"
                   autoComplete="username"
@@ -147,7 +130,7 @@ const FormLogin = () => {
                 </Form.Label>
                 <Form.Control
                   type="password"
-                  value={contraseñaLogin || ''}
+                  value={contraseñaLogin || ""}
                   onChange={(e) => setContraseñaLogin(e.target.value)}
                   placeholder="****************"
                   autoComplete="username"
