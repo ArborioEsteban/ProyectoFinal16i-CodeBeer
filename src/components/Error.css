@@ -1,27 +1,24 @@
-.error1{
+.error1 {
+  color: #ecb465ee;
+}
 
-    color:#ecb465ee;
-  }
-
-  .error{
+.error {
   margin-top: 3rem;
-    color:#ecb465ee;
-  }
+  color: #ecb465ee;
+}
 
-  .butt{
-    text-align: center !important;
-  
-  
-  }
+.butt {
+  text-align: center !important;
+}
 
-  .Bc{
-    border:1px solid  #ecb465 !important;
-    background-color: #ecb46591 !important;
-      color: black !important;
-      font-size: 20px !important;
-  }
+.Bc {
+  border: 1px solid #ecb465 !important;
+  background-color: #ecb46591 !important;
+  color: black !important;
+  font-size: 20px !important;
+}
 
-  .Logo404{
-    width: 300px;
-    margin-top: 100px;
-  }
+.Logo404 {
+  width: 300px;
+  margin-top: 100px;
+}

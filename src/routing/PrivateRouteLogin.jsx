@@ -1,12 +1,12 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-const PrivateRouteUser = () => {
+const PrivateRouteLogin = () => {
   const isActive = JSON.parse(sessionStorage.getItem("isActive"));
   if (!isActive) {
-    return <Navigate to="/" />;
-  } else {
     return <Outlet />;
+  } else {
+    return <Navigate to="/products" />;
   }
 };
 
-export default PrivateRouteUser;
+export default PrivateRouteLogin;

@@ -1,11 +1,14 @@
-import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
-import { Outlet, Link, useNavigate } from "react-router-dom";
-import jwt_decode from "jwt-decode";
-import "../Navbar/Navbar1.css";
-import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+
+import jwt_decode from "jwt-decode";
+import Swal from "sweetalert2";
+
 import axios from "../api/axios";
+
+import "./NavBarCode.css";
 
 const NavBarCode = () => {
   const navigate = useNavigate();
@@ -52,7 +55,6 @@ const NavBarCode = () => {
               background: "#ecb465",
             });
 
-            
             sessionStorage.clear();
             setIsActive(false);
             navigate("/");
@@ -74,10 +76,6 @@ const NavBarCode = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data.Nombre);
-    console.log(data.Apellido);
-    console.log(userEmail);
-
     const res = await axios().put(`/user/${userEmail}`, {
       name: data.Nombre,
       lastName: data.Apellido,
@@ -194,7 +192,6 @@ const NavBarCode = () => {
                   maxLength: 20,
                   pattern: /^[a-zA-Z]{2,20}$/i,
                 })}
-                // value={userName }
                 maxLength={20}
                 minLength={2}
                 required
@@ -212,7 +209,6 @@ const NavBarCode = () => {
                   maxLength: 20,
                   pattern: /^[a-zA-Z]{2,20}$/i,
                 })}
-                // value={userLastName}
                 maxLength={20}
                 minLength={2}
                 required

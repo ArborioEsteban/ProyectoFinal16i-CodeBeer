@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-const PrivateRoute = ({ isAdmin }) => {
-  console.log(isAdmin);
+const PrivateRoute = () => {
+  const isAdmin = JSON.parse(sessionStorage.getItem("isAdmin"));
   if (!isAdmin) {
     return <Navigate to="/" />;
   }

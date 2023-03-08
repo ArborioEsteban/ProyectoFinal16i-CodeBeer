@@ -1,68 +1,61 @@
 body {
-	/* background: linear-gradient(rgba(4, 3, 20, 0.833), rgba(4, 3, 20, 0.833)),
-	  url("https://img.freepik.com/free-photo/glass-bottles-beer-with-glass-ice-dark-background_1150-8901.jpg?w=1380&t=st=1675872713~exp=1675873313~hmac=5b3610be203a4b1ea22f98b970aee3f1ffad09582008c34b4e369db93591b6f0");
-	  color: #ecb465; */
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-    min-height: 100vh;
-    color: #ecb465 !important;
-  }
-
-  .textBienvenidos {
-    display: block;
-    font-size: calc(1em + 3vmax);
-    line-height: 1.1;
-    text-align: center;
-    color: #ecb465;
-  }
-
-  #btnTable {
-    background-color: transparent;
-    border-radius: 20%;
-    margin-left: 0,5rem;
-   
-    border: 1px solid #ecb465;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-
-  /*informacion*/
-
-  .color {
-    background: #041c32ce;
-  }
-
-
-  .info{background-color:#042f5868;}
-
- 
-
-  .info2{background-color:rgba(8, 6, 1, 0.089) ;
-
-   color: #ecb465;  
-
- }
-
-div.accordion-body{
-  background-color: #041c32ce !important;
-  color: black;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #ecb465 !important;
 }
-button.accordion-button.collapsed{
+
+.textBienvenidos {
+  display: block;
+  font-size: calc(1em + 3vmax);
+  line-height: 1.1;
+  text-align: center;
+  color: #ecb465;
+}
+
+#btnTable {
+  background-color: transparent;
+  border-radius: 20%;
+  margin-left: 0, 5rem;
+
+  border: 1px solid #ecb465;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*informacion*/
+
+.color {
+  background: #041c32ce;
+}
+
+.info {
+  background-color: #042f5868;
+}
+
+.info2 {
+  background-color: rgba(8, 6, 1, 0.089);
+
+  color: #ecb465;
+}
+
+div.accordion-body {
+  background-color: #041c32 !important;
+  color: rgb(255, 255, 255);
+}
+button.accordion-button.collapsed {
   background-color: #041c32ce !important;
-  color:  #ecb465;
+  color: #ecb465;
 }
 
 @media (mix-width: 600px) {
-  
-  .logoTapaCerveza{
+  .logoTapaCerveza {
     width: 25% !important;
     height: 50%;
-  
   }
 }

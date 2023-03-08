@@ -1,0 +1,26 @@
+.Formulario1 {
+  max-width: 25em;
+  padding: 1.3em;
+  margin: 0 auto;
+  background-color: #041c32f2 !important;
+  font-weight: bold;
+  border-radius: 0.5em;
+  box-shadow: inset 1px 1px 22px 4px #041c32f2 !important;
+  /* margin-top: 160px; */
+}
+
+.Button {
+  background-color: #ecb46591 !important;
+  border-radius: 10%;
+  border: 1px solid #ee900d !important;
+  cursor: pointer;
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+label.form-label {
+  font-size: 20px;
+  color: #ecb46591;
+}

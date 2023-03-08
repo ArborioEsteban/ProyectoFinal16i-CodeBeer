@@ -47,7 +47,7 @@ const ProductItem = (props) => {
 
   const popover = (
     <Popover id="popover-basic" name="popOverInfo bg-transparent">
-      {/* <Popover.Header as="h4" className='popOverInfo bg-transparent'>{name}</Popover.Header> */}
+      
       <Popover.Body className="popOverInfo text-white">
         {isActive
           ? description
@@ -79,8 +79,6 @@ const ProductItem = (props) => {
       </OverlayTrigger>
       <Card.Body className="bodyCardProductos">
         <Card.Title className="text-center">{name}</Card.Title>
-        {/* <Card.Text className='cardProductos text-center'>{description}</Card.Text> */}
-
         <div className="text-center my-2">
           <h5 className="text-card">$ {price}</h5>
 

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import axios from "../../api/axios";
 import { Button, Container, Form } from "react-bootstrap";
+
+import axios from "../../api/axios";
 import Swal from "sweetalert2";
 
-import { validateDate } from "../../../hellpers/validateDate";
+import { validateData } from "../../../helpers/validateData";
 
 const ItemsForm = (props) => {
   const { modifyingItem } = props;
@@ -13,8 +14,6 @@ const ItemsForm = (props) => {
   const [image, setImage] = useState();
   const [description, setDescription] = useState();
   const [category, setCategory] = useState();
-  const [quantity, setQuantity] = useState();
-  const [available, setAvailable] = useState();
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -39,7 +38,7 @@ const ItemsForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateDate(name, price, description, image)) {
+    if (validateData(name, price, description, image)) {
       //   Caso EDITAR
       if (modifyingItem) {
         const res = await axios().put(`/product/${modifyingItem}`, {

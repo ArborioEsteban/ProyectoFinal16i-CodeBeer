@@ -1,100 +1,93 @@
-.text-card{
-    color: #ECB365;
+.text-card {
+  color: #ecb365;
 }
 
-.imgCardProductos{
-    max-width: 100%;
-	min-height: 10rem;
-    max-height: 10rem;
-    border-radius: 10px;
+.imgCardProductos {
+  max-width: 100%;
+  min-height: 10rem;
+  max-height: 10rem;
+  border-radius: 10px;
 }
-.cardProductos{
-    background-color: #06466338 !important;
-    color: #ECB365 !important;
-    border-radius: 10px;
-	/* border-color: #ecb4659d !important; */
-	border: 1px solid #ecb4658c !important;
-	min-height: 18rem;
-	
+.cardProductos {
+  background-color: #06466338 !important;
+  color: #ecb365 !important;
+  border-radius: 10px;
+  border: 1px solid #ecb4658c !important;
+  min-height: 18rem;
 }
-.bodyCardProductos{
-	min-height: 11rem;
-
+.bodyCardProductos {
+  min-height: 11rem;
 }
 
-.popOverInfo{
-	background-color: #041C32 ;
-    color: #ecb365;
-    border-radius: 10px;
+.popOverInfo {
+  background-color: #041c32;
+  color: #ecb365;
+  border-radius: 10px;
 }
 
-.btnCardProductos{
-	position: absolute; 
-    right: 5%;
-	left: 5%;
-    bottom: 3%;  
+.btnCardProductos {
+  position: absolute;
+  right: 5%;
+  left: 5%;
+  bottom: 3%;
 }
 
 #myButton {
-	/* box-shadow: 3px 4px 0px 0px #ecb365; */
-	background-color:transparent;
-	border-radius:18px;
-	border:1px solid #ecb365;
-	display:inline-block;
-	cursor:pointer;
-	color:#ecb365;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	padding:7px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 1px #ecb365;
+  background-color: transparent;
+  border-radius: 18px;
+  border: 1px solid #ecb365;
+  display: inline-block;
+  cursor: pointer;
+  color: #ecb365;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px #ecb365;
 }
 #myButton:focus {
-	background-color:#ecb365;
-    box-shadow: 3px 4px 0px 0px #ecb365;
-    color: white;
+  background-color: #ecb365;
+  box-shadow: 3px 4px 0px 0px #ecb365;
+  color: white;
 }
 #myButton:hover {
-	background-color:#ecb365;
-    box-shadow: 3px 4px 0px 0px #ecb365;
-    color: white;
+  background-color: #ecb365;
+  box-shadow: 3px 4px 0px 0px #ecb365;
+  color: white;
 }
 
-
-.divImagen{
-	display:inline-block;
-  	position:relative;
+.divImagen {
+  display: inline-block;
+  position: relative;
 }
 
-  
-  .desvanecer:hover {
-	opacity: 0.15;
-	-webkit-transition: opacity 500ms;
-	-moz-transition: opacity 500ms;
-	-o-transition: opacity 500ms;
-	-ms-transition: opacity 500ms;
-	transition: opacity 500ms;
-  }
+.desvanecer:hover {
+  opacity: 0.15;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
 
-  .divImagen p {
-	width: inherit;  
-	color: #ffffff;
-	text-align: center;
-	position: absolute;
-	margin: auto;
-	top: 50%; 
-	left: 35%;
-	transition: top .3s linear;
-	opacity: 0;
-  }
-  
-  .divImagen:hover p {    
-	top: 60%;
-	opacity: 0.95;
-  }
+.divImagen p {
+  width: inherit;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 35%;
+  transition: top 0.3s linear;
+  opacity: 0;
+}
 
-  .noDisponible{
-	opacity: 0.2;
-  }
+.divImagen:hover p {
+  top: 60%;
+  opacity: 0.95;
+}
 
+.noDisponible {
+  opacity: 0.2;
+}

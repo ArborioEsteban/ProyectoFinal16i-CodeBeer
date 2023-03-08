@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import Router from "./routing/Router";
 
-
 const App = () => {
-  
   return (
     <>
       <Router />

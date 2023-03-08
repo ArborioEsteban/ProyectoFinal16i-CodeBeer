@@ -15,34 +15,14 @@ import SelectTable from "../components/Table/SelectTable";
 
 import PrivateRoute from "./PrivateRoute";
 import PrivateRouteUser from "./PrivateRouteUser";
-import PrivateRouteActiveUser from "./PrivateRouteUser";
+import PrivateRouteLogin from "./PrivateRouteLogin";
+
 
 import "../components/ProductGrid/ProductGrid.css";
 
 
 
 const Router = () => {
-
-const [isAdmin,setIsAdmin]  = useState(false);
-const [isActive,setIsActive]  = useState(false);
-
-useEffect(() => {
-
-  let token = sessionStorage.getItem("token");
-  console.log(token);
-  
-  if (token) {
-    const dataDecoded = jwt_decode(token);
-    setIsAdmin(true);    
-    // if(dataDecoded.isAdmin === true){
-    //   setIsAdmin(true);    
-
-    // }
-  }
-  setIsActive(true);
-
-}, [sessionStorage.getItem("token")]);
-
 
   return (
     <BrowserRouter>
@@ -56,22 +36,27 @@ useEffect(() => {
         <Route path="*" element={<Navigate replace to="Error404" />} />
         <Route path="/FormSignIn" element={<FormSignIn />} />
         <Route path="*" element={<Error404 />} />
-        <Route path="/FormLogin" element={<FormLogin />} />
+        {/* <Route path="/products" element={<ProductGrid />} />  */}
+        {/* <Route path="/FormLogin" element={<FormLogin />} /> */}
         
 
         {/* rutas protegidas Admin*/}
 
-        <Route path="/" element={<PrivateRoute isAdmin={isAdmin}/>}>
+        <Route path="/" element={<PrivateRoute/>}>
           <Route path="/adminForm" element={<AdminView/>} />
         </Route>
+        {/* <PrivateRoute path="/adminForm" element={<AdminView/>} /> */}
 
         {/* rutas protegidas, solo para usuario logeado */}
 
-        <Route path="/" element={<PrivateRouteUser isActive={isActive}/>}>
+        <Route path="/" element={<PrivateRouteUser/>}>
           <Route path="/products" element={<ProductGrid />} />
         </Route>
 
-        
+        {/* usuario logeado que no pueda ver pantalla de login*/}
+        <Route path="/" element={<PrivateRouteLogin/>}>
+          <Route path="/FormLogin" element={<FormLogin />} />
+        </Route>
 
         {/* fin rutas protegidas */}
 

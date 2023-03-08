@@ -100,10 +100,10 @@ const MainView = () => {
       </div>
 
       <div className="accordion m-5">
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey="0" className="bg-transparent">
           <Accordion.Item eventKey="0">
             <Accordion.Header>Beber con moderacion</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="bg-transparent">
               Moderación significa que beber no es intoxicarse (o embriagarse) y
               que usted no consuma más de 1 trago al día si es una mujer y no
               más de 2 si es un hombre. Un trago se define como 12 onzas (350
