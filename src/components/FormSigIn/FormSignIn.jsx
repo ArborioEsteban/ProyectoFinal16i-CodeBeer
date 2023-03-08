@@ -36,7 +36,7 @@ const FormSignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const textoRegex = /^[a-zA-Z]{6,20}$/;
+    const textoRegex = /^[a-zA-Z]{2,20}$/;
     if (!textoRegex.test(nombreRegistro.trim())) {
       setNombreError(true);
       return;
@@ -135,12 +135,12 @@ const FormSignIn = () => {
                 placeholder="Nombre"
                 autoComplete="username"
                 maxLength={20}
-                minLength={6}
+                minLength={2}
                 required
               />
               {nombreError && (
                 <span className="helper-text">
-                  Ingrese minimo 6 caracteres y un maximo de 20
+                  Ingrese minimo 2 caracteres y un maximo de 20
                 </span>
               )}
             </Form.Group>
