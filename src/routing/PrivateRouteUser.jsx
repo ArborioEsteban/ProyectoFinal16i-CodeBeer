@@ -1,15 +1,12 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-const PrivateRouteUser = ({ isActive}) => {
+const PrivateRouteUser = ({ isActive }) => {
   console.log(isActive);
-  
-
   if (!isActive) {
     return <Navigate to="/" />;
-  }else{
+  } else {
     return <Outlet />;
   }
-
 };
 
 export default PrivateRouteUser;
