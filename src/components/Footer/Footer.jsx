@@ -1,27 +1,24 @@
-import {  Container, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 import "./Footer.css";
 
 const Footer = () => {
   return (
-   
     <footer className="container-fluid text-light ">
       <div className="py-3 Lgg">
         <div className="row">
           <div className="col ">
             <h5 className="logo">Code&Beer</h5>
 
-
             <Nav.Link as={Link} to="/">
-            <img
-              src="https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg"
-              alt="Code&Beer"
-              className="logo LOGO "
-            />
-              </Nav.Link>
+              <img
+                src="https://live.staticflickr.com/65535/52696635898_5d1c068db0_b.jpg"
+                alt="Code&Beer"
+                className="logo LOGO "
+              />
+            </Nav.Link>
           </div>
-        
-
 
           <div className="col SitioWeb">
             <h5>Redes Sociales</h5>
@@ -61,9 +58,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-   
   );
 };
 
 export default Footer;
-

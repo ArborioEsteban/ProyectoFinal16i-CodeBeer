@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { edadValidator } from "./validators";
-import { Alert, Form, Button, FormGroup, FormControl } from "react-bootstrap";
+import { Alert, Form, Button, FormGroup } from "react-bootstrap";
+
 import Swal from "sweetalert2";
-import "./Formulario.css";
+
+import { edadValidator } from "./validators";
+
+import "./FormContacto.css";
 
 const FormContacto = () => {
   const {

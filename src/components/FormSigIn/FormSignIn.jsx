@@ -17,8 +17,8 @@ const FormSignIn = () => {
     navigate(route);
   };
   //const de los campos
-  const [nombreRegistro, setNombreRegistro] = useState('');
-  const [apellidoRegistro, setApellidoRegistro] = useState('');
+  const [nombreRegistro, setNombreRegistro] = useState("");
+  const [apellidoRegistro, setApellidoRegistro] = useState("");
   const [emailRegistro, setEmailRegistro] = useState();
   const [contraseñaRegistro, setContraseñaRegistro] = useState();
   const [contraseña2Registro, setContraseña2Registro] = useState();
@@ -69,10 +69,11 @@ const FormSignIn = () => {
     }
     setPasswordError(false);
 
-    // Validar contraseña2 
+    // Validar contraseña2
     if (
       !passwordRegex.test(contraseña2Registro) ||
-      contraseña2Registro.lenght < 6 || contraseñaRegistro !== contraseña2Registro
+      contraseña2Registro.lenght < 6 ||
+      contraseñaRegistro !== contraseña2Registro
     ) {
       setPassword2Error(true);
       return;
@@ -109,7 +110,7 @@ const FormSignIn = () => {
         background: "#ecb465",
         showCancelButton: false,
         showConfirmButton: false,
-      })
+      });
     }
   };
 
@@ -210,7 +211,6 @@ const FormSignIn = () => {
                   caracteres.
                 </span>
               )}
-
             </Form.Group>
 
             <Form.Group className="my-4" controlId="Password">
@@ -229,10 +229,10 @@ const FormSignIn = () => {
                 required
               />
               {password2Error && (
-                  <span className="helper-text">
-                    Las contraseñas deben coincidir
-                  </span>
-                )}
+                <span className="helper-text">
+                  Las contraseñas deben coincidir
+                </span>
+              )}
             </Form.Group>
 
             <Form.Group
