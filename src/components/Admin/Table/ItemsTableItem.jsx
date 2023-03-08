@@ -40,7 +40,7 @@ const ItemsTableItem = (props) => {
                 showCancelButton: false,
                 showConfirmButton: false,
             }).then(()=>{
-                window.location.reload();
+                // window.location.reload();
             });
         } else {
             Swal.fire({
