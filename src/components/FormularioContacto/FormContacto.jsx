@@ -74,7 +74,7 @@ const FormContacto = () => {
                     placeholder="Nombre Completo"
                     className={`py-2`}
                     maxLength={20}
-                    minLength={6}
+                    minLength={2}
                     required
                   />
                   {errors.nombre?.type === "required" && (
