@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Offcanvas, Row } from "react-bootstrap";
-import axios from "../api/axios";
-import ProductItem from "../ProductItem/ProductItem";
 import { AiOutlineShoppingCart, AiFillCloseSquare } from "react-icons/ai";
 import Swal from "sweetalert2";
+
+import axios from "../api/axios";
+import ProductItem from "../ProductItem/ProductItem";
+
 import "./ProductGrid.css";
 
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
