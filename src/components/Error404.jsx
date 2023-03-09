@@ -1,6 +1,9 @@
 import React from "react";
-import "./Error.css";
 import Button from "react-bootstrap/Button";
+
+
+import "./Error.css";
+
 
 const Error404 = () => {
   return (

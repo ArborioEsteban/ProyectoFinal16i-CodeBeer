@@ -2,8 +2,11 @@ import React from "react";
 import { Container, Accordion } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import "./MainView.css";
+
 import Footer from "../Footer/Footer";
+
+import "./MainView.css";
+
 
 const MainView = () => {
   const navigate = useNavigate();
