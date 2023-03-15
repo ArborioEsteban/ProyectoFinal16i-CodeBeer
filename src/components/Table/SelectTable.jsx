@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -15,8 +15,14 @@ const SelectTable = () => {
 
   return (
     <>
-      <div className="d-flex  justify-content-center flex-column text-center my-2 vh-100">
-        <h2 className="textBienvenidos my-2">Bienvenido {userName}</h2>
+      <div className="d-flex justify-content-center flex-column text-center container">
+        <div className="">
+          <h2 className="textBienvenidos mt-5">Bienvenido {userName}</h2>
+
+        </div>
+      </div>
+
+      <div className="d-flex justify-content-center flex-column text-center g-1">
 
         <form
           onSubmit={handleRHF((data) => {
@@ -34,7 +40,7 @@ const SelectTable = () => {
               navigate("/products");
             });
           })}
-          className="bg-transparent fs-3 my-5 text-center align-content-center"
+          className="bg-transparent fs-3 my-1 text-center align-content-center"
         >
           <label className="textBienvenidos mt-5 bg-transparent align-content-center m-auto text-center w-100">
             Seleccione su Mesa

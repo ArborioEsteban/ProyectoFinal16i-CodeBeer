@@ -111,7 +111,7 @@ const NavBarCode = () => {
 
   return (
     <>
-      <Navbar className="navBg fixed-top" variant="dark" expand="lg">
+      <Navbar className="navBg sticky-top" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img
