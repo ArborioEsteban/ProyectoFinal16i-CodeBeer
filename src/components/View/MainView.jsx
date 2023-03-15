@@ -25,20 +25,23 @@ const MainView = () => {
 
   return (
     <>
-      <Container className="d-flex  justify-content-center flex-column text-center mt-5 vh-100 ">
-        <h1 className="align-items-center mt-5 pt-4 titulo textBienvenidos">
-          Bienvenidos a <br></br>Code & Beer
-        </h1>
+      <div className="d-flex justify-content-center flex-column text-center container">
+        <div className="">
+          <h1 className="align-items-center mt-5 mb-0 pt-5 titulo textBienvenidos">
+            Bienvenidos a <br></br>Code & Beer
+          </h1>
+
+        </div>
 
         <img
           src="https://imageup.me/images/7252be06-9860-4ef9-80cc-17cd3e79cee8.png"
           alt="Code&Beer"
-          className="CodeBeer logoTapaCerveza w-50 align-self-center bg-transparent px-2"
+          className="py-2 CodeBeer logoTapaCerveza w-50 align-self-center bg-transparent px-4"
           onClick={() => handleClick()}
         />
-      </Container>
+      </div>
 
-      <div className=" container  color col-lg-8 col-sm-8 col-md-8">
+      <div className=" container color col-lg-8 col-sm-8 col-md-8">
         <div className="row justify-content-center"></div>
 
         <div className="col-sm-8 pt-3 pb-3"></div>
