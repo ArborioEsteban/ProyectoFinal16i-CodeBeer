@@ -200,7 +200,7 @@ const ProductGrid = () => {
       </div>
 
       <Container>
-        <Row className="mt-5">
+        <Row className="my-5">
           <div className="mt-5"></div>
           {products.map((elemento) => {
             return (
@@ -225,7 +225,7 @@ const ProductGrid = () => {
             );
           })}
         </Row>
-      </Container>
+      </Container >
       <Container>
         <Footer/>
       </Container>

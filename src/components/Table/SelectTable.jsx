@@ -95,9 +95,7 @@ const SelectTable = () => {
           </Button>
         </form>
       </div>
-      <Container>
-        <Footer />
-      </Container>
+     
     </>
   );
 };
