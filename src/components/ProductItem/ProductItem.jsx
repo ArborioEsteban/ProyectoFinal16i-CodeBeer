@@ -99,6 +99,7 @@ const ProductItem = (props) => {
         </div>
       </Card.Body>
     </Card>
+    
   );
 };
 
