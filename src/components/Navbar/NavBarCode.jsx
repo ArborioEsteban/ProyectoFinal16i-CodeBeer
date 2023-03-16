@@ -18,6 +18,7 @@ const NavBarCode = () => {
   };
 
   const [isActive, setIsActive] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [userName, setUserName] = useState("");
   const [userLastName, setUserLastName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -28,6 +29,7 @@ const NavBarCode = () => {
       const dataDecoded = jwt_decode(token);
 
       setIsActive(dataDecoded.isActive);
+      setIsAdmin(dataDecoded.isAdmin);
       setUserName(dataDecoded.name);
       setUserLastName(dataDecoded.lastName);
       setUserEmail(dataDecoded.email);
@@ -138,6 +140,13 @@ const NavBarCode = () => {
                 className={` ${isActive ? "" : "d-none"}`}
               >
                 Mi pedido
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/adminForm"
+                className={` ${isAdmin ? "" : "d-none"}`}
+              >
+                Administrador
               </Nav.Link>
             </Nav>
 
