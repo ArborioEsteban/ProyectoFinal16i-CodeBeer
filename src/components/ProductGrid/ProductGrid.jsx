@@ -123,13 +123,15 @@ const ProductGrid = () => {
 
   return (
     <>
-      <div className="w-25 text-end fixed-bottom mb-1 me-4 container">
+
+      <div className=" container d-flex justify-content-end flex-column text-right g-2 mt-3 mb-1 w-25 text-end sticky-top">
         <Button className="" id="myCartBtn" onClick={handleShow}>
           Productos<br></br>
           {countProducts}
           <AiOutlineShoppingCart />
         </Button>
       </div>
+
       <div className="text-end fixed-bottom mb-1 me-1 container">
         <Offcanvas show={show} className="bg-pedido" onHide={handleClose}>
           <Offcanvas.Header>

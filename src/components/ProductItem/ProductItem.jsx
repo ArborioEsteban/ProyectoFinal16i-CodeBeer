@@ -57,7 +57,7 @@ const ProductItem = (props) => {
   );
 
   return (
-    <Card className="cardProductos">
+    <Card className="cardProductos mb-2">
       <OverlayTrigger
         trigger="click"
         placement="bottom"
@@ -79,14 +79,14 @@ const ProductItem = (props) => {
       </OverlayTrigger>
       <Card.Body className="bodyCardProductos">
         <Card.Title className="text-center">{name}</Card.Title>
-        <div className="text-center my-2">
-          <h5 className="text-card">$ {price}</h5>
+        <div className="text-center mt-2">
+          <h5 className="text-card mb-2">$ {price}</h5>
 
           <Button
             onClick={() => onAddProduct(elemento)}
             id="myButton"
             className={`
-           btnCardProductos mt-
+           btnCardProductos mt-5
             ${isActive ? "" : "disabled"}`}
           >
             {`${

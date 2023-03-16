@@ -8,15 +8,15 @@ body {
   }
   #myCartBtn{
 	background-color: #ecb465c8 !important;
-	border-radius: 20%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+	border-radius: 15%;
+    margin-left: 0.1rem;
+    margin-bottom: 0.1rem;
 	border:1px solid #ecb465;
 	cursor:pointer;
 	color:#000000;
 	font-family:Arial;
 	font-size:12px;
-	font-weight:bold;
+	font-weight:lighter;
 	text-decoration:none;
 }
 
@@ -54,4 +54,15 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	color: #ecb465 !important;
+}
+
+@media (min-width:990px){
+	#myCartBtn{
+		background-color: #ecb465c8 !important;
+		position: fixed;
+		bottom: 14%;
+		right: 10%;
+		width: 20%;
+	}
+	
 }
