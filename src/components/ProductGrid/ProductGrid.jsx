@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Offcanvas, Row } from "react-bootstrap";
 import { AiOutlineShoppingCart, AiFillCloseSquare } from "react-icons/ai";
+import Footer from "../Footer/Footer";
 import Swal from "sweetalert2";
 
 import axios from "../api/axios";
+
 import ProductItem from "../ProductItem/ProductItem";
 
 import "./ProductGrid.css";
@@ -223,6 +225,9 @@ const ProductGrid = () => {
             );
           })}
         </Row>
+      </Container>
+      <Container>
+        <Footer/>
       </Container>
     </>
   );

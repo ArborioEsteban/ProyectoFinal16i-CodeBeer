@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Alert, Form, Button, FormGroup } from "react-bootstrap";
+import { Alert, Form, Button, FormGroup, Container } from "react-bootstrap";
+import Footer from "../Footer/Footer";
 
 import Swal from "sweetalert2";
 
@@ -46,7 +47,7 @@ const FormContacto = () => {
   const incluirTelefono = watch("incluirTelefono");
 
   return (
-   
+   <>
       <div className="container mt-5 py-5">
         <div className="row mt-5 py-2">
           <div className="col-sm-12 col-md-12 col-lg-12">
@@ -205,6 +206,10 @@ const FormContacto = () => {
         </div>
       </section>
     </div>
+      <Container>
+        <Footer />
+      </Container>
+    </>
   );
 };
 

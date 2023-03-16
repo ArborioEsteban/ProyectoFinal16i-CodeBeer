@@ -2,7 +2,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 
 import "./AcercaDe.css";
-
+import Footer from "./Footer/Footer"; 
 const AcercaDe = () => {
   return (
     <>
@@ -105,6 +105,9 @@ const AcercaDe = () => {
             </ListGroup>
           </Row>
         </div>
+      </Container>
+      <Container>
+      <Footer/>
       </Container>
     </>
   );
